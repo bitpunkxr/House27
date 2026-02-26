@@ -1,3 +1,5 @@
+@media (max-width: 768px) {
+
 html, body {
     margin: 0;
     padding: 0;
@@ -6,11 +8,13 @@ html, body {
 }
 
 :root {
-    --bg: #131313;
+    --bg: #070707;
     --primary: #fff;
     --secondary: #ff8800;
     --border: 3rem;
     --pad: 1rem;
+    --bdr: 7px;
+    --bdf: blur(5px) saturate(120%) brightness(60%);
 }
 
 body {
@@ -18,7 +22,7 @@ body {
     color: var(--primary);
 }
 
-div, section {
+div, section, h1, h2, h3, h4, h5, h6, p {
     margin: 0;
 }
 
@@ -84,44 +88,96 @@ hr {
 .overlay {
     height: 100%;
     width: 100%;
-    background: linear-gradient(#00000000, #13131365, #131313);
+    background: linear-gradient(#07070700, #07070765, #070707);
     position: absolute;
     z-index: 0;
 }
 
-.sticky {
-    width: 100%;
-    height: 3rem;
-    display: flex;
-    margin: 1rem 0;
-}
-
-.sticky button {
-    margin: auto;
+button {
+    margin: 10px auto;
     padding: 1rem;
+    color: #ff8800c2;
     font-weight: 300;
     font-size: 1rem;
     background: none;
-    color: #ff880069;
     border: none;
-    border: 2px solid #ff880069;
     border-top: none;
     border-bottom: none;
+    box-shadow: inset 0 0 15px #ff8800c9;
+    border-radius: var(--bdr)
 }
 
-#showcase {
-    padding: var(--pad);
+.head {
+    text-align: center;
+    justify-content: center;
+    align-content: center;
 }
 
-.project img {
-    width: 100%;
-    height: auto;
+.head h2 {
+    margin: 1rem;
 }
 
-.head h3 {
-    background: radial-gradient(#ff8800, #ff8800, #ff880034, #ff880000);
+.head h1 {
+    background: radial-gradient(#ff8800, #ff8800a2, #ff880018, #ff880000);
     -webkit-text-fill-color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
     text-align: center;
+}
+
+.table {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: var(--pad);
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.items {
+    width: 100%;
+    height: 20vh;
+    font-size: 1.7rem;
+    margin-bottom: var(--pad);
+    text-shadow: 0 0 5px #000;
+    text-align: center;
+    border-radius: var(--bdr);
+}
+
+.items h3 {
+    backdrop-filter: var(--bdf);
+    -webkit-backdrop-filter: var(--bdf);
+    border-radius: inherit;
+}
+
+.items:first-child {
+    background: url(../public/images/street.JPG);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+}
+
+.items:nth-child(2) {
+    background: url(../public/images/modern.JPG);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+}
+
+.items:nth-child(3) {
+    background: url(../public/images/terrace.JPG);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+}
+
+
+
+
+
+
 }

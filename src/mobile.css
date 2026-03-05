@@ -8,13 +8,14 @@ html, body {
 }
 
 :root {
-    --bg: #070707;
+    --bg: #ffffff;
     --primary: #fff;
-    --secondary: #ff8800;
+    --secondary: #000;
     --border: 3rem;
     --pad: 1rem;
     --bdr: 7px;
     --bdf: blur(5px) saturate(120%) brightness(60%);
+    --shadow: 0 0 15px #0000008f;
 }
 
 body {
@@ -27,7 +28,7 @@ div, section, h1, h2, h3, h4, h5, h6, p {
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 2.4rem;
     font-weight: 500;
     font-family: 'Times New Roman', Times, serif;
     margin: 0;
@@ -63,8 +64,12 @@ hr {
     margin: 2rem auto;
 }
 
+li {
+    list-style: none;
+}
+
 #hero {
-    background: url(../public/images/terrace-n.JPG);
+    background: url(../public/images/terrace.JPG);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -88,7 +93,7 @@ hr {
 .overlay {
     height: 100%;
     width: 100%;
-    background: linear-gradient(#07070700, #07070765, #070707);
+    background: #0078af85;
     position: absolute;
     z-index: 0;
 }
@@ -96,15 +101,30 @@ hr {
 button {
     margin: 10px auto;
     padding: 1rem;
-    color: #ff8800c2;
+    background: #fff;
+    box-shadow: var(--shadow), inset 0 0 10px #00000057;
     font-weight: 300;
     font-size: 1rem;
-    background: none;
     border: none;
     border-top: none;
     border-bottom: none;
-    box-shadow: inset 0 0 15px #ff8800c9;
-    border-radius: var(--bdr)
+    border-radius: var(--bdr);
+}
+
+.list {
+    margin: auto;
+    width: 85%;
+    height: fit-content;
+    background: var(--bg);
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: 0;
+}
+
+.list p {
+    color: var(--secondary);
+    font-weight: 400;
 }
 
 .head {

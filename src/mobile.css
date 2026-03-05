@@ -8,9 +8,11 @@ html, body {
 }
 
 :root {
-    --bg: #ffffff;
+    --bg: #eeeeee;
+    --trans-bg: #004d7085;
     --primary: #fff;
-    --secondary: #000;
+    --tertiary: #004d70;
+    --secondary: #000000b9;
     --border: 3rem;
     --pad: 1rem;
     --bdr: 7px;
@@ -68,6 +70,21 @@ li {
     list-style: none;
 }
 
+a {
+    text-decoration: none;
+}
+
+.header {
+    color: var(--bg);
+    background: var(--tertiary);
+    padding: 15px;
+    justify-content: space-between;
+}
+
+.header em {
+    color: #8adaff;
+}
+
 #hero {
     background: url(../public/images/terrace.JPG);
     background-position: center;
@@ -93,7 +110,7 @@ li {
 .overlay {
     height: 100%;
     width: 100%;
-    background: #0078af85;
+    background: var(--trans-bg);
     position: absolute;
     z-index: 0;
 }
@@ -113,18 +130,25 @@ button {
 
 .list {
     margin: auto;
-    width: 85%;
     height: fit-content;
-    background: var(--bg);
+    background: transparent;
     position: absolute;
     transform: translateX(-50%);
     left: 50%;
     bottom: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.list li {
+    background: var(--bg);
+    padding: 14px
 }
 
 .list p {
     color: var(--secondary);
     font-weight: 400;
+    text-align: center;
 }
 
 .head {

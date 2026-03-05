@@ -8,7 +8,7 @@ html, body {
 }
 
 :root {
-    --bg: #eeeeee;
+    --bg: #e2e2e2;
     --trans-bg: #004d7085;
     --primary: #fff;
     --tertiary: #004d70;
@@ -30,7 +30,7 @@ div, section, h1, h2, h3, h4, h5, h6, p {
 }
 
 h1 {
-    font-size: 2.4rem;
+    font-size: 3rem;
     font-weight: 500;
     font-family: 'Times New Roman', Times, serif;
     margin: 0;
@@ -78,11 +78,38 @@ a {
     color: var(--bg);
     background: var(--tertiary);
     padding: 15px;
+    padding-top: 60px;
     justify-content: space-between;
+    display: flex;
 }
 
 .header em {
     color: #8adaff;
+}
+
+.menu {
+    height: 30px;
+    width: 40px;
+    /* background: rgba(255, 0, 0, 0.979); */
+    position: relative;
+    margin: auto;
+    margin-right: 0;
+}
+
+.menu span {
+    background: var(--primary);
+    height: 2px;
+    width: 100%;
+    position: absolute;
+}
+
+.menu span:nth-child(2) {
+    transform: translateY(-50%);
+    top: 50%;
+}
+
+.menu span:last-child {
+    bottom: 0;
 }
 
 #hero {

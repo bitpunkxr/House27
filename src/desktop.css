@@ -1,0 +1,49 @@
+:root {
+    --bg: #e2e2e2;
+    --trans-bg: #004d7085;
+    --primary: #fff;
+    --tertiary: #004d70;
+    --secondary: #000000b9;
+    --border: 3rem;
+    --pad: 1rem;
+    --bdr: 7px;
+    --bdf: blur(5px) saturate(120%) brightness(60%);
+    --shadow: 0 0 15px #0000008f;
+    --trans: all 0.3s ease;
+}
+
+@media (min-width: 1024px) {
+    hr {
+        width: 30%;
+    }
+
+    .header {
+        padding-top: 15px;
+        justify-content: space-around;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        border-radius: var(--bdr);
+        border: 1px solid #fff;
+        background: var(--bg);
+        color: var(--secondary);
+    }
+
+    .navbar li {
+        padding: 10px var(--pad);
+        border-radius: inherit;
+        margin: 5px;
+        transition: var(--trans);
+    }
+
+    .navbar li:hover, #main, button:hover {
+        color: #8adaff;
+        background: var(--secondary);
+    }
+}

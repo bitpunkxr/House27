@@ -1,5 +1,3 @@
-@media (max-width: 768px) {
-
 html, body {
     margin: 0;
     padding: 0;
@@ -18,6 +16,7 @@ html, body {
     --bdr: 7px;
     --bdf: blur(5px) saturate(120%) brightness(60%);
     --shadow: 0 0 15px #0000008f;
+    --trans: all 0.3s ease;
 }
 
 body {
@@ -43,12 +42,11 @@ h2 {
 }
 
 h3 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
 }
 
 p {
     font-size: 1.2rem;
-    color: #ffffff91;
 }
 
 h3, p {
@@ -87,9 +85,15 @@ a {
     color: #8adaff;
 }
 
+.name {
+    margin: auto;
+    margin-left: 0;
+    width: fit-content;
+}
+
 .menu {
-    height: 30px;
-    width: 40px;
+    height: 25px;
+    width: 35px;
     /* background: rgba(255, 0, 0, 0.979); */
     position: relative;
     margin: auto;
@@ -110,6 +114,10 @@ a {
 
 .menu span:last-child {
     bottom: 0;
+}
+
+.navbar {
+    display: none;
 }
 
 #hero {
@@ -146,13 +154,13 @@ button {
     margin: 10px auto;
     padding: 1rem;
     background: #fff;
-    box-shadow: var(--shadow), inset 0 0 10px #00000057;
     font-weight: 300;
     font-size: 1rem;
     border: none;
     border-top: none;
     border-bottom: none;
     border-radius: var(--bdr);
+    transition: var(--trans);
 }
 
 .list {
@@ -244,11 +252,4 @@ button {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: scroll;
-}
-
-
-
-
-
-
 }

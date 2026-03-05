@@ -56,7 +56,7 @@ h3, p {
 }
 
 em {
-    color: var(--secondary)
+    color: var(--secondary);
 }
 
 hr {
@@ -69,6 +69,10 @@ li {
 }
 
 a {
+    color: var(--secondary);
+}
+
+a {
     text-decoration: none;
 }
 
@@ -76,7 +80,6 @@ a {
     color: var(--bg);
     background: var(--tertiary);
     padding: 15px;
-    padding-top: 60px;
     justify-content: space-between;
     display: flex;
 }
@@ -186,70 +189,13 @@ button {
     text-align: center;
 }
 
-.head {
-    text-align: center;
-    justify-content: center;
-    align-content: center;
-}
-
-.head h2 {
-    margin: 1rem;
-}
-
-.head h1 {
-    background: radial-gradient(#ff8800, #ff8800a2, #ff880018, #ff880000);
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    -webkit-background-clip: text;
-    text-align: center;
-}
-
-.table {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: var(--pad);
-    text-align: center;
-    justify-content: center;
-    align-content: center;
-}
-
-.items {
-    width: 100%;
+.full-list {
     height: 20vh;
-    font-size: 1.7rem;
-    margin-bottom: var(--pad);
-    text-shadow: 0 0 5px #000;
-    text-align: center;
-    border-radius: var(--bdr);
+    background: var(--trans-bg);
 }
 
-.items h3 {
-    backdrop-filter: var(--bdf);
-    -webkit-backdrop-filter: var(--bdf);
-    border-radius: inherit;
-}
-
-.items:first-child {
-    background: url(../public/images/street.JPG);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: scroll;
-}
-
-.items:nth-child(2) {
-    background: url(../public/images/modern.JPG);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: scroll;
-}
-
-.items:nth-child(3) {
-    background: url(../public/images/terrace.JPG);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: scroll;
+.navbar li:hover, #main, 
+button:hover, list li {
+    color: #8adaff;
+    background: var(--secondary);
 }

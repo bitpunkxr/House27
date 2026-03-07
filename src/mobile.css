@@ -6,16 +6,17 @@ html, body {
 }
 
 :root {
-    --bg: #e2e2e2;
+    --bg: #f1f1f1;
     --trans-bg: #004d7085;
     --primary: #fff;
     --tertiary: #004d70;
     --secondary: #000000b9;
+    --text: #0000008c;
     --border: 3rem;
     --pad: 1rem;
     --bdr: 7px;
     --bdf: blur(5px) saturate(120%) brightness(60%);
-    --shadow: 0 0 15px #0000008f;
+    --shadow: 0 0 35px #004c70ab;
     --trans: all 0.3s ease;
 }
 
@@ -26,33 +27,16 @@ body {
 
 div, section, h1, h2, h3, h4, h5, h6, p {
     margin: 0;
+    padding: 0;
 }
 
 h1 {
-    font-size: 3rem;
     font-weight: 500;
     font-family: 'Times New Roman', Times, serif;
-    margin: 0;
-    padding: 0;
 }
 
-h2 {
-    font-size: 2rem;
+h2, h3, p {
     font-weight: 400;
-}
-
-h3 {
-    font-size: 1.5rem;
-}
-
-p {
-    font-size: 1.2rem;
-}
-
-h3, p {
-    font-weight: 300;
-    margin: 0;
-    padding: 0;
 }
 
 em {
@@ -129,7 +113,7 @@ a {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: scroll;
-    height: 70vh;
+    height: 80vh;
     margin: 0;
     padding: 0;
     display: flex;
@@ -148,7 +132,7 @@ a {
 .overlay {
     height: 100%;
     width: 100%;
-    background: var(--trans-bg);
+    background: linear-gradient(var(--trans-bg), var(--trans-bg), #000);
     position: absolute;
     z-index: 0;
 }
@@ -179,8 +163,12 @@ button {
 }
 
 .list li {
-    background: var(--bg);
-    padding: 14px
+    background: var(--tertiary);
+    color: var(--primary);
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-start-start-radius: var(--bdr);
+    border-start-end-radius: var(--bdr);
 }
 
 .list p {
@@ -195,7 +183,7 @@ button {
 }
 
 .navbar li:hover, #main, 
-button:hover, list li {
+button:hover, .list li:hover {
     color: #8adaff;
     background: var(--secondary);
 }

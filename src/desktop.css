@@ -1,17 +1,3 @@
-:root {
-    --bg: #e2e2e2;
-    --trans-bg: #004d7085;
-    --primary: #fff;
-    --tertiary: #004d70;
-    --secondary: #000000b9;
-    --border: 3rem;
-    --pad: 1rem;
-    --bdr: 7px;
-    --bdf: blur(5px) saturate(120%) brightness(60%);
-    --shadow: 0 0 15px #0000008f;
-    --trans: all 0.3s ease;
-}
-
 @media (min-width: 1024px) {
     hr {
         width: 30%;
@@ -45,5 +31,9 @@
     .navbar li:hover, #main, button:hover {
         color: #8adaff;
         background: var(--secondary);
+    }
+
+    .hero p {
+        width: 50%;
     }
 }

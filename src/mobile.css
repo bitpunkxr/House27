@@ -201,11 +201,14 @@ button:hover, .list li:hover {
 .results {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+    width: fit-content;
 }
 
 .showcase {
     width: 90%;
-    max-width: 410px;
+    max-width: 350px;
     box-shadow: var(--shadow);
     border-radius: var(--bdr);
     margin: 1.5rem auto;
@@ -248,4 +251,10 @@ button:hover, .list li:hover {
 
 .description p {
     color: var(--text);
+}
+
+.icons {
+    display: flex;
+    gap: 0.5rem;
+    margin: 2rem 0;
 }

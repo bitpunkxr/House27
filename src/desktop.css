@@ -33,25 +33,15 @@
         margin: 5px;
         transition: var(--trans);
         position: relative;
-        
+        border-bottom: 2px solid #00000000;
+    }
 
+    .navbar li:hover {
+        border-bottom: 2px solid var(--primary);
     }
 
     .navbar li p {
         margin: 7px 10px;
-    }
-
-    .border {
-        width: 0;
-        position: absolute;
-        border-bottom: 2px solid var(--primary);
-        z-index: 1000;
-        transition: var(--trans);
-        border-radius: var(--bdr);
-    }
-
-    .border {
-        width: 100%;
     }
 
     #main, button:hover {

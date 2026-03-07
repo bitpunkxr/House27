@@ -25,7 +25,7 @@ body {
     color: var(--primary);
 }
 
-div, section, h1, h2, h3, h4, h5, h6, p {
+div, section, h1, h2, h3, h4, h5, h6, p, img, li, ul {
     margin: 0;
     padding: 0;
 }
@@ -177,13 +177,75 @@ button {
     text-align: center;
 }
 
-.full-list {
-    height: 20vh;
-    background: var(--trans-bg);
-}
-
 .navbar li:hover, #main, 
 button:hover, .list li:hover {
     color: #8adaff;
     background: var(--secondary);
+}
+
+.options, .image img {
+    transition: var(--trans);
+}
+
+.showcase:hover {
+    scale: 1.03;
+}
+
+.options h2 {
+    text-align: center;
+    color: var(--secondary);
+    margin: auto;
+    width: 90%;
+}
+
+.results {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.showcase {
+    width: 90%;
+    max-width: 410px;
+    box-shadow: var(--shadow);
+    border-radius: var(--bdr);
+    margin: 1.5rem auto;
+    justify-content: space-around;
+    transition: var(--trans);
+}
+
+.image {
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+    border-start-start-radius: inherit;
+    border-start-end-radius: inherit;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+}
+
+.image img:hover {
+    scale: 1.1;
+}
+
+.description {
+    width: inherit;
+    margin: auto;
+}
+
+.description h2 {
+    color: var(--secondary);
+    text-align: left;
+    margin: 1rem 0;
+}
+
+.description h2 b {
+    color: var(--tertiary);
+    /* font-weight: 400; */
+}
+
+.description p {
+    color: var(--text);
 }

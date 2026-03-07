@@ -4,7 +4,6 @@
     }
 
     .header {
-        padding-top: 15px;
         justify-content: space-around;
     }
 
@@ -35,5 +34,9 @@
 
     .hero p {
         width: 50%;
+    }
+
+    .showcase {
+        margin: 2rem;
     }
 }

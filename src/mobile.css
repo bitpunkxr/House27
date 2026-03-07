@@ -60,12 +60,19 @@ a {
     text-decoration: none;
 }
 
+.navigation {
+    position: fixed;
+    z-index: 900;
+    width: 100%
+}
+
 .header {
     color: var(--bg);
-    background: var(--tertiary);
-    padding: 15px;
+    background: var(--trans-bg);
+    padding: 5px 10px;
     justify-content: space-between;
     display: flex;
+    backdrop-filter: var(--bdf);
 }
 
 .header em {
@@ -159,7 +166,7 @@ button {
     left: 50%;
     bottom: 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 .list li {
@@ -169,6 +176,7 @@ button {
     margin: 0 5px;
     border-start-start-radius: var(--bdr);
     border-start-end-radius: var(--bdr);
+    transition: var(--trans);
 }
 
 .list p {
@@ -177,8 +185,7 @@ button {
     text-align: center;
 }
 
-.navbar li:hover, #main, 
-button:hover, .list li:hover {
+#main, button:hover, .list li:hover {
     color: #8adaff;
     background: var(--secondary);
 }
@@ -208,7 +215,7 @@ button:hover, .list li:hover {
 
 .showcase {
     width: 90%;
-    max-width: 350px;
+    max-width: 400px;
     box-shadow: var(--shadow);
     border-radius: var(--bdr);
     margin: 1.5rem auto;
@@ -251,6 +258,7 @@ button:hover, .list li:hover {
 
 .description p {
     color: var(--text);
+    font-size: 16px;
 }
 
 .icons {

@@ -3,6 +3,14 @@
         width: 30%;
     }
 
+    h1 {
+        font-size: 2.6rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+
     .header {
         justify-content: space-around;
     }
@@ -15,25 +23,45 @@
         display: flex;
         justify-content: space-between;
         border-radius: var(--bdr);
-        border: 1px solid #fff;
-        background: var(--bg);
         color: var(--secondary);
+        backdrop-filter: var(--bdr);
+        color: var(--primary);
     }
 
     .navbar li {
-        padding: 10px var(--pad);
         border-radius: inherit;
         margin: 5px;
         transition: var(--trans);
+        position: relative;
+        
+
     }
 
-    .navbar li:hover, #main, button:hover {
+    .navbar li p {
+        margin: 7px 10px;
+    }
+
+    .border {
+        width: 0;
+        position: absolute;
+        border-bottom: 2px solid var(--primary);
+        z-index: 1000;
+        transition: var(--trans);
+        border-radius: var(--bdr);
+    }
+
+    .border {
+        width: 100%;
+    }
+
+    #main, button:hover {
         color: #8adaff;
         background: var(--secondary);
     }
 
-    .hero p {
-        width: 50%;
+    .home p {
+        width: 70%;
+        margin: auto;
     }
 
     .showcase {

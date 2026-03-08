@@ -37,7 +37,7 @@
     }
 
     .navbar li:hover {
-        border-bottom: 2px solid var(--primary);
+        border-bottom: 2px solid var(--tertiary-2);
     }
 
     .navbar li p {
@@ -45,7 +45,7 @@
     }
 
     #main, button:hover {
-        color: #8adaff;
+        color: var(--tertiary-2);
         background: var(--secondary);
     }
 
@@ -55,6 +55,6 @@
     }
 
     .showcase {
-        margin: 2rem 1rem;
+        margin: 3rem 1rem;
     }
 }

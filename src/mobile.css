@@ -10,6 +10,7 @@ html, body {
     --trans-bg: #004d7085;
     --primary: #fff;
     --tertiary: #004d70;
+    --tertiary-2: #8adaff;
     --secondary: #000000b9;
     --text: #0000008c;
     --border: 3rem;
@@ -76,7 +77,7 @@ a {
 }
 
 .header em {
-    color: #8adaff;
+    color: var(--tertiary-2);
 }
 
 .name {
@@ -177,6 +178,7 @@ button {
     border-start-start-radius: var(--bdr);
     border-start-end-radius: var(--bdr);
     transition: var(--trans);
+    border-top: 2px solid #00000000;
 }
 
 .list p {
@@ -186,12 +188,17 @@ button {
 }
 
 #main, button:hover, .list li:hover {
-    color: #8adaff;
+    color: var(--tertiary-2);
     background: var(--secondary);
+    border-top: 2px solid var(--tertiary-2);
 }
 
 .options, .image img {
     transition: var(--trans);
+}
+
+.image img {
+    transition: all 1s ease-in-out;
 }
 
 .showcase:hover {
@@ -208,13 +215,13 @@ button {
 .results {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
     margin: auto;
     width: fit-content;
 }
 
 .showcase {
-    width: 90%;
+    width: 85%;
     max-width: 400px;
     box-shadow: var(--shadow);
     border-radius: var(--bdr);
@@ -224,7 +231,7 @@ button {
 }
 
 .image {
-    height: 200px;
+    height: 150px;
     width: 100%;
     overflow: hidden;
     border-start-start-radius: inherit;
@@ -265,4 +272,12 @@ button {
     display: flex;
     gap: 0.5rem;
     margin: 2rem 0;
+}
+
+#categories {
+    display: none;
+}
+
+#price {
+    display: none;
 }

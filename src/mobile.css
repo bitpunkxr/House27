@@ -115,6 +115,39 @@ a {
     display: none;
 }
 
+.open-menu {
+    display: none;
+}
+
+.open-menu show {
+    font-size: 2rem;
+    height: 100%;
+    width: 100%;
+    right: 0;
+    background: var(--text);
+    backdrop-filter: var(--bdf);
+    height: 90vh;
+    box-shadow: 0 0 50px #000;
+    border-end-end-radius: 1rem;
+    border-end-start-radius: 1rem;
+}
+
+.pages li {
+    color: var(--primary);
+    padding: 0.5rem 0;
+    border-top: 2px solid transparent;
+    transition: var(--trans); 
+}
+
+.pages li:hover {
+    color: var(--tertiary-2);
+}
+
+.pages li p {
+    margin-right: 1.5rem;
+    text-align: right;
+}
+
 #hero {
     background: url(../public/images/terrace.JPG);
     background-position: center;
@@ -178,7 +211,7 @@ button {
     border-start-start-radius: var(--bdr);
     border-start-end-radius: var(--bdr);
     transition: var(--trans);
-    border-top: 2px solid #00000000;
+    border-top: 2px solid transparent;
 }
 
 .list p {

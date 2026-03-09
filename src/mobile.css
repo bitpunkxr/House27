@@ -350,7 +350,7 @@ button {
     margin: 5rem 0;
 }
 
-.text {
+.text, .thin {
     width: 90%;
     margin: 1rem auto;
     color: var(--secondary);
@@ -362,4 +362,8 @@ button {
 
 .face {
     margin: 2rem 0;
+}
+
+.thin img {
+    margin: 1rem auto;
 }

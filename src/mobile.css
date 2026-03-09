@@ -93,6 +93,7 @@ a {
     position: relative;
     margin: auto;
     margin-right: 0;
+    cursor: pointer;
 }
 
 .menu span {
@@ -100,6 +101,7 @@ a {
     height: 2px;
     width: 100%;
     position: absolute;
+    transition: var(--trans);
 }
 
 .menu span:nth-child(2) {
@@ -111,15 +113,24 @@ a {
     bottom: 0;
 }
 
+.menu.fold span {
+    transform: rotate(45deg) translateY(-50%);
+    top: 50%;
+}
+
+.menu.fold span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu.fold span:last-child {
+    transform: rotate(-45deg);
+}
+
 .navbar {
     display: none;
 }
 
 .open-menu {
-    display: none;
-}
-
-.open-menu show {
     font-size: 2rem;
     height: 100%;
     width: 100%;
@@ -130,6 +141,12 @@ a {
     box-shadow: 0 0 50px #000;
     border-end-end-radius: 1rem;
     border-end-start-radius: 1rem;
+    transform: translateX(150%);
+    transition: var(--trans);
+}
+
+.open-menu.show {
+    transform: translateX(0);
 }
 
 .pages li {
@@ -293,7 +310,6 @@ button {
 
 .description h2 b {
     color: var(--tertiary);
-    /* font-weight: 400; */
 }
 
 .description p {

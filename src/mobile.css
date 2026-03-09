@@ -18,6 +18,7 @@ html, body {
     --bdr: 7px;
     --bdf: blur(5px) saturate(120%) brightness(60%);
     --shadow: 0 0 35px #004c70ab;
+    --b-shadow: 0 0 35px #8adaffab;
     --trans: all 0.3s ease;
 }
 
@@ -257,7 +258,7 @@ button {
 }
 
 .showcase:hover {
-    scale: 1.03;
+    box-shadow: var(--b-shadow);
 }
 
 .options h2 {
@@ -285,6 +286,10 @@ button {
     transition: var(--trans);
 }
 
+.showcase:hover {
+    scale: 1.02
+}
+
 .image {
     height: 150px;
     width: 100%;
@@ -298,7 +303,7 @@ button {
     height: auto;
 }
 
-.image.hover img {
+.options.hover .results .showcase .image img {
     scale: 1.1;
 }
 
@@ -311,6 +316,7 @@ button {
     color: var(--secondary);
     text-align: left;
     margin: 1rem 0;
+    font-size: 1.3rem;
 }
 
 .description h2 b {

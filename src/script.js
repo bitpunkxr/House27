@@ -7,10 +7,17 @@ const option1 = document.getElementById('location');
 const option2 = document.getElementById('categories');
 const option3 = document.getElementById('price');
 const dispName = document.getElementById('filter');
-const card = document.querySelector('.showcase');
-const image = document.querySelector('.image img');
+const card = document.querySelector('.options');
 
-card.addEventListener('click', () => {
+card.addEventListener('mouseover', () => {
+    card.classList.add('hover');
+});
+card.addEventListener('mouseleave', () => {
+    card.classList.remove('hover');
+});
+
+
+card.addEventListener('', () => {
     image.classList.toggle('hover');
     card.style.backgroundColor = "red";
 });

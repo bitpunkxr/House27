@@ -7,6 +7,13 @@ const option1 = document.getElementById('location');
 const option2 = document.getElementById('categories');
 const option3 = document.getElementById('price');
 const dispName = document.getElementById('filter');
+const card = document.querySelector('.showcase');
+const image = document.querySelector('.image img');
+
+card.addEventListener('click', () => {
+    image.classList.toggle('hover');
+    card.style.backgroundColor = "red";
+});
 
 filter1.style.backgroundColor = "var(--bg)";
 filter1.style.color = "var(--secondary)";

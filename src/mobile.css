@@ -298,7 +298,7 @@ button {
     height: auto;
 }
 
-.image img:hover {
+.image.hover img {
     scale: 1.1;
 }
 

@@ -64,7 +64,7 @@ a {
 .navigation {
     position: fixed;
     z-index: 900;
-    width: 100%
+    width: 100%;
 }
 
 .header {
@@ -277,7 +277,7 @@ button {
 
 .showcase {
     width: 85%;
-    max-width: 400px;
+    max-width: 350px;
     box-shadow: var(--shadow);
     border-radius: var(--bdr);
     margin: 1.5rem auto;

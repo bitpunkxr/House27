@@ -62,6 +62,11 @@ a {
     text-decoration: none;
 }
 
+img {
+    width: 100%;
+    height: auto;
+}
+
 .navigation {
     position: fixed;
     z-index: 900;
@@ -90,7 +95,6 @@ a {
 .menu {
     height: 25px;
     width: 35px;
-    /* background: rgba(255, 0, 0, 0.979); */
     position: relative;
     margin: auto;
     margin-right: 0;
@@ -340,4 +344,22 @@ button {
 
 #price {
     display: none;
+}
+
+.about {
+    margin: 5rem 0;
+}
+
+.text {
+    width: 90%;
+    margin: 1rem auto;
+    color: var(--secondary);
+}
+
+.text h3, .text p {
+    color: var(--text);
+}
+
+.face {
+    margin: 2rem 0;
 }

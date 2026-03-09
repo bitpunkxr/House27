@@ -7,6 +7,9 @@ const option1 = document.getElementById('location');
 const option2 = document.getElementById('categories');
 const option3 = document.getElementById('price');
 const dispName = document.getElementById('filter');
+
+filter1.style.backgroundColor = "var(--bg)";
+filter1.style.color = "var(--secondary)";
 function toggleDisplay() {
     menu.classList.toggle('fold');
     option.classList.toggle('show');
@@ -19,19 +22,37 @@ function toggleLocation() {
    option1.style.display = "flex";
    option2.style.display = "none";
    option3.style.display = "none";
-   dispName.innerHTML = "Best Properties Based On <em>Location</em>";
+   dispName.innerHTML = "Latest Properties Based On <em>Location</em>";
+   filter1.style.backgroundColor = "var(--bg)";
+   filter1.style.color = "var(--secondary)";
+   filter2.style.backgroundColor = "var(--tertiary)";
+   filter2.style.color = "var(--primary)";
+   filter3.style.backgroundColor = "var(--tertiary)";
+   filter3.style.color = "var(--primary)";
 };
 function toggleCategories() {
    option1.style.display = "none";
    option2.style.display = "flex";
    option3.style.display = "none";
-   dispName.innerHTML = "Best Properties Based On <em>Categories</em>";
+   dispName.innerHTML = "Latest Properties Based On <em>Categories</em>";
+   filter2.style.backgroundColor = "var(--bg)";
+   filter2.style.color = "var(--secondary)";
+   filter1.style.backgroundColor = "var(--tertiary)";
+   filter1.style.color = "var(--primary)";
+   filter3.style.backgroundColor = "var(--tertiary)";
+   filter3.style.color = "var(--primary)";
 };
 function togglePrice() {
    option1.style.display = "none";
    option2.style.display = "none";
    option3.style.display = "flex";
-   dispName.innerHTML = "Best Properties Based On <em>Price</em>";
+   dispName.innerHTML = "Latest Properties Based On <em>Price</em>";
+   filter3.style.backgroundColor = "var(--bg)";
+   filter3.style.color = "var(--secondary)";
+   filter1.style.backgroundColor = "var(--tertiary)";
+   filter1.style.color = "var(--primary)";
+   filter2.style.backgroundColor = "var(--tertiary)";
+   filter2.style.color = "var(--primary)";
 };
 filter1.addEventListener('click', () => {
     toggleLocation();

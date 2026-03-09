@@ -276,7 +276,7 @@ button {
 }
 
 .showcase {
-    width: 85%;
+    width: 80%;
     max-width: 350px;
     box-shadow: var(--shadow);
     border-radius: var(--bdr);

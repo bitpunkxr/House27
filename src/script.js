@@ -1,14 +1,5 @@
 const menu = document.getElementById('ham-menu');
 const option = document.getElementById('full-menu');
-function toggleDisplay() {
-    menu.classList.toggle('fold');
-    option.classList.toggle('show');
-};
-
-menu.addEventListener('click', () => {
-    toggleDisplay();
-});
-
 const filter1 = document.getElementById('filter1');
 const filter2 = document.getElementById('filter2');
 const filter3 = document.getElementById('filter3');
@@ -16,6 +7,13 @@ const option1 = document.getElementById('location');
 const option2 = document.getElementById('categories');
 const option3 = document.getElementById('price');
 const dispName = document.getElementById('filter');
+function toggleDisplay() {
+    menu.classList.toggle('fold');
+    option.classList.toggle('show');
+};
+menu.addEventListener('click', () => {
+    toggleDisplay();
+});
 
 function toggleLocation() {
    option1.style.display = "flex";
@@ -35,7 +33,6 @@ function togglePrice() {
    option3.style.display = "flex";
    dispName.innerHTML = "Best Properties Based On <em>Price</em>";
 };
-
 filter1.addEventListener('click', () => {
     toggleLocation();
 });

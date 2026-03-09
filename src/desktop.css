@@ -20,6 +20,7 @@
     }
 
     .navbar {
+        pointer-events: auto;
         display: flex;
         justify-content: space-between;
         border-radius: var(--bdr);

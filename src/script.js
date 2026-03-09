@@ -8,3 +8,4 @@ function toggleDisplay() {
 menu.addEventListener('click', () => {
     toggleDisplay();
 });
+

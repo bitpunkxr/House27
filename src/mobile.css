@@ -35,6 +35,19 @@ div, section, h1, h2, h3, h4, h5, h6, p, img, li, ul {
 h1 {
     font-weight: 500;
     font-family: 'Times New Roman', Times, serif;
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.6rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 20px;
 }
 
 h2, h3, p {
@@ -109,7 +122,7 @@ img {
     transition: var(--trans);
 }
 
-.menu span:nth-child(2) {
+.menu span:nth-child(2), .menu span:nth-child(3) {
     transform: translateY(-50%);
     top: 50%;
 }
@@ -118,17 +131,20 @@ img {
     bottom: 0;
 }
 
-.menu.fold span {
-    transform: rotate(45deg) translateY(-50%);
-    top: 50%;
-}
-
-.menu.fold span:nth-child(2) {
+.menu.fold span:first-child {
     opacity: 0;
 }
 
-.menu.fold span:last-child {
+.menu.fold span:nth-child(2) {
+    transform: rotate(45deg) translateY(-50%);
+}
+
+.menu.fold span:nth-child(3) {
     transform: rotate(-45deg);
+}
+
+.menu.fold span:last-child {
+    opacity: 0;
 }
 
 .navbar {
@@ -265,7 +281,7 @@ button {
     box-shadow: var(--b-shadow);
 }
 
-.options h2 {
+.options h3 {
     text-align: center;
     color: var(--secondary);
     margin: auto;
@@ -346,18 +362,26 @@ button {
     display: none;
 }
 
+.transition {
+    width: 100%;
+    height: 10px;
+    margin-top: 3rem;
+    background: linear-gradient(var(--bg), var(--secondary));
+}
+
 .about {
-    margin: 5rem 0;
+    background: var(--secondary);
+    color: var(--primary);
 }
 
 .text, .thin {
     width: 90%;
-    margin: 1rem auto;
-    color: var(--secondary);
+    margin: auto;
+    color: var(--primary);
 }
 
 .text h3, .text p {
-    color: var(--text);
+    color: var(--bg);
 }
 
 .face {

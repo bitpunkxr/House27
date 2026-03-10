@@ -36,7 +36,7 @@ function toggleLocation() {
    option1.style.display = "flex";
    option2.style.display = "none";
    option3.style.display = "none";
-   dispName.innerHTML = "Latest Properties Based On <em>Location</em>";
+   dispName.innerHTML = "Latest Properties Based On Location";
    filter1.style.backgroundColor = "var(--bg)";
    filter1.style.color = "var(--secondary)";
    filter2.style.backgroundColor = "var(--tertiary)";
@@ -48,7 +48,7 @@ function toggleCategories() {
    option1.style.display = "none";
    option2.style.display = "flex";
    option3.style.display = "none";
-   dispName.innerHTML = "Latest Properties Based On <em>Categories</em>";
+   dispName.innerHTML = "Latest Properties Based On Categories";
    filter2.style.backgroundColor = "var(--bg)";
    filter2.style.color = "var(--secondary)";
    filter1.style.backgroundColor = "var(--tertiary)";
@@ -60,7 +60,7 @@ function togglePrice() {
    option1.style.display = "none";
    option2.style.display = "none";
    option3.style.display = "flex";
-   dispName.innerHTML = "Latest Properties Based On <em>Price</em>";
+   dispName.innerHTML = "Latest Properties Based On Price";
    filter3.style.backgroundColor = "var(--bg)";
    filter3.style.color = "var(--secondary)";
    filter1.style.backgroundColor = "var(--tertiary)";

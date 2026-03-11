@@ -218,7 +218,7 @@ rd {
 
 .home {
     margin: auto;
-    margin-bottom: 4rem;
+    margin-bottom: 5rem;
     text-align: center;
     justify-content: center;
     align-content: center;
@@ -345,8 +345,9 @@ button {
     height: auto;
 }
 
-.options.hover .results .showcase .image img {
+.showcase:hover .image img {
     scale: 1.1;
+    backdrop-filter: brightness(120%);
 }
 
 .description {

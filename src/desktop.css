@@ -24,9 +24,19 @@
         display: flex;
         justify-content: space-between;
         border-radius: var(--bdr);
-        color: var(--secondary);
         backdrop-filter: var(--bdr);
-        color: var(--primary);
+        color: var(--secondary);
+        margin: auto;
+    }
+
+    .link {
+        margin-right: 0;
+        border-radius: var(--bdr);
+        backdrop-filter: var(--bdr);
+        color: var(--secondary);
+        margin: auto;
+        margin-right: 0;
+        width: fit-content;
     }
 
     .navbar li {
@@ -39,10 +49,19 @@
 
     .navbar li:hover {
         border-bottom: 2px solid var(--tertiary-2);
+        color: var(--tertiary-2);
     }
 
     .navbar li p {
         margin: 7px 10px;
+    }
+
+    h1 {
+        font-size: 3.4rem;
+    }
+
+    #hero {
+        height: 90vh;
     }
 
     #main, button:hover {
@@ -50,12 +69,20 @@
         background: var(--secondary);
     }
 
-    .home p {
-        width: 70%;
-        margin: auto;
+    .home {
+        width: 50%;
     }
 
     .showcase {
         margin: 3rem 1rem;
+    }
+
+    .about {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .text {
+        width: 40%;
     }
 }

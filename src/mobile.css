@@ -399,13 +399,9 @@ button {
 
 .text, .face {
     width: 90%;
-    margin: auto;
+    margin: 7rem auto;
     color: var(--primary);
     z-index: 1;
-}
-
-.text {
-    margin-bottom: 7rem;
 }
 
 .text p {
@@ -420,7 +416,6 @@ button {
     width: fit-content;
     text-align: left;
     margin: auto;
-    font-size: 5.6rem;
 }
 
 .boxed {
@@ -438,4 +433,14 @@ button {
     height: 200px;
     width: 200px;
     border-radius: var(--bdr);
+}
+
+.box2 img:first-child {
+    border-start-start-radius: var(--bdr);
+    border-start-end-radius: var(--bdr);
+}
+
+.box2 img:last-child {
+    border-end-start-radius: var(--bdr);
+    border-end-end-radius: var(--bdr);
 }

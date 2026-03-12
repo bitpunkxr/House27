@@ -70,19 +70,25 @@
     }
 
     .home {
-        width: 50%;
+        margin-bottom: 7rem;
     }
 
     .showcase {
         margin: 3rem 1rem;
-    }
-
-    .about {
         display: flex;
-        justify-content: space-evenly;
     }
 
     .text {
-        width: 40%;
+        display: flex;
+    }
+
+    .box1, .box2 {
+        width: 50%;
+        margin: 10rem 5rem;
+    }
+
+    #right {
+        margin-left: auto;
+        margin-right: 5rem;
     }
 }

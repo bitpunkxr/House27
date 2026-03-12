@@ -10,6 +10,8 @@ const dispName = document.getElementById('filter');
 
 filter1.style.backgroundColor = "var(--bg)";
 filter1.style.color = "var(--secondary)";
+filter1.style.padding = "10px 50px";
+
 function toggleDisplay() {
     menu.classList.toggle('fold');
     option.classList.toggle('show');
@@ -24,10 +26,13 @@ function toggleLocation() {
    option3.style.display = "none";
    dispName.innerHTML = "Latest Properties Based On Location";
    filter1.style.backgroundColor = "var(--bg)";
+   filter1.style.padding = "10px 50px";
    filter1.style.color = "var(--secondary)";
    filter2.style.backgroundColor = "var(--tertiary)";
+   filter2.style.padding = "10px 20px";
    filter2.style.color = "var(--primary)";
    filter3.style.backgroundColor = "var(--tertiary)";
+   filter3.style.padding = "10px 20px";
    filter3.style.color = "var(--primary)";
 };
 function toggleCategories() {
@@ -36,10 +41,13 @@ function toggleCategories() {
    option3.style.display = "none";
    dispName.innerHTML = "Latest Properties Based On Categories";
    filter2.style.backgroundColor = "var(--bg)";
+   filter2.style.padding = "10px 50px";
    filter2.style.color = "var(--secondary)";
    filter1.style.backgroundColor = "var(--tertiary)";
+   filter1.style.padding = "10px 20px";
    filter1.style.color = "var(--primary)";
    filter3.style.backgroundColor = "var(--tertiary)";
+   filter3.style.padding = "10px 20px";
    filter3.style.color = "var(--primary)";
 };
 function togglePrice() {
@@ -48,10 +56,13 @@ function togglePrice() {
    option3.style.display = "flex";
    dispName.innerHTML = "Latest Properties Based On Price";
    filter3.style.backgroundColor = "var(--bg)";
+   filter3.style.padding = "10px 50px";
    filter3.style.color = "var(--secondary)";
    filter1.style.backgroundColor = "var(--tertiary)";
+   filter1.style.padding = "10px 20px";
    filter1.style.color = "var(--primary)";
    filter2.style.backgroundColor = "var(--tertiary)";
+   filter2.style.padding = "10px 20px";
    filter2.style.color = "var(--primary)";
 };
 filter1.addEventListener('click', () => {

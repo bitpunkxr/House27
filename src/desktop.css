@@ -105,15 +105,19 @@
     .w-card {
         flex-direction: row;
         width: 70%;
-        background: url(../public/images/modern.JPG);
-        background-position: center;
-        background-attachment: scroll;
-        background-size: cover;
-        background-repeat: no-repeat;
+        margin: auto;
     }
 
     .card {
         width: 40%;
         backdrop-filter: var(--bdf);
+    }
+
+    .links {
+        justify-content: space-around;
+    }
+
+    .footer a {
+        font-size: 1.7rem;
     }
 }

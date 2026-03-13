@@ -11,8 +11,7 @@ const cName = document.querySelector('.c-name');
 
 let nDate = new Date();
 let year = nDate.getFullYear();
-cName.innerHTML = '&copy; HOUSE 27 ' + year + '. All Rights Reserved';
-console.log(cName.length);
+cName.innerHTML = '&copy; H<rd>O</rd>USE 27 ' + year + '. All Rights Reserved';
 
 filter1.style.backgroundColor = "var(--bg)";
 filter1.style.color = "var(--secondary)";

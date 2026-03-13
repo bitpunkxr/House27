@@ -513,3 +513,26 @@ button {
     display: none;
 }
 
+.footer {
+    background: var(--secondary-3);
+    color: var(--text-2);
+    padding: var(--pad);
+}
+
+.footer a {
+    color: var(--text-2);
+}
+
+.c-name {
+    text-shadow: 0 0 10px var(--text-2);
+    text-align: center;
+}
+
+.links {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.pages a {
+    display: block;
+}

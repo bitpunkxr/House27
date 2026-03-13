@@ -543,16 +543,20 @@ button {
     color: var(--tertiary);
 }
 
+.footer h3 {
+    text-align: center;
+}
+
 .form {
     margin: 1rem auto;
+    width: fit-content;
     margin-bottom: 5rem;
 }
 
 input {
+    margin: .5rem;
     border-radius: var(--bdr);
-    width: 50%;
     border: none;
-    margin: .5rem 0;
     background: var(--primary);
     box-shadow: 0 0 10px #00000057;
     transition: var(--trans);
@@ -561,5 +565,4 @@ input {
 
 input:hover {
     box-shadow: var(--b-shadow);
-    width: 60%;
 }

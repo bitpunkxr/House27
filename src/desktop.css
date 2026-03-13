@@ -113,11 +113,12 @@
         backdrop-filter: var(--bdf);
     }
 
-    .links {
-        justify-content: space-around;
+    .pages {
+        width: 30%;
+        text-align: start;
     }
 
     .footer a {
-        font-size: 1.7rem;
+        font-size: 1.3rem;
     }
 }

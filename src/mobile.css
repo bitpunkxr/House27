@@ -12,17 +12,19 @@ html, body {
     --primary: #fff;
     --secondary: #000000b9;
     --secondary-2: #1b1b1b;
+    --secondary-3: #0e0e0e;
     --tertiary: #d6000085;
     --tertiary-2: #ff4444;
+    --tertiary-3: #360000;
     --tertiary-4: #d600001e;
-    --tertiary-3: #004c70;
     --text: #00000079;
-    --text-2: #ffffff79;
+    --text-2: #ffffffa6;
     --border: 3rem;
     --pad: 1rem;
+    --b-pad: 2rem;
     --bdr: 1rem;
-    --bdf: blur(5px) saturate(0%);
-    --shadow: 0 0 35px #d6000028;
+    --bdf: blur(5px) saturate(0%) brightness(60%);
+    --shadow: 0 0 35px #0000007e;
     --b-shadow: 0 0 35px #d6000085;
     --i-shadow: inset 0 0 3px #f00;
     --trans: all 0.3s ease;
@@ -282,7 +284,7 @@ button {
     margin: 0 5px;
     border-start-start-radius: var(--bdr);
     border-start-end-radius: var(--bdr);
-    transition: var(--trans), padding 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: all 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     border-top: 2px solid transparent;
     cursor: pointer;
 }
@@ -304,7 +306,7 @@ button {
 }
 
 .image img {
-    transition: all 1.2s cubic-bezier(0.86, 0, 0.07, 1);
+    transition: all 1s cubic-bezier(0.86, 0, 0.07, 1);
 }
 
 .showcase:hover {
@@ -387,21 +389,37 @@ button {
 .transition {
     width: 100%;
     height: 7rem;
-    background: linear-gradient(transparent, var(--secondary-2));
+    background: linear-gradient(transparent, var(--secondary));
+}
+
+.transition-2 {
+    width: 100%;
+    height: 7rem;
+    background: linear-gradient(var(--secondary-3), transparent);
 }
 
 .about {
-    background: var(--secondary-2);
+    background: url(../public/images/modern.JPG);
+    background-position: center;
+    background-attachment: scroll;
+    background-size: cover;
+    background-repeat: no-repeat;
     color: var(--primary);
-    margin: 0 auto 2rem auto;
-    padding: 1rem 0;
+    margin: 0 auto 0 auto;
 }
 
 .text, .face {
-    width: 90%;
-    margin: 7rem auto;
+    width: 100%;
+    margin: auto;
+    padding: 7rem auto;
     color: var(--primary);
     z-index: 1;
+    backdrop-filter: var(--bdf);
+}
+
+.text {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 }
 
 .text p {
@@ -411,21 +429,28 @@ button {
 .boxed h1 {
     background: linear-gradient(45deg, var(--primary), var(--tertiary-2), transparent);
     background-clip: text;
+    text-shadow: var(--b-shadow);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     width: fit-content;
-    text-align: left;
+    text-align: center;
     margin: auto;
 }
 
 .boxed {
-    margin-bottom: 2rem;
     width: fit-content;
-    margin: 0 auto 2rem auto;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+
+.box1, .box2 {
+    width: 90%;
+    margin: auto;
 }
 
 .face {
-    margin: 2rem auto;
+    margin: auto;
+    padding: 2rem 0;
     width: fit-content;
 }
 
@@ -443,4 +468,42 @@ button {
 .box2 img:last-child {
     border-end-start-radius: var(--bdr);
     border-end-end-radius: var(--bdr);
+}
+
+.w-card {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    padding: var(--pad);
+    justify-content: space-evenly;
+    margin: 2rem auto;
+    border-radius: var(--bdr);
+    width: 90%;
+}
+
+.card {
+    background: linear-gradient(-45deg, var(--bg), transparent);
+    border-radius: inherit;
+    width: 90%;
+    justify-content: center;
+    text-align: center;
+    padding: var(--pad);
+    box-shadow: var(--shadow);
+    display: flex;
+    background: var(--text);
+    flex-direction: column;
+}
+
+.card em {
+    color: var(--tertiary-2);
+}
+
+.card h1 {
+    text-shadow: var(--b-shadow);
+    margin: auto;
+}
+
+.card h3 {
+    color: var(--text-2);
+    margin: auto;
 }

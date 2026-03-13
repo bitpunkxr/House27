@@ -45,6 +45,7 @@
         transition: var(--trans);
         position: relative;
         border-bottom: 2px solid #00000000;
+        cursor: pointer;
     }
 
     .navbar li:hover {
@@ -98,5 +99,20 @@
     #right {
         margin-left: auto;
         margin-right: 5rem;
+    }
+
+    .w-card {
+        flex-direction: row;
+        width: 70%;
+        background: url(../public/images/modern.JPG);
+        background-position: center;
+        background-attachment: scroll;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .card {
+        width: 40%;
+        backdrop-filter: var(--bdf);
     }
 }

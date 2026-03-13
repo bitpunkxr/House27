@@ -535,4 +535,11 @@ button {
 
 .pages a {
     display: block;
+    transition: var(--trans);
+    margin: 4px auto;
+}
+
+.pages a:hover {
+    color: var(--primary);
+    text-shadow: 0 0 10px var(--primary);
 }

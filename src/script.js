@@ -7,6 +7,12 @@ const option1 = document.getElementById('location');
 const option2 = document.getElementById('categories');
 const option3 = document.getElementById('price');
 const dispName = document.getElementById('filter');
+const cName = document.querySelector('.c-name');
+let nDate = new Date();
+let year = nDate.getFullYear;
+
+cName.innerHTML = '&copy; HOUSE 27. ' + year + 'All Rights Reserved';
+
 
 filter1.style.backgroundColor = "var(--bg)";
 filter1.style.color = "var(--secondary)";

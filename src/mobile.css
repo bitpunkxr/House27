@@ -508,3 +508,7 @@ button {
     color: var(--text-2);
     margin: auto;
 }
+
+.link {
+    display: none;
+}

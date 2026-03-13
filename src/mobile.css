@@ -391,26 +391,26 @@ button {
 .transition {
     width: 100%;
     height: 7rem;
-    background: linear-gradient(transparent, var(--tertiary-4));
+    background: linear-gradient(transparent, var(--text));
 }
 
 .transition-2 {
     width: 100%;
     height: 7rem;
-    background: linear-gradient(var(--tertiary-4), transparent);
+    background: linear-gradient(var(--text), transparent);
 }
 
 .about {
     color: var(--primary);
     margin: 0 auto;
-    background-color: var(--tertiary-4);
+    background-color: var(--text);
 }
 
 .text, .face {
     width: 100%;
     margin: auto;
     padding: 7rem auto;
-    color: var(--text);
+    color: var(--text-2);
     z-index: 1;
 }
 
@@ -421,7 +421,7 @@ button {
 }
 
 .text p {
-    color: var(--text);
+    color: var(--text-2);
 }
 
 .boxed h1 {
@@ -512,8 +512,9 @@ button {
 
 .footer {
     background: var(--bg);
-    color: var(--text);
+    color: var(--text-2);
     padding: var(--pad);
+    background: var(--secondary-3);
 }
 
 .footer h2 {
@@ -521,11 +522,12 @@ button {
 }
 
 .footer a {
-    color: var(--text);
+    color: var(--text-2);
 }
 
 .c-name {
     text-align: center;
+    color: var(--primary);
 }
 
 .links {
@@ -540,7 +542,8 @@ button {
 }
 
 .pages a:hover {
-    color: var(--tertiary);
+    color: var(--primary);
+    
 }
 
 .footer h3 {
@@ -557,7 +560,7 @@ input {
     margin: .5rem;
     border-radius: var(--bdr);
     border: none;
-    background: var(--primary);
+    background: var(--bg);
     box-shadow: 0 0 10px #00000057;
     transition: var(--trans);
     padding: var(--pad);

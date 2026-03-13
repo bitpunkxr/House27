@@ -30,6 +30,7 @@
     }
 
     .link {
+        display: block;
         margin-right: 0;
         border-radius: var(--bdr);
         backdrop-filter: var(--bdr);

@@ -6,7 +6,7 @@ html, body {
 }
 
 :root {
-    --bg: #f0f0f0;
+    --bg: #e6e6e6;
     --trans-bg: #ffffffb2;
     --trans-bg-2: #ffffff5e;
     --primary: #fff;
@@ -29,6 +29,7 @@ html, body {
     --b-shadow: 0 0 35px #d6000085;
     --i-shadow: inset 0 0 3px #f00;
     --trans: all 0.3s ease;
+    --cb-trans: all 1s cubic-bezier(0.86, 0, 0.07, 1);
 }
 
 body {
@@ -36,7 +37,7 @@ body {
     color: var(--primary);
 }
 
-div, section, h1, h2, h3, h4, h5, h6, p, img, li, ul {
+div, section, h1, h2, h3, h4, h5, h6, p, img, li, ul, a {
     margin: 0;
     padding: 0;
 }
@@ -55,11 +56,15 @@ h3 {
     font-size: 2rem;
 }
 
+h4 {
+    font-size: 1.6rem;
+}
+
 p {
     font-size: 20px;
 }
 
-h2, h3, p {
+h2, h3, p, h4 {
     font-weight: 400;
 }
 
@@ -307,7 +312,7 @@ button {
     border-top: 2px solid var(--tertiary-2);
 }
 
-.image img {
+.image img, .b-img img {
     transition: all 1s cubic-bezier(0.86, 0, 0.07, 1);
 }
 
@@ -365,8 +370,9 @@ button {
     font-size: 1.3rem;
 }
 
-.description h2 b {
+.description p b {
     color: var(--tertiary);
+    margin: 1rem 0;
 }
 
 .description p {
@@ -391,22 +397,22 @@ button {
 .transition {
     width: 100%;
     height: 7rem;
-    background: linear-gradient(transparent, var(--text));
+    background: linear-gradient(transparent, var(--secondary-2));
 }
 
 .transition-2 {
     width: 100%;
     height: 7rem;
-    background: linear-gradient(var(--text), transparent);
+    background: linear-gradient(var(--secondary-2), transparent);
 }
 
 .about {
     color: var(--primary);
     margin: 0 auto;
-    background-color: var(--text);
+    background-color: var(--secondary-2);
 }
 
-.text, .face {
+.text {
     width: 100%;
     margin: auto;
     padding: 7rem auto;
@@ -424,8 +430,8 @@ button {
     color: var(--text-2);
 }
 
-.boxed h1 {
-    background: linear-gradient(45deg, var(--primary), var(--tertiary-2), transparent);
+.boxed h1, .footer h3, .blog h1 {
+    background: linear-gradient(45deg, var(--text), var(--tertiary-2), var(--secondary));
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -442,7 +448,7 @@ button {
 
 .box1, .box2 {
     width: 90%;
-    margin: auto;
+    margin: 1rem auto;
 }
 
 .face {
@@ -510,11 +516,53 @@ button {
     display: none;
 }
 
+.blog {
+    padding-bottom: 7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background: var(--primary);
+}
+
+.b-card {
+    background: #dfdfdf;
+    width: 90%;
+    margin: auto;
+    color: var(--secondary-3);
+    box-shadow: var(--shadow);
+    border-radius: var(--bdr);
+    margin: 2rem auto;
+}
+
+.b-img {
+    border-radius: var(--bdr);
+    overflow: hidden;
+    height: fit-content;
+    position: relative;
+}
+
+.b-img:hover img {
+    scale: 1.1;
+}
+
+.b-text {
+    color: var(--primary);
+    background: linear-gradient(transparent, var(--secondary-3));
+    width: 100%;
+    text-align: center;
+    padding: var(--pad) 0;
+    position: absolute;
+    bottom: 0;
+}
+
+/* Footer  */
+
 .footer {
-    background: var(--bg);
     color: var(--text-2);
     padding: var(--pad);
     background: var(--secondary-3);
+    border-start-start-radius: var(--bdr);
+    border-start-end-radius: var(--bdr);
 }
 
 .footer h2 {
@@ -530,20 +578,20 @@ button {
     color: var(--primary);
 }
 
-.links {
+.h-link {
     display: flex;
     justify-content: space-between;
 }
 
-.pages a {
+.links a {
     display: block;
     transition: var(--trans);
     margin: 4px auto;
 }
 
-.pages a:hover {
+.links a:hover {
     color: var(--primary);
-    
+    text-shadow: 0 0 10px var(--primary);
 }
 
 .footer h3 {

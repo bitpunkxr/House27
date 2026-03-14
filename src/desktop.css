@@ -113,6 +113,14 @@
         backdrop-filter: var(--bdf);
     }
 
+    .blog {
+        flex-direction: row;
+    }
+
+    .b-card {
+        width: 30%;
+    }
+
     .pages {
         width: 30%;
         text-align: center;

@@ -337,7 +337,7 @@ button {
 
 .showcase {
     width: 80%;
-    max-width: 350px;
+    max-width: 400px;
     box-shadow: var(--shadow);
     border-radius: var(--bdr);
     margin: 1.5rem auto;
@@ -431,7 +431,7 @@ button {
 }
 
 .boxed h1, .footer h3, .blog h1 {
-    background: linear-gradient(45deg, var(--text), var(--tertiary-2), var(--secondary));
+    background: linear-gradient(45deg, var(--tertiary-3), var(--tertiary-2), var(--tertiary-2), var(--tertiary-3));
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -518,10 +518,13 @@ button {
 
 .blog {
     padding-bottom: 7rem;
+    background: var(--primary);
+}
+
+.b-of-card {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    background: var(--primary);
 }
 
 .b-card {

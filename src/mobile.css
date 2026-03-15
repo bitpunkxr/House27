@@ -306,6 +306,12 @@ button {
     border-top: 2px solid var(--primary);    
 }
 
+.list li.active {
+    padding: 10px 35px;
+    background: var(--bg);
+    color: var(--secondary);
+}
+
 #main, button:hover {
     color: var(--tertiary-2);
     background: var(--secondary);

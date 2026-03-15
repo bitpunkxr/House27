@@ -107,6 +107,7 @@ img {
     justify-content: space-between;
     display: flex;
     backdrop-filter: var(--bdf);
+    -webkit-backdrop-filter: var(--bdf);
     width: 85%;
     margin: 0.7em auto;
     border-radius: var(--bdr);
@@ -184,6 +185,7 @@ rd {
     right: 0;
     background: var(--text);
     backdrop-filter: var(--bdf);
+    -webkit-backdrop-filter: var(--bdf);
     height: 90vh;
     box-shadow: 0 0 50px #000;
     border-end-end-radius: 1rem;
@@ -361,7 +363,6 @@ button {
 
 .showcase:hover .image img {
     scale: 1.1;
-    backdrop-filter: brightness(120%);
 }
 
 .description {

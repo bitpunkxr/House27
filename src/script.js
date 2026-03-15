@@ -11,7 +11,7 @@ const cName = document.querySelector('.c-name');
 
 let nDate = new Date();
 let year = nDate.getFullYear();
-cName.innerHTML = '&copy; H<rd>O</rd>USE 27 ' + year + '. All Rights Reserved';
+cName.innerHTML = '&copy; ' + year + ' H<rd>O</rd>USE 27. All Rights Reserved';
 filter1.classList.add('active');
 
 function toggleDisplay() {

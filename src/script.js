@@ -12,10 +12,7 @@ const cName = document.querySelector('.c-name');
 let nDate = new Date();
 let year = nDate.getFullYear();
 cName.innerHTML = '&copy; H<rd>O</rd>USE 27 ' + year + '. All Rights Reserved';
-
-filter1.style.backgroundColor = "var(--bg)";
-filter1.style.color = "var(--secondary)";
-filter1.style.padding = "10px 50px";
+filter1.classList.add('active');
 
 function toggleDisplay() {
     menu.classList.toggle('fold');
@@ -30,45 +27,27 @@ function toggleLocation() {
    option2.style.display = "none";
    option3.style.display = "none";
    dispName.innerHTML = "Latest Properties Based On Location";
-   filter1.style.backgroundColor = "var(--bg)";
-   filter1.style.padding = "10px 50px";
-   filter1.style.color = "var(--secondary)";
-   filter2.style.backgroundColor = "var(--tertiary)";
-   filter2.style.padding = "10px 20px";
-   filter2.style.color = "var(--primary)";
-   filter3.style.backgroundColor = "var(--tertiary)";
-   filter3.style.padding = "10px 20px";
-   filter3.style.color = "var(--primary)";
+   filter1.classList.add('active');
+   filter2.classList.remove('active');
+   filter3.classList.remove('active');
 };
 function toggleCategories() {
    option1.style.display = "none";
    option2.style.display = "flex";
    option3.style.display = "none";
    dispName.innerHTML = "Latest Properties Based On Categories";
-   filter2.style.backgroundColor = "var(--bg)";
-   filter2.style.padding = "10px 50px";
-   filter2.style.color = "var(--secondary)";
-   filter1.style.backgroundColor = "var(--tertiary)";
-   filter1.style.padding = "10px 20px";
-   filter1.style.color = "var(--primary)";
-   filter3.style.backgroundColor = "var(--tertiary)";
-   filter3.style.padding = "10px 20px";
-   filter3.style.color = "var(--primary)";
+   filter1.classList.remove('active');
+   filter2.classList.add('active');
+   filter3.classList.remove('active');
 };
 function togglePrice() {
    option1.style.display = "none";
    option2.style.display = "none";
    option3.style.display = "flex";
    dispName.innerHTML = "Latest Properties Based On Price";
-   filter3.style.backgroundColor = "var(--bg)";
-   filter3.style.padding = "10px 50px";
-   filter3.style.color = "var(--secondary)";
-   filter1.style.backgroundColor = "var(--tertiary)";
-   filter1.style.padding = "10px 20px";
-   filter1.style.color = "var(--primary)";
-   filter2.style.backgroundColor = "var(--tertiary)";
-   filter2.style.padding = "10px 20px";
-   filter2.style.color = "var(--primary)";
+   filter1.classList.remove('active');
+   filter2.classList.remove('active');
+   filter3.classList.add('active');
 };
 filter1.addEventListener('click', () => {
     toggleLocation();

@@ -17,6 +17,7 @@ html, body {
     --tertiary-2: #ff4444;
     --tertiary-3: #360000;
     --tertiary-4: #d600001e;
+    --tertiary-5: #fac6c6;
     --text: #00000079;
     --text-2: #ffffffa6;
     --border: 3rem;
@@ -35,6 +36,8 @@ html, body {
 body {
     background: var(--bg);
     color: var(--primary);
+    word-spacing: 2px;
+    letter-spacing: 1px;
 }
 
 div, section, h1, h2, h3, h4, h5, h6, p, img, li, ul, a {
@@ -112,10 +115,17 @@ img {
     margin: 0.7em auto;
     border-radius: var(--bdr);
     box-shadow: var(--i-shadow);
+    transition: var(--trans);
 }
 
 .header em {
     color: var(--tertiary-2);
+}
+
+.header.active {
+    color: var(--primary);
+    background: var(--secondary);
+    box-shadow: var(--shadow);
 }
 
 .name {
@@ -438,7 +448,7 @@ button {
 }
 
 .boxed h1, .footer h3, .blog h1 {
-    background: linear-gradient(45deg, var(--tertiary-3), var(--tertiary-2), var(--tertiary-2), var(--tertiary-3));
+    background: radial-gradient(var(--tertiary-2), var(--tertiary-2), var(--tertiary-2), var(--tertiary-3), var(--tertiary-3));
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -524,7 +534,7 @@ button {
 }
 
 .blog {
-    padding-bottom: 7rem;
+    padding: 7rem 0 0.2rem 0;
     background: var(--primary);
 }
 
@@ -614,7 +624,7 @@ button {
     margin-bottom: 5rem;
 }
 
-input {
+input, textarea {
     margin: .5rem;
     border-radius: var(--bdr);
     border: none;
@@ -622,8 +632,41 @@ input {
     box-shadow: 0 0 10px #00000057;
     transition: var(--trans);
     padding: var(--pad);
+    width: 35%;
 }
 
-input:hover {
+input:hover, textarea:hover {
     box-shadow: var(--b-shadow);
+    background: var(--tertiary-5);
+}
+
+.user-input {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#userName {
+    width: 100%;
+}
+
+#userEmail {
+    width: 100%;
+}
+
+#submit {
+    width: 100%;
+    background: var(--tertiary-2);
+}
+
+#submit:hover {
+    background: var(--tertiary-4);
+    color: var(--primary);
+    box-shadow: var(--i-shadow), var(--b-shadow);
+}
+
+textarea {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 100%;
+    resize: vertical;
 }

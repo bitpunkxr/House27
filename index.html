@@ -21,10 +21,18 @@
             </div>
             <div class="navbar">
                 <li id="main"><p>Home</p></li>
-                <li><p>Properties</p></li>
-                <li><p>About</p></li>
-                <li><p>Projects</p></li>
-                <li><p>Contact</p></li>
+                <a href="properties.html">
+                    <li><p>Properties</p></li>
+                </a>
+                <a href="about.html">
+                    <li><p>About</p></li>
+                </a>
+                <a href="projects.html">
+                    <li><p>Projects</p></li>
+                </a>
+                <a href="contact.html">
+                    <li><p>Contact</p></li>
+                </a>
             </div>
             <div class="link">
                 <a href="">X</a>
@@ -34,21 +42,20 @@
         </div>
         <div class="open-menu" id="full-menu">
             <div class="pages">
-                <a href="#">
-                    <li id="main"><p>Home</p></li>
-                </a>
-                <a href="#">
+                <li id="main"><p>Home</p></li>
+                <a href="properties.html">
                     <li><p>Properties</p></li>
                 </a>
-                <a href="#">
+                <a href="about.html">
                     <li><p>About</p></li>
                 </a>
-                <a href="#">
+                <a href="projects.html">
                     <li><p>Projects</p></li>
                 </a>
-                <a href="#">
+                <a href="contact.html">
                     <li><p>Contact</p></li>
                 </a>
+            </div>
         </div>
     </section>  
     <section id="hero">
@@ -455,7 +462,9 @@
             <div class="user-input">
                 <input type="text" name="name" id="userName" placeholder="Name" required>
                 <input type="email" name="email" id="userEmail" placeholder="Email" required>
-                <input type="tel" name="" id="" placeholder="Phone Number" required> <br>
+                <input type="tel" name="" id="phoneNumber" placeholder="Phone Number" required> 
+                <input type="text" name="Location/State" id="location" placeholder="Location" required> <br>
+                <textarea name="userMessage" id="message" required></textarea> <br>
                 <input type="submit" value="Send" id="submit">
             </div>
             <hr>

@@ -9,13 +9,6 @@ const option2 = document.getElementById('categories');
 const option3 = document.getElementById('price');
 const dispName = document.getElementById('filter');
 const cName = document.querySelector('.c-name');
-
-let nDate = new Date();
-let year = nDate.getFullYear();
-cName.innerHTML = '&copy; ' + year + ' H<rd>O</rd>USE 27. All Rights Reserved';
-
-filter1.classList.add('active');
-
 function toggleDisplay() {
     menu.classList.toggle('fold');
     option.classList.toggle('show');
@@ -24,7 +17,7 @@ function toggleDisplay() {
 menu.addEventListener('click', () => {
     toggleDisplay();
 });
-
+filter1.classList.add('active');
 function toggleLocation() {
    option1.style.display = "flex";
    option2.style.display = "none";
@@ -61,3 +54,6 @@ filter2.addEventListener('click', () => {
 filter3.addEventListener('click', () => {
     togglePrice();
 });
+let nDate = new Date();
+let year = nDate.getFullYear();
+cName.innerHTML = '&copy; ' + year + ' H<rd>O</rd>USE 27. All Rights Reserved';

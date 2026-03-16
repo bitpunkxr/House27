@@ -126,7 +126,7 @@ img {
 .header.active {
     color: var(--primary);
     background: var(--secondary);
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow), var(--i-shadow);
 }
 
 .name {
@@ -634,7 +634,7 @@ input, textarea {
     box-shadow: 0 0 10px #00000057;
     transition: var(--trans);
     padding: var(--pad);
-    width: 35%;
+    width: 28%;
 }
 
 input:hover, textarea:hover {

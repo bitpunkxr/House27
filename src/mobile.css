@@ -24,6 +24,7 @@ html, body {
     --pad: 1rem;
     --b-pad: 2rem;
     --bdr: 1rem;
+    --bdr-2: 2rem;
     --bdf: blur(5px) saturate(0%) brightness(120%);
     --bdf-2: blur(5px) saturate(0%) brightness(60%);
     --shadow: 0 0 35px #0000007e;
@@ -447,7 +448,7 @@ button {
     color: var(--text-2);
 }
 
-.boxed h1, .footer h3, .blog h1 {
+.boxed h1, .blog h1 {
     background: radial-gradient(var(--tertiary-2), var(--tertiary-2), var(--tertiary-2), var(--tertiary-3), var(--tertiary-3));
     background-clip: text;
     -webkit-background-clip: text;
@@ -534,7 +535,7 @@ button {
 }
 
 .blog {
-    padding: 7rem 0 0.2rem 0;
+    padding: 3rem 0 7rem 0;
     background: var(--primary);
 }
 
@@ -585,8 +586,9 @@ button {
     border-start-end-radius: var(--bdr);
 }
 
-.footer h2 {
+.footer h3 {
     margin: 2rem auto;
+    color: var(--tertiary-2)
 }
 
 .footer a {
@@ -644,13 +646,12 @@ input:hover, textarea:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    box-shadow: var(--i-shadow), var(--b-shadow);
+    padding: var(--pad);
+    border-radius: var(--bdr-2);
 }
 
-#userName {
-    width: 100%;
-}
-
-#userEmail {
+#userName, #userEmail {
     width: 100%;
 }
 

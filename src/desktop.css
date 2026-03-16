@@ -41,8 +41,8 @@
     }
 
     .navbar li {
-        border-radius: inherit;
-        margin: 5px;
+        border-radius: var(--bdr);
+        margin: 0 5px;
         transition: var(--trans);
         position: relative;
         border-bottom: 2px solid #00000000;
@@ -52,11 +52,26 @@
     .navbar li:hover {
         border-bottom: 2px solid var(--tertiary-2);
         color: var(--tertiary-2);
+        background: linear-gradient(transparent, transparent, var(--tertiary-3));
     }
 
     .navbar li p {
         margin: 7px 10px;
     }
+
+    .header:hover {
+        color: var(--primary);
+        background: var(--secondary);
+        box-shadow: var(--shadow), var(--i-shadow);
+    }
+
+    .header:hover .navbar li p {
+        color: var(--primary);
+    }
+
+    .header:hover #main p, .link a {
+        color: var(--tertiary-2);
+    } 
 
     h1 {
         font-size: 3.4rem;
@@ -144,5 +159,9 @@
     .links {
         text-align: center;
         width: 30%;
+    }
+
+    .form {
+        width: 50%;
     }
 }

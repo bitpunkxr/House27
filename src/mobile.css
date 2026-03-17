@@ -424,28 +424,37 @@ button {
     background: linear-gradient(var(--secondary-2), transparent);
 }
 
-.about {
+.about, .about2 {
     color: var(--primary);
     margin: 0 auto;
     background-color: var(--secondary-2);
 }
 
-.text {
-    width: 100%;
-    margin: auto;
-    padding: 1rem auto;
-    color: var(--text-2);
-    z-index: 1;
+.about2 {
+    padding-top: 5rem;
+    background: var(--bg);
+    color: var(--secondary-2);
 }
 
-.text {
+.text, .text2 {
+    width: 100%;
+    color: var(--text-2);
+    z-index: 1;
     padding-top: 1rem;
     padding-bottom: 1rem;
     margin: 0;
 }
 
+.text2 {
+    color: var(--text);
+}
+
 .text p {
     color: var(--text-2);
+}
+
+.text2 p {
+    color: var(--text);
 }
 
 .boxed h1, .blog h1 {
@@ -482,7 +491,7 @@ button {
 }
 
 .box2 img {
-    border-radius: var(--bdr);
+    margin: 2px;
     width: 100%;
 }
 

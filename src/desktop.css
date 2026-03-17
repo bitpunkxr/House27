@@ -94,7 +94,7 @@
         margin: 3rem 1rem;
     }
 
-    .text {
+    .text, .text2 {
         display: flex;
         margin: auto;
     }
@@ -102,15 +102,17 @@
     .box1, .box2 {
         width: 50%;
         margin: 2rem 5rem;
-    }
-
-    .box2 {
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
 
-    .text:nth-child(2) {
+    .box2 {
+        background: url(../public/images/street.jpg);
+        height: box2;
+    }
+
+    .text:nth-child(2), .text2:nth-child(2) {
         flex-direction: row-reverse;
     }
 

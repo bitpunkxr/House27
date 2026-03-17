@@ -97,6 +97,7 @@
     .text, .text2 {
         display: flex;
         margin: auto;
+        flex-direction: row;
     }
 
     .box1, .box2 {
@@ -108,8 +109,12 @@
     }
 
     .box2 {
-        background: url(../public/images/street.jpg);
-        height: box2;
+        background: url(../public/tab-img.JPG);
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: var(--bdr);
     }
 
     .text:nth-child(2), .text2:nth-child(2) {
@@ -129,11 +134,16 @@
         flex-direction: row;
         width: 70%;
         margin: auto;
+        justify-content: space-evenly;
     }
 
     .card {
         width: 40%;
         backdrop-filter: var(--bdf);
+    }
+
+    .card h1 {
+        font-size: 3rem;
     }
 
     .b-of-card {
@@ -168,6 +178,10 @@
     }
 
     input {
-        width: 42%;
+        width: 44%;
+    }
+
+    .user-input {
+        justify-content: space-between;
     }
 }

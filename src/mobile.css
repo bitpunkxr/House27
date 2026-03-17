@@ -433,14 +433,14 @@ button {
 .text {
     width: 100%;
     margin: auto;
-    padding: 7rem auto;
+    padding: 1rem auto;
     color: var(--text-2);
     z-index: 1;
 }
 
 .text {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     margin: 0;
 }
 
@@ -466,7 +466,7 @@ button {
 
 .box1, .box2 {
     width: 90%;
-    margin: 1rem auto;
+    margin: 2rem auto;
 }
 
 .face {
@@ -481,14 +481,9 @@ button {
     border-radius: var(--bdr);
 }
 
-.box2 img:first-child {
-    border-start-start-radius: var(--bdr);
-    border-start-end-radius: var(--bdr);
-}
-
-.box2 img:last-child {
-    border-end-start-radius: var(--bdr);
-    border-end-end-radius: var(--bdr);
+.box2 img {
+    border-radius: var(--bdr);
+    width: 100%;
 }
 
 .w-card {
@@ -582,13 +577,11 @@ button {
     color: var(--text-2);
     padding: var(--pad);
     background: var(--secondary-3);
-    border-start-start-radius: var(--bdr);
-    border-start-end-radius: var(--bdr);
 }
 
 .footer h3 {
-    margin: 2rem auto;
-    color: var(--tertiary-2)
+    margin: 3rem auto;
+    color: var(--tertiary-2);
 }
 
 .footer a {
@@ -627,14 +620,14 @@ button {
 }
 
 input, textarea {
-    margin: .5rem;
+    margin: .5rem .1rem;
     border-radius: var(--bdr);
     border: none;
     background: var(--bg);
     box-shadow: 0 0 10px #00000057;
     transition: var(--trans);
     padding: var(--pad);
-    width: 28%;
+    width: 35%;
 }
 
 input:hover, textarea:hover {
@@ -645,14 +638,10 @@ input:hover, textarea:hover {
 .user-input {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
     box-shadow: var(--i-shadow), var(--b-shadow);
     padding: var(--pad);
     border-radius: var(--bdr-2);
-}
-
-#userName, #userEmail {
-    width: 100%;
 }
 
 #submit {
@@ -661,7 +650,7 @@ input:hover, textarea:hover {
 }
 
 #submit:hover {
-    background: var(--tertiary-4);
+    background: var(--tertiary);
     color: var(--primary);
     box-shadow: var(--i-shadow), var(--b-shadow);
 }

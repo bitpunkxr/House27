@@ -1,6 +1,3 @@
-const menu = document.getElementById('ham-menu');
-const option = document.getElementById('full-menu');
-const header = document.querySelector('.header');
 const filter1 = document.getElementById('filter1');
 const filter2 = document.getElementById('filter2');
 const filter3 = document.getElementById('filter3');
@@ -8,15 +5,7 @@ const option1 = document.getElementById('location');
 const option2 = document.getElementById('categories');
 const option3 = document.getElementById('price');
 const dispName = document.getElementById('filter');
-const cName = document.querySelector('.c-name');
-function toggleDisplay() {
-    menu.classList.toggle('fold');
-    option.classList.toggle('show');
-    header.classList.toggle('active');
-};
-menu.addEventListener('click', () => {
-    toggleDisplay();
-});
+
 filter1.classList.add('active');
 function toggleLocation() {
    option1.style.display = "flex";
@@ -54,6 +43,3 @@ filter2.addEventListener('click', () => {
 filter3.addEventListener('click', () => {
     togglePrice();
 });
-let nDate = new Date();
-let year = nDate.getFullYear();
-cName.innerHTML = '&copy; ' + year + ' H<rd>O</rd>USE 27. All Rights Reserved';

@@ -11,7 +11,8 @@ html, body {
     --trans-bg-2: #ffffff5e;
     --primary: #ebebeb;
     --primary-2: #002272;
-    --primary-3: #6895ff9d;
+    --primary-3: #006ab1;
+    --primary-4: #83cdff;
     --secondary: #000000b9;
     --secondary-2: #1b1b1b;
     --secondary-3: #0e0e0e;
@@ -137,6 +138,19 @@ img {
     margin-left: 0;
     width: fit-content;
     letter-spacing: 0px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.name img, .link img {
+    width: 30px;
+    height: 30px;
+    margin: auto;
+    transition: var(--trans);
+}
+
+.link img:hover {
+    scale: 1.1;
 }
 
 rd {
@@ -465,8 +479,8 @@ button {
     color: var(--text);
 }
 
-.boxed h1, .blog h1 {
-    background: radial-gradient(var(--primary), var(--primary), var(--primary), var(--primary), transparent, transparent);
+.boxed h1 {
+    background: radial-gradient(var(--primary-4), var(--primary-4), var(--primary-3), var(--primary-4), transparent, transparent);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -475,7 +489,7 @@ button {
     margin: auto;
 }
 
-.boxed2 h1 {
+.boxed2 h1, .blog h1 {
     background: radial-gradient(var(--tertiary-2), var(--tertiary-2), var(--tertiary-2), var(--tertiary), transparent, transparent);
     background-clip: text;
     -webkit-background-clip: text;

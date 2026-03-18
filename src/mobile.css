@@ -341,7 +341,7 @@ button {
 
 .list li.active {
     padding: 10px 35px;
-    background: var(--bg);
+    background: var(--primary);
     color: var(--secondary);
 }
 
@@ -359,11 +359,15 @@ button {
     box-shadow: var(--b-shadow);
 }
 
+.options {
+    background: var(--primary);
+    padding-top: 3rem;
+}
+
 .options h3 {
     text-align: center;
     color: var(--secondary);
     margin: auto;
-    padding-top: 3rem;
     width: 90%;
 }
 
@@ -383,6 +387,7 @@ button {
     margin: 1.5rem auto;
     justify-content: space-around;
     transition: var(--trans);
+    background: var(--bg);
 }
 
 .image {

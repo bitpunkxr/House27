@@ -257,7 +257,7 @@ rd {
 
 .home em {
     background: var(--tertiary);
-    padding: var(--pad);
+    padding: .3rem var(--pad);
     color: var(--bg);
     border-radius: var(--bdr);
 }

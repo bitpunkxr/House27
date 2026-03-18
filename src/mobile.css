@@ -12,7 +12,7 @@ html, body {
     --primary: #ebebeb;
     --primary-2: #002272;
     --primary-3: #006ab1;
-    --primary-4: #83cdff;
+    --primary-4: #b9e3ff;
     --secondary: #000000b9;
     --secondary-2: #1b1b1b;
     --secondary-3: #0e0e0e;
@@ -29,7 +29,7 @@ html, body {
     --bdr: 1rem;
     --bdr-2: 2rem;
     --bdf: blur(5px) saturate(0%) brightness(120%);
-    --bdf-2: blur(5px) saturate(0%) brightness(60%);
+    --bdf-2: blur(5px) /* saturate(0%) */ brightness(30%);
     --shadow: 0 0 35px #0000007e;
     --b-shadow: 0 0 35px #d6000085;
     --i-shadow: inset 0 0 3px #f00;
@@ -142,7 +142,7 @@ img {
     justify-content: space-evenly;
 }
 
-.name img, .link img {
+.name img, .link img, .icons img {
     width: 30px;
     height: 30px;
     margin: auto;
@@ -319,7 +319,7 @@ button {
 
 .list li {
     background: var(--tertiary);
-    color: var(--primary);
+    color: var(--bg);
     padding: 10px 20px;
     margin: 0 5px;
     border-start-start-radius: var(--bdr);
@@ -363,6 +363,7 @@ button {
     text-align: center;
     color: var(--secondary);
     margin: auto;
+    padding-top: 3rem;
     width: 90%;
 }
 
@@ -479,8 +480,8 @@ button {
     color: var(--text);
 }
 
-.boxed h1 {
-    background: radial-gradient(var(--primary-4), var(--primary-4), var(--primary-3), var(--primary-4), transparent, transparent);
+.boxed h1, .boxed2 h1, .blog h1 {
+    background: linear-gradient(90deg, var(--tertiary), var(--primary-3), var(--primary-4));
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -489,7 +490,7 @@ button {
     margin: auto;
 }
 
-.boxed2 h1, .blog h1 {
+ /* {
     background: radial-gradient(var(--tertiary-2), var(--tertiary-2), var(--tertiary-2), var(--tertiary), transparent, transparent);
     background-clip: text;
     -webkit-background-clip: text;
@@ -497,7 +498,7 @@ button {
     width: fit-content;
     text-align: center;
     margin: auto;
-}
+} */
 
 .boxed, .boxed2 {
     width: fit-content;
@@ -523,16 +524,18 @@ button {
     border-radius: var(--bdr);
 }
 
-.face {
-    margin: auto;
-    padding: 2rem 0;
-    width: fit-content;
+#pie {
+    background: url(../public/images/living-room.JPG);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-.face img {
-    height: 200px;
-    width: 200px;
-    border-radius: var(--bdr);
+#wwd {
+    background: url(../public/images/terrace.JPG);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .w-card {
@@ -550,28 +553,32 @@ button {
     width: 90%;
     justify-content: center;
     text-align: center;
-    padding: var(--pad);
     box-shadow: var(--i-shadow), var(--shadow);
     display: flex;
     background: var(--secondary);
     flex-direction: column;
     margin: 2rem auto;
+    background: url(../public/logo.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.card h1 {
+    padding: var(--pad) 0;
+    text-shadow: var(--b-shadow);
+    margin: auto;
+    font-size: 1.6rem;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: var(--bdf-2);
+    color: var(--bg);
+    border-radius: inherit;
 }
 
 .card em {
     color: var(--tertiary-2);
-}
-
-.card h1 {
-    text-shadow: var(--b-shadow);
-    margin: auto;
-    font-size: 1.6rem;
-}
-
-.card h3 {
-    color: var(--text-2);
-    margin: auto;
-    font-size: 1.6rem;
 }
 
 .link {

@@ -98,6 +98,7 @@
         display: flex;
         margin: auto;
         flex-direction: row;
+        justify-content: center;
     }
 
     .box1, .box2 {
@@ -105,7 +106,6 @@
         margin: 2rem 5rem;
         display: flex;
         flex-direction: column;
-        justify-content: center;
     }
 
     .box2 {
@@ -121,7 +121,7 @@
         flex-direction: row-reverse;
     }
 
-    .boxed h1 {
+    .boxed h1, .boxed2 h1 {
         font-size: 5.6rem;
     }
 
@@ -158,6 +158,11 @@
     .pages {
         width: 30%;
         text-align: center;
+    }
+    
+    .heading h1 {
+        padding: 9rem 0 6rem 0;
+        font-size: 5.6rem;
     }
 
     .footer a {

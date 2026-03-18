@@ -421,19 +421,19 @@ button {
 .transition {
     width: 100%;
     height: 7rem;
-    background: linear-gradient(transparent, var(--primary-2));
+    background: linear-gradient(transparent, var(--text), var(--secondary-2));
 }
 
 .transition-2 {
     width: 100%;
     height: 7rem;
-    background: linear-gradient(var(--primary-2), transparent);
+    background: linear-gradient(var(--secondary-2), var(--text), transparent);
 }
 
 .about, .about2 {
     color: var(--primary);
     margin: 0 auto;
-    background-color: var(--primary-2);
+    background-color: var(--secondary-2);
 }
 
 .about2 {
@@ -475,7 +475,17 @@ button {
     margin: auto;
 }
 
-.boxed {
+.boxed2 h1 {
+    background: radial-gradient(var(--tertiary-2), var(--tertiary-2), var(--tertiary-2), var(--tertiary), transparent, transparent);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: fit-content;
+    text-align: center;
+    margin: auto;
+}
+
+.boxed, .boxed2 {
     width: fit-content;
     margin: 0 auto;
     padding: 1rem 0;
@@ -625,9 +635,9 @@ button {
     height: 100%;
     width: 100%;
     background: #00000088;
-    padding: 9rem 0 6rem 0;
+    padding: 6rem 0 3rem 0;
     color: var(--bg);
-    font-size: 5.6rem;
+    font-size: 2.6rem;
 }
 
 .c-name {

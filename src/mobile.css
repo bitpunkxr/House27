@@ -34,12 +34,12 @@ html, body {
     --b-shadow: 0 0 35px #d6000085;
     --i-shadow: inset 0 0 3px #f00;
     --trans: all 0.3s ease;
-    --cb-trans: all 1s cubic-bezier(0.86, 0, 0.07, 1);
+    --cb-trans: all 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 body {
-    background: var(--bg);
-    color: var(--primary);
+    background: var(--primary);
+    color: var(--text);
     word-spacing: 2px;
     letter-spacing: 1px;
 }
@@ -52,7 +52,7 @@ div, section, h1, h2, h3, h4, h5, h6, p, img, li, ul, a {
 h1 {
     font-weight: 500;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 3.3rem;
+    font-size: 3rem;
 }
 
 h2 {
@@ -151,6 +151,9 @@ img {
     height: 25px;
     width: auto;
     margin: auto;
+}
+
+.link img {
     transition: var(--trans);
 }
 
@@ -337,7 +340,7 @@ button {
     margin: 0 5px;
     border-start-start-radius: var(--bdr);
     border-start-end-radius: var(--bdr);
-    transition: all 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: var(--cb-trans);
     border-top: 2px solid transparent;
     cursor: pointer;
 }
@@ -358,13 +361,19 @@ button {
     color: var(--secondary);
 }
 
-#main, button:hover {
+button:hover {
     color: var(--tertiary-2);
     background: var(--secondary);
     border-top: 2px solid var(--tertiary-2);
 }
 
-.image img, .b-img img {
+#main {
+    color: var(--tertiary-2);
+    background: var(--secondary);
+    border-top: 2px solid var(--tertiary-2);
+}
+
+.image img, .b-img img, .b-text {
     transition: all 1s cubic-bezier(0.86, 0, 0.07, 1);
 }
 
@@ -387,6 +396,7 @@ button {
 .results {
     display: none;
     opacity: 0;
+    transform: translateY(20px);
 }
 
 .results.active {
@@ -395,7 +405,7 @@ button {
     justify-content: space-evenly;
     margin: auto;
     width: fit-content;
-    animation: 0.7s fadeIn cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+    animation: 0.7s fadeIn forwards;
 }
 
 .showcase {
@@ -410,11 +420,17 @@ button {
 }
 
 .image {
-    height: 150px;
+    height: fit-content;
     width: 100%;
     overflow: hidden;
+    overflow-y: hidden;
     border-start-start-radius: inherit;
     border-start-end-radius: inherit;
+}
+
+.image img {
+    margin: 0;
+    padding: 0;
 }
 
 .showcase:hover .image img {
@@ -447,6 +463,22 @@ button {
     display: flex;
     gap: 0.5rem;
     margin: 2rem 0;
+    justify-content: space-evenly;
+}
+
+.icons div {
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+}
+
+.icons div p {
+    font-size: 1.2rem;
+}
+
+.icons p {
+    color: var(--secondary-3);
 }
 
 .transition {
@@ -642,6 +674,11 @@ button {
     position: absolute;
     bottom: 0;
 }
+
+.b-img:hover .b-text {
+    scale: 1.05;
+}
+
 
 /* Footer  */
 

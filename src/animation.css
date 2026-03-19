@@ -15,6 +15,15 @@
 
 @keyframes fadeIn {
     to {
+        transform: translateY(0);
         opacity: 1;
+    }
+}
+
+@keyframes intro {
+    to {
+        color: var(--tertiary-2);
+        background: var(--secondary);
+        border-top: 2px solid var(--tertiary-2);
     }
 }

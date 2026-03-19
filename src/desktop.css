@@ -45,7 +45,7 @@
         margin: 0 5px;
         transition: var(--trans);
         position: relative;
-        border-bottom: 2px solid #00000000;
+        border-bottom: 2px solid transparent;
         cursor: pointer;
     }
 
@@ -81,9 +81,17 @@
         height: 90vh;
     }
 
-    #main, button:hover {
+    button:hover {
         color: var(--tertiary-2);
         background: var(--secondary);
+    }
+
+    #main {
+        color: var(--secondary);
+        border-top: 2px solid transparent;
+        background: transparent;
+        animation: 0.7s intro cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+        animation-delay: 2s;
     }
 
     .home {

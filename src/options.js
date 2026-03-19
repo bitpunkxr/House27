@@ -7,28 +7,30 @@ const option3 = document.getElementById('price');
 const dispName = document.getElementById('filter');
 
 filter1.classList.add('active');
+option1.classList.add('active');
+
 function toggleLocation() {
-   option1.style.display = "flex";
-   option2.style.display = "none";
-   option3.style.display = "none";
+   option1.classList.add('active');
+   option2.classList.remove('active');
+   option3.classList.remove('active');
    dispName.innerHTML = "Latest Properties Based On Location";
    filter1.classList.add('active');
    filter2.classList.remove('active');
    filter3.classList.remove('active');
 };
 function toggleCategories() {
-   option1.style.display = "none";
-   option2.style.display = "flex";
-   option3.style.display = "none";
+   option2.classList.add('active');
+   option1.classList.remove('active');
+   option3.classList.remove('active');
    dispName.innerHTML = "Latest Properties Based On Categories";
    filter1.classList.remove('active');
    filter2.classList.add('active');
    filter3.classList.remove('active');
 };
 function togglePrice() {
-   option1.style.display = "none";
-   option2.style.display = "none";
-   option3.style.display = "flex";
+   option3.classList.add('active');
+   option1.classList.remove('active');
+   option2.classList.remove('active');
    dispName.innerHTML = "Latest Properties Based On Price";
    filter1.classList.remove('active');
    filter2.classList.remove('active');

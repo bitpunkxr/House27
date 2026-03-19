@@ -416,7 +416,6 @@ button:hover {
     margin: 1.5rem auto;
     justify-content: space-around;
     transition: var(--trans);
-    background: var(--bg);
 }
 
 .image {
@@ -455,6 +454,7 @@ button:hover {
 }
 
 .description p {
+    margin: 1rem auto;
     color: var(--text);
     font-size: 16px;
 }
@@ -528,12 +528,13 @@ button:hover {
     color: var(--text);
 }
 
-.boxed h1, .boxed2 h1, .blog h1 {
-    background: linear-gradient(90deg, var(--tertiary), var(--primary-3), var(--primary-4));
+.boxed h1, .boxed2 h1, .blog h1, .options h1 {
+    background: linear-gradient(var(--tertiary), var(--tertiary), var(--primary-3), var(--primary-2), var(--tertiary), var(--tertiary), var(--primary-3), var(--primary-2));
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     width: fit-content;
+    background-attachment: fixed;
     text-align: center;
     margin: auto;
 }

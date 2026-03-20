@@ -102,18 +102,19 @@
         margin: 3rem 1rem;
     }
 
-    .text, .text2 {
+    .text {
         display: flex;
         margin: auto;
         flex-direction: row;
-        justify-content: center;
+        justify-content: space-around;
     }
 
     .box1, .box2 {
-        width: 50%;
-        margin: 2rem 5rem;
+        width: 35%;
+        margin: 2rem auto;
         display: flex;
         flex-direction: column;
+        height: 100vh;
     }
 
     .box2 {
@@ -125,11 +126,11 @@
         border-radius: var(--bdr);
     }
 
-    .text:nth-child(2), .text2:nth-child(2) {
+    .text:nth-child(2):nth-child(2) {
         flex-direction: row-reverse;
     }
 
-    .boxed h1, .boxed2 h1 {
+    .boxed h1 h1 {
         font-size: 5.6rem;
     }
 

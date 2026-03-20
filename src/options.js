@@ -6,6 +6,7 @@ const option2 = document.getElementById('categories');
 const option3 = document.getElementById('price');
 const dispName = document.getElementById('filter');
 
+
 filter1.classList.add('active');
 option1.classList.add('active');
 

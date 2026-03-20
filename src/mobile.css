@@ -6,23 +6,26 @@ html, body {
 }
 
 :root {
-    --bg: #fff;
-    --trans-bg: #ffffffb2;
+    --bg: #f3f3f3;
+    --trans-bg: #ffffffda;
     --trans-bg-2: #ffffff5e;
-    --primary: #ebebeb;
+    --primary: #fff;
     --primary-2: #002272;
     --primary-3: #006ab1;
     --primary-4: #b9e3ff;
     --secondary: #000000b9;
     --secondary-2: #1b1b1b;
     --secondary-3: #0e0e0e;
+    --secondary-4: #4d4d4d;
     --tertiary: #a70000;
     --tertiary-2: #ff4444;
     --tertiary-3: #360000;
     --tertiary-4: #d600001e;
     --tertiary-5: #fac6c6;
     --text: #00000079;
-    --text-2: #ffffffa6;
+    --faint: #00000041;
+    --faint-2: #ffffff41;
+    --text-2: #ffffffde;
     --border: 3rem;
     --pad: 1rem;
     --b-pad: 2rem;
@@ -33,12 +36,13 @@ html, body {
     --shadow: 0 0 35px #0000007e;
     --b-shadow: 0 0 35px #d6000085;
     --i-shadow: inset 0 0 3px #f00;
+    --s-shadow: 0 0 7px rgba(0, 0, 0, 0.63);
     --trans: all 0.3s ease;
     --cb-trans: all 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 body {
-    background: var(--primary);
+    background: var(--bg);
     color: var(--text);
     word-spacing: 2px;
     letter-spacing: 1px;
@@ -52,11 +56,6 @@ div, section, h1, h2, h3, h4, h5, h6, p, img, li, ul, a {
 h1 {
     font-weight: 500;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 3rem;
-}
-
-h2 {
-    font-size: 2.6rem;
 }
 
 h3 {
@@ -68,7 +67,7 @@ h4 {
 }
 
 p {
-    font-size: 20px;
+    /* font-size: 20px; */
 }
 
 h2, h3, p, h4 {
@@ -109,18 +108,16 @@ img {
 
 .header {
     color: black;
-    background: var(--trans-bg-2);
+    background: var(--trans-bg);
     padding: 10px var(--pad);
     justify-content: space-between;
     display: flex;
+    width: 100%;
     backdrop-filter: var(--bdf);
     -webkit-backdrop-filter: var(--bdf);
-    width: 95%;
     border-radius: var(--bdr);
-    box-shadow: var(--i-shadow);
+    box-shadow: var(--s-shadow);
     transition: var(--trans);
-    top: 1rem;
-    animation: 2s wideIn forwards;
     position: fixed;
     left: 50%;
     transform: translateX(-50%);
@@ -131,14 +128,17 @@ img {
 }
 
 .header.active {
-    color: var(--primary);
     background: var(--secondary);
     box-shadow: var(--shadow), var(--i-shadow);
 }
 
+.header.active p {
+    color: var(--primary);
+}
+
 .name {
     margin: auto;
-    margin-left: 0;
+    margin-left: 2%;
     width: fit-content;
     letter-spacing: 0px;
     display: flex;
@@ -146,10 +146,12 @@ img {
 }
 
 .name p {
-    font-size: 1.5rem;
+    font-size: 1rem;
+    color: var(--secondary-4);
+    transition: var(--trans);
 }
 
-.name img, .link img, .icons img {
+.name img, .link img {
     height: 25px;
     width: auto;
     margin: auto;
@@ -167,21 +169,33 @@ rd {
     color: var(--tertiary-2);
 }
 
-.menu {
+.container {
+    padding: .5rem;
+    border-radius: 50%;
+    border: 2px solid var(--secondary-4);
+    transition: var(--trans);
+    margin-right: 2%;
+}
+
+.menu, .menu img {
     height: 20px;
-    width: 25px;
+    width: 20px;
+    border-radius: 50%;
     position: relative;
     margin: auto;
-    margin-right: 0;
     cursor: pointer;
 }
 
 .menu span {
-    background: var(--secondary);
+    background: var(--secondary-4);
     height: 2px;
     width: 100%;
     position: absolute;
     transition: var(--trans);
+}
+
+.menu span:first-child {
+    top: 20%;
 }
 
 .menu span:nth-child(2), .menu span:nth-child(3) {
@@ -190,7 +204,11 @@ rd {
 }
 
 .menu span:last-child {
-    bottom: 0;
+    bottom: 20%;
+}
+
+.container.fold {
+    border: 2px solid var(--tertiary-2);
 }
 
 .menu.fold span:first-child {
@@ -231,7 +249,7 @@ rd {
     border-end-start-radius: 1rem;
     transform: translateX(150%);
     transition: var(--trans);
-    top: 2.5rem;
+    top: 5rem;
     position: absolute;
 }
 
@@ -257,12 +275,12 @@ rd {
 }
 
 #hero {
-    background: url(../public/images/hero.jpg);
+    background: url(../public/images/hero-2.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: scroll;
-    height: 80vh;
+    height: 90vh;
     margin: 0;
     padding: 0;
     display: flex;
@@ -271,8 +289,7 @@ rd {
 
 .home {
     margin: auto;
-    margin-bottom: 5rem;
-    text-align: center;
+    margin-bottom: 7rem;
     justify-content: center;
     align-content: center;
     width: 90%;
@@ -284,8 +301,52 @@ rd {
     opacity: 0;
     letter-spacing: 5px;
     word-spacing: 5px;
-    /* transform: translateY(20px); */
     animation: 3s fadeUp forwards;
+    margin: 1rem 0;
+}
+
+.home p {
+    color: var(--text-2);
+}
+
+.capital {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.primary, .secondary {
+    padding: var(--pad);
+    background: var(--faint-2);
+    color: var(--primary);
+    box-shadow: var(--s-shadow);
+    border-radius: var(--bdr-2);
+    backdrop-filter: blur(5px);
+}
+
+.primary:hover, .secondary:hover {
+    scale: 1.1;
+    border-top: 0;
+    background: #0000008f;
+    color: var(--primary);
+}
+
+.secondary {
+    background: var(--faint-2);
+    backdrop-filter: blur(3px);
+}
+
+.icon {
+    background: var(--primary);
+    color: #000;
+    display: inline;
+    margin-left: .5rem;
+    padding: .5rem .7rem;
+    border-radius: 50%;
+    font-weight: 900;
+}
+
+.home hr {
+    margin: .5 rem auto;
 }
 
 .home em {
@@ -298,7 +359,7 @@ rd {
 .overlay {
     height: 100%;
     width: 100%;
-    background: linear-gradient(transparent, #00000044, #000);
+    background: linear-gradient(#00000044, #00000044, #000);
     position: absolute;
     z-index: 0;
 }
@@ -337,14 +398,12 @@ button {
 }
 
 .list li {
-    background: var(--tertiary);
+    background: var(--faint-2);
     color: var(--bg);
-    padding: 10px 20px;
-    margin: 0 5px;
-    border-start-start-radius: var(--bdr);
-    border-start-end-radius: var(--bdr);
+    padding: 10px 15px;
+    margin: 20px 5px;
+    border-radius: var(--bdr);
     transition: var(--cb-trans);
-    border-top: 2px solid transparent;
     cursor: pointer;
 }
 
@@ -355,13 +414,14 @@ button {
 }
 
 .list li:hover {
-    border-top: 2px solid var(--primary);    
+    border-top: 0;
+    box-shadow: 0 0 5px var(--primary);
 }
 
 .list li.active {
-    padding: 10px 35px;
-    background: var(--primary);
-    color: var(--secondary);
+    padding: 10px 30px;
+    background: var(--tertiary);
+    animation: 5.7s bounce;
 }
 
 button:hover {
@@ -394,6 +454,7 @@ button:hover {
     color: var(--secondary);
     margin: auto;
     width: 90%;
+    font-size: 1.5rem;
 }
 
 .results {
@@ -412,10 +473,9 @@ button:hover {
 }
 
 .showcase {
-    width: 80%;
-    max-width: 400px;
+    width: 47%;
+    max-width: 370px;
     box-shadow: var(--shadow);
-    border-radius: var(--bdr);
     margin: 1.5rem auto;
     justify-content: space-around;
     transition: var(--trans);
@@ -440,7 +500,7 @@ button:hover {
 }
 
 .description {
-    width: inherit;
+    width: 90%;
     margin: auto;
 }
 
@@ -448,7 +508,7 @@ button:hover {
     color: var(--secondary);
     text-align: left;
     margin: 1rem 0;
-    font-size: 1.3rem;
+    font-size: 1rem;
 }
 
 .description p b {
@@ -459,14 +519,18 @@ button:hover {
 .description p {
     margin: 1rem auto;
     color: var(--text);
-    font-size: 16px;
+    font-size: 13px;
 }
 
 .icons {
     display: flex;
     gap: 0.5rem;
-    margin: 2rem 0;
     justify-content: space-evenly;
+}
+
+.icons img {
+    height: 20px;
+    width: auto;
 }
 
 .icons div {
@@ -474,10 +538,6 @@ button:hover {
     display: flex;
     justify-content: space-around;
     gap: 1rem;
-}
-
-.icons div p {
-    font-size: 1.2rem;
 }
 
 .icons p {
@@ -709,7 +769,7 @@ button:hover {
     background-repeat: no-repeat;
     text-align: center;
     opacity: 0;
-    animation: 0.7s fadeUp forwards
+    animation: 0.7s fadeUp forwards;
 }
 
 .heading h1 {

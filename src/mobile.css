@@ -312,6 +312,12 @@ rd {
 .capital {
     text-transform: uppercase;
     letter-spacing: 3px;
+    animation: 3s fadeUp forwards;
+    animation-delay: .3s;
+}
+
+.capital.active {
+    opacity: 0;
 }
 
 .primary, .secondary {
@@ -470,6 +476,7 @@ button:hover {
     margin: auto;
     width: fit-content;
     animation: 0.7s fadeIn forwards;
+    animation-delay: .3s
 }
 
 .showcase {
@@ -479,6 +486,7 @@ button:hover {
     margin: 1.5rem auto;
     justify-content: space-around;
     transition: var(--trans);
+    border-radius: var(--bdr);
 }
 
 .image {
@@ -524,24 +532,26 @@ button:hover {
 
 .icons {
     display: flex;
-    gap: 0.5rem;
+    gap: 3px;
     justify-content: space-evenly;
 }
 
 .icons img {
-    height: 20px;
+    height: 15px;
     width: auto;
+    margin: 0;
 }
 
 .icons div {
-    margin: auto;
+    margin: 10px auto;
     display: flex;
     justify-content: space-around;
-    gap: 1rem;
+    gap: 8px;
 }
 
 .icons p {
     color: var(--secondary-3);
+    margin: 0;
 }
 
 .transition, .transition-2 {

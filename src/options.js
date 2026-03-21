@@ -14,7 +14,7 @@ function toggleLocation() {
    option1.classList.add('active');
    option2.classList.remove('active');
    option3.classList.remove('active');
-   dispName.innerHTML = "Latest Properties Based On Location";
+   dispName.innerHTML = "Listed properties by location";
    filter1.classList.add('active');
    filter2.classList.remove('active');
    filter3.classList.remove('active');
@@ -23,7 +23,7 @@ function toggleCategories() {
    option2.classList.add('active');
    option1.classList.remove('active');
    option3.classList.remove('active');
-   dispName.innerHTML = "Latest Properties Based On Categories";
+   dispName.innerText = "Listed properties by categories";
    filter1.classList.remove('active');
    filter2.classList.add('active');
    filter3.classList.remove('active');
@@ -32,7 +32,7 @@ function togglePrice() {
    option3.classList.add('active');
    option1.classList.remove('active');
    option2.classList.remove('active');
-   dispName.innerHTML = "Latest Properties Based On Price";
+   dispName.innerHTML = "Listed properties by price";
    filter1.classList.remove('active');
    filter2.classList.remove('active');
    filter3.classList.add('active');

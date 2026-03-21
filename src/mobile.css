@@ -288,8 +288,8 @@ rd {
 }
 
 .home {
+    margin-top: 9rem;
     margin: auto;
-    margin-bottom: 7rem;
     justify-content: center;
     align-content: center;
     width: 90%;

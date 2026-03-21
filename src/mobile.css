@@ -275,12 +275,12 @@ rd {
 }
 
 #hero {
-    background: url(../public/images/hero-2.jpg);
+    /* background: url(../public/images/hero-2.jpg); */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: scroll;
-    height: 100vh;
+    height: 50vh;
     margin: 0;
     padding: 0;
     display: flex;
@@ -311,8 +311,6 @@ rd {
 .capital {
     text-transform: uppercase;
     letter-spacing: 3px;
-    animation: 3s fadeUp forwards;
-    animation-delay: .3s;
 }
 
 .capital.active {
@@ -385,6 +383,59 @@ button {
     border-radius: var(--bdr);
     transition: var(--trans);
 }
+
+.recent {
+    margin: 2rem auto;
+    color: var(--secondary-3);
+    width: 95%;
+}
+
+.grid-container {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-auto-rows: 120px;
+    margin: inherit;
+}
+
+.grid-container div {
+    background: red;
+    position: realtive;
+    overflow: hidden;
+}
+
+.grid-container div img {
+    width: 100%;
+}
+
+.grid-m {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.grid-m img {
+    height: 100%;
+}
+
+.grid-a {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.grid-f {
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+
+
+
+
+
+
+
+
+
+
 
 .list {
     margin: auto;

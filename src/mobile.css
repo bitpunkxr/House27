@@ -280,7 +280,7 @@ rd {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: scroll;
-    height: 90vh;
+    height: 100vh;
     margin: 0;
     padding: 0;
     display: flex;
@@ -288,7 +288,6 @@ rd {
 }
 
 .home {
-    margin-top: 9rem;
     margin: auto;
     justify-content: center;
     align-content: center;
@@ -327,6 +326,7 @@ rd {
     box-shadow: var(--s-shadow);
     border-radius: var(--bdr-2);
     backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 }
 
 .primary:hover, .secondary:hover {
@@ -334,11 +334,6 @@ rd {
     border-top: 0;
     background: #0000008f;
     color: var(--primary);
-}
-
-.secondary {
-    background: var(--faint-2);
-    backdrop-filter: blur(3px);
 }
 
 .icon {
@@ -693,6 +688,7 @@ button:hover {
     height: 100%;
     width: 100%;
     backdrop-filter: var(--bdf-2);
+    -webkit-backdrop-filter: var(--bdf-2);
     color: var(--bg);
     border-radius: inherit;
 }

@@ -22,9 +22,8 @@
 
 @keyframes intro {
     to {
+        border-bottom: 2px solid var(--tertiary-2);
         color: var(--tertiary-2);
-        background: var(--secondary);
-        border-top: 2px solid var(--tertiary-2);
     }
 }
 

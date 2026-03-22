@@ -27,6 +27,8 @@
         backdrop-filter: var(--bdr);
         color: var(--secondary);
         margin: auto;
+        text-transform: uppercase;
+        letter-spacing: 4px;
     }
 
     .link {
@@ -36,7 +38,7 @@
         backdrop-filter: var(--bdr);
         color: var(--secondary);
         margin: auto;
-        margin-right: 0;
+        margin-right: 2%;
         width: fit-content;
     }
 
@@ -57,6 +59,7 @@
 
     .navbar li p {
         margin: 7px 10px;
+        font-size: 1rem;
     }
 
     .header:hover {
@@ -69,7 +72,7 @@
         color: var(--primary);
     }
 
-    .header:hover #main p, .link a {
+    .header:hover #main p, .link a, .header:hover .name p {
         color: var(--tertiary-2);
     } 
 
@@ -78,7 +81,7 @@
     }
 
     #hero {
-        height: 90vh;
+        height: 100vh;
     }
 
     button:hover {
@@ -88,7 +91,6 @@
 
     #main {
         color: var(--secondary);
-        border-top: 2px solid transparent;
         background: transparent;
         animation: 0.7s intro cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
         animation-delay: 2s;
@@ -96,6 +98,31 @@
 
     .home {
         margin-bottom: 7rem;
+    }
+
+    .home p {
+        width: 50%;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+         "header main aside"
+         "aside-2 nav footer";
+    }
+
+    .list {
+        padding: 0 var(--pad);
+        border-start-start-radius: var(--bdr-2);
+        border-start-end-radius: var(--bdr-2);
+    }
+
+    .list li {
+        margin: 20px 5px;
+    }
+
+    .list li.active {
+        padding: 10px 50px;
     }
 
     .showcase {

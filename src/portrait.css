@@ -6,7 +6,7 @@ html, body {
 }
 
 :root {
-    --bg: #f3f3f3;
+    --bg: #e4e4e4;
     --trans-bg: #ffffffda;
     --trans-bg-2: #ffffff5e;
     --primary: #fff;
@@ -64,10 +64,6 @@ h3 {
 
 h4 {
     font-size: 1.6rem;
-}
-
-p {
-    /* font-size: 20px; */
 }
 
 h2, h3, p, h4 {
@@ -314,10 +310,6 @@ rd {
     letter-spacing: 4px;
 }
 
-.capital.active {
-    opacity: 0;
-}
-
 .primary, .secondary {
     padding: var(--pad);
     background: var(--faint-2);
@@ -330,7 +322,6 @@ rd {
 
 .primary:hover, .secondary:hover {
     scale: 1.1;
-    border-top: 0;
     background: #0000008f;
     color: var(--primary);
 }
@@ -371,8 +362,6 @@ button {
     font-weight: 300;
     font-size: 1rem;
     border: none;
-    border-top: none;
-    border-bottom: none;
     border-radius: var(--bdr);
     transition: var(--trans);
 }
@@ -392,71 +381,101 @@ button {
     overflow: hidden;
     grid-template-areas:
      "header header" 
-     "header header" 
      "main aside" 
-     "main aside-2"
-     "nav aside-2"
+     "aside-2 nav"
      "footer footer";
+     border-radius: var(--bdr-2);
 }
 
-.grid-container div {
-    background: var(--tertiary);    
-    position: realtive;
+.grid-container .grid {
+    background: var(--faint);    
+    position: relative;
     overflow: hidden;
     transition: var(--trans);
     display: flex;
+    transition: var(--trans);
+    position: relative;
 }
 
-.grid-container div img {
-    size: cover;
+.grid-container .grid .info img {
+    width: 100%;
+    transition: var(--trans);
+    z-index: 0;
 }
 
-.grid-container div div:hover {
-    background: var(--faint);
+.grid-container div:hover .info img {
+    scale: 1.1;
 }
 
-.grid-h { grid-area: header; }
+.grid.h { grid-area: header; }
 
-.grid-m { grid-area: main; }
+.grid.m { grid-area: main; }
 
-.grid-a { grid-area: aside; }
+.grid.a { grid-area: aside; }
 
-.grid-a2 { grid-area: aside-2; }
+.grid.a2 { grid-area: aside-2; }
 
-.grid-n { grid-area: nav; }
+.grid.n { grid-area: nav; }
 
-.grid-n2 { grid-area: nav-2; }
+.grid.n2 { grid-area: nav-2; }
 
-.grid-f { grid-area: footer; }
+.grid.f { grid-area: footer; }
 
+.info {
+    position: relative;
+    background: transparent;
+}
 
+.interactions {
+    z-index: 10;
+    background: var(--text);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    z-index: 100;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    transition: var(--trans);
+    color: var(--primary);
+}
 
+.interactions:hover {
+    background: transparent;
+    color: var(--tertiary-2);
+}
 
-
-
-
-
-
+.interactions h3, .interactions button {
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+}
 
 .list {
     margin: auto;
     height: fit-content;
+    width: fit-content;
     background: transparent;
-    transform: translateX(-50%);
-    left: 50%;
-    bottom: 0;
     display: flex;
     justify-content: space-evenly;
+    background: var(--primary);
+    border-start-start-radius: var(--bdr);
+    border-start-end-radius: var(--bdr);
 }
 
 .list li {
-    background: var(--faint-2);
+    background: var(--secondary);
     color: var(--bg);
     padding: 10px 15px;
-    margin: 20px 5px;
+    margin: 5px;
     border-radius: var(--bdr);
     transition: var(--cb-trans);
     cursor: pointer;
+    box-shadow: var(--s-shadow);
 }
 
 .list p {
@@ -466,26 +485,28 @@ button {
 }
 
 .list li:hover {
-    border-top: 0;
-    box-shadow: 0 0 5px var(--primary);
+    background: var(--tertiary-2);
+    color: var(--secondary-3);
 }
 
 .list li.active {
     padding: 10px 30px;
     background: var(--tertiary);
     animation: 5.7s bounce;
+    color: var(--primary);
 }
 
-button:hover {
+button:hover, .interactions:hover button {
     color: var(--tertiary-2);
     background: var(--secondary);
-    border-top: 2px solid var(--tertiary-2);
+    box-shadow: var(--i-shadow);
+    scale: 1.1;
 }
 
 #main {
-    color: var(--tertiary-2);
-    background: var(--secondary);
-    border-top: 2px solid var(--tertiary-2);
+    background: transparent;
+    animation: 1s intro cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+    animation-delay: 2s;
 }
 
 .image img, .b-img img, .b-text {

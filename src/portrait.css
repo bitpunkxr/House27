@@ -275,12 +275,12 @@ rd {
 }
 
 #hero {
-    /* background: url(../public/images/hero-2.jpg); */
+    background: url(../public/images/hero-2.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: scroll;
-    height: 50vh;
+    height: 90vh;
     margin: 0;
     padding: 0;
     display: flex;
@@ -291,6 +291,7 @@ rd {
     margin: auto;
     justify-content: center;
     align-content: center;
+    margin-bottom: 20%;
     width: 90%;
     z-index: 1;
     color: var(--bg);
@@ -310,7 +311,7 @@ rd {
 
 .capital {
     text-transform: uppercase;
-    letter-spacing: 3px;
+    letter-spacing: 4px;
 }
 
 .capital.active {
@@ -363,14 +364,6 @@ rd {
     z-index: 0;
 }
 
-.overlay2 {
-    height: 100%;
-    width: 100%;
-    background: #000000a2;
-    position: absolute;
-    z-index: 0;
-}
-
 button {
     margin: 10px auto;
     padding: 1rem;
@@ -399,115 +392,42 @@ button {
     overflow: hidden;
     grid-template-areas:
      "header header" 
+     "header header" 
      "main aside" 
      "main aside-2"
-     "nav nav-2"
+     "nav aside-2"
      "footer footer";
-     border-radius: var(--bdr-2);
 }
 
 .grid-container div {
-    background: red;
+    background: var(--tertiary);    
     position: realtive;
     overflow: hidden;
     transition: var(--trans);
+    display: flex;
 }
 
 .grid-container div img {
     size: cover;
 }
 
-.grid-container div:hover {
+.grid-container div div:hover {
     background: var(--faint);
 }
 
-.grid-container div img {
-    width: 100%;
-}
+.grid-h { grid-area: header; }
 
-.grid-h {
-    grid-area: header;
-}
+.grid-m { grid-area: main; }
 
-.grid-m {
-    grid-area: main;
-}
+.grid-a { grid-area: aside; }
 
-.grid-a {
-    grid-area: aside;
-}
+.grid-a2 { grid-area: aside-2; }
 
-.grid-a2 {
-    grid-area: aside-2;
-}
+.grid-n { grid-area: nav; }
 
-.grid-n {
-    grid-area: nav;
-}
+.grid-n2 { grid-area: nav-2; }
 
-.grid-n2 {
-    grid-area: nav-2;
-}
-
-.grid-f {
-    grid-area: footer;
-}
-
-/* #img-1 {
-    background: url(../public/images/living-room.JPG);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-#img-2 {
-    background: url(../public/images/3-105x70.webp);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-#img-3 {
-    background: url(../public/images/modern.JPG);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-#img-4 {
-    background: url(../public/images/terrace-2.JPG);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-#img-5 {
-    background: url(../public/images/terrace.JPG);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-#img-6 {
-    background: url(../public/images/hero.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-#img-7 {
-    background: url(../public/logo.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-#img-8 {
-    background: url(../public/images/hero-3.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-} */
+.grid-f { grid-area: footer; }
 
 
 
@@ -522,7 +442,6 @@ button {
     margin: auto;
     height: fit-content;
     background: transparent;
-    position: absolute;
     transform: translateX(-50%);
     left: 50%;
     bottom: 0;

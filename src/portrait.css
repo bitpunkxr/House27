@@ -393,40 +393,121 @@ button {
 .grid-container {
     display: grid;
     grid-gap: 5px;
-    grid-template-columns: 2fr 2fr 2fr;
-    grid-auto-rows: 120px;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: minmax(120px, auto);
     margin: inherit;
+    overflow: hidden;
+    grid-template-areas:
+     "header header" 
+     "main aside" 
+     "main aside-2"
+     "nav nav-2"
+     "footer footer";
+     border-radius: var(--bdr-2);
 }
 
 .grid-container div {
     background: red;
     position: realtive;
     overflow: hidden;
+    transition: var(--trans);
+}
+
+.grid-container div img {
+    size: cover;
+}
+
+.grid-container div:hover {
+    background: var(--faint);
 }
 
 .grid-container div img {
     width: 100%;
 }
 
-.grid-m {
-    grid-column-start: 1;
-    grid-column-end: 4;
+.grid-h {
+    grid-area: header;
 }
 
-.grid-m img {
-    height: 100%;
+.grid-m {
+    grid-area: main;
 }
 
 .grid-a {
-    grid-column-start: 1;
-    grid-column-end: 3;
+    grid-area: aside;
+}
+
+.grid-a2 {
+    grid-area: aside-2;
+}
+
+.grid-n {
+    grid-area: nav;
+}
+
+.grid-n2 {
+    grid-area: nav-2;
 }
 
 .grid-f {
-    grid-column-start: 2;
-    grid-column-end: 4;
+    grid-area: footer;
 }
 
+/* #img-1 {
+    background: url(../public/images/living-room.JPG);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#img-2 {
+    background: url(../public/images/3-105x70.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#img-3 {
+    background: url(../public/images/modern.JPG);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#img-4 {
+    background: url(../public/images/terrace-2.JPG);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#img-5 {
+    background: url(../public/images/terrace.JPG);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#img-6 {
+    background: url(../public/images/hero.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#img-7 {
+    background: url(../public/logo.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#img-8 {
+    background: url(../public/images/hero-3.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+} */
 
 
 

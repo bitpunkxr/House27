@@ -111,6 +111,24 @@
          "aside-2 nav footer";
     }
 
+    .brief-card {
+        display: flex;
+        max-width: 1440px;
+        margin-bottom: 10rem;
+    }
+
+    .brief-img {
+        width: 70%;
+    }
+
+    .brief-text {
+        width: 30%;
+    }
+
+    .brief-name h1 {
+        margin-bottom: 3rem;
+    }
+
     .list {
         padding: 0 var(--pad);
         border-start-start-radius: var(--bdr-2);

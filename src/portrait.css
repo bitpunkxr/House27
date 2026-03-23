@@ -320,6 +320,10 @@ rd {
     -webkit-backdrop-filter: blur(5px);
 }
 
+.secondary {
+    background: #000;
+}
+
 .primary:hover, .secondary:hover {
     scale: 1.1;
     background: #0000008f;
@@ -367,7 +371,7 @@ button {
 }
 
 .recent {
-    margin: 2rem auto;
+    margin: 4rem auto;
     color: var(--secondary-3);
     width: 95%;
 }
@@ -455,16 +459,67 @@ button {
     margin: auto;
 }
 
+.brief {
+    width: 95%;
+    margin: 2rem auto;
+}
+
+.brief button {
+    margin: 0 auto 2rem auto;
+}
+
+.brief-of-cards {
+    margin: inherit;
+    display: flex;
+    flex-direction: column;
+}
+
+.brief-card {
+    box-shadow: var(--s-shadow);
+    border-radius: var(--bdr);
+    overflow: hidden;
+    margin-bottom: 4rem;
+}
+
+.brief-img {
+    position: relative;
+    border-start-start-radius: inherit;
+    border-start-end-radius: inherit;
+}
+
+.brief-img h1, .brief-text p {
+    letter-spacing: 4px;
+    color: var(--bg);
+    margin: auto;
+}
+
+.brief-img h1 {
+    width: 90%;
+    color: var(--tertiary-2);
+}
+
+.brief-name {
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(transparent, #000);
+    color: var(--tertiary-2);
+    width: 100%;
+    padding-top: 20%;
+}
+
+.brief-text {
+    background: #000;
+    padding: 2rem var(--pad);
+}
+
 .list {
     margin: auto;
+    margin-top: var(--b-pad);
     height: fit-content;
     width: fit-content;
     background: transparent;
     display: flex;
     justify-content: space-evenly;
-    background: var(--primary);
-    border-start-start-radius: var(--bdr);
-    border-start-end-radius: var(--bdr);
 }
 
 .list li {
@@ -631,7 +686,7 @@ button:hover, .interactions:hover button {
     background: linear-gradient(var(--secondary-2), var(--text), transparent);
 }
 
-.about, .about2 {
+.about {
     color: var(--primary);
     margin: 0 auto;
     background-color: var(--primary);
@@ -641,22 +696,13 @@ button:hover, .interactions:hover button {
     animation-delay: .8s;
 }
 
-.about2 {
-    padding-top: 5rem;
-    background: var(--bg);
-    color: var(--secondary-2);
-}
-
 .text {
-    width: 90%;
+    width: 95%;
     color: var(--text-2);
     z-index: 1;
     margin: 3rem auto;
     display: flex;
     flex-direction: column;
-    background-color: var(--bg);
-    box-shadow: var(--shadow);
-    border-radius: var(--bdr-2);
 }
 
 .text2 {
@@ -683,7 +729,7 @@ button:hover, .interactions:hover button {
 }
 
 .boxed {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     padding: 1rem;
     border: 1px solid var(--tertiary);

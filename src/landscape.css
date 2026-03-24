@@ -152,6 +152,8 @@
         margin: auto;
         flex-direction: row;
         justify-content: space-around;
+        box-shadow: none;
+        border-radius: none;
     }
 
     .box1, .box2 {
@@ -163,6 +165,7 @@
     }
 
     .box2 {
+        width: 45%;
         background: url(../public/tab-img.JPG);
         height: 100vh;
         background-size: cover;
@@ -225,12 +228,20 @@
     }
 
     .h-link {
+        flex-direction: row;
         justify-content: space-evenly;
     }
 
     .links {
-        text-align: center;
         width: 30%;
+        border: none;
+    }
+
+    .links:nth-child(2) {
+        border-left: 2px solid var(--bg);
+        border-right: 2px solid var(--bg);
+        border-top: none;
+        border-bottom: none;
     }
 
     .form {

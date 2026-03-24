@@ -309,8 +309,11 @@ rd {
 .capital {
     text-transform: uppercase;
     letter-spacing: 4px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: var(--secondary-3);
+    color: var(--secondary);
+}
+
+.capital.middle {
+    text-align: center;
 }
 
 .primary, .secondary {
@@ -412,7 +415,7 @@ button {
      "main aside" 
      "aside-2 nav"
      "footer footer";
-     border-radius: var(--bdr-2);
+    border-radius: var(--bdr-2);
 }
 
 .grid-container .grid {
@@ -485,7 +488,7 @@ button {
 
 .brief {
     width: 95%;
-    margin: 2rem auto;
+    margin: 6rem auto;
 }
 
 .brief button {
@@ -493,7 +496,7 @@ button {
 }
 
 .brief-of-cards {
-    margin: inherit;
+    margin: 2rem auto;
     display: flex;
     flex-direction: column;
 }
@@ -503,6 +506,10 @@ button {
     border-radius: var(--bdr);
     overflow: hidden;
     margin-bottom: 4rem;
+}
+
+.brief-card:last-of-type {
+    margin-bottom: 1rem;
 }
 
 .brief-img {
@@ -751,6 +758,7 @@ button:hover, .interactions:hover button {
     border-radius: inherit;
     background: #000;
     border-radius: 4rem;
+    box-shadow: var(--s-shadow);
 }
 
 .boxed h1 {
@@ -945,12 +953,24 @@ button:hover, .interactions:hover button {
 .h-link {
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
 }
 
-.links a {
-    display: block;
+.links {
+    margin: 1rem;
+    border-bottom: 2px var(--primary);
+    font-size: 1.2rem;
+}
+
+.links:nth-child(2) {
+    border-bottom: 2px solid var(--bg);
+    border-top: 2px solid var(--bg);
+}
+
+.links p {
+    margin: 2rem auto;
     transition: var(--trans);
-    margin: 4px auto;
+    width: fit-content;
 }
 
 .links a:hover {
@@ -969,14 +989,14 @@ button:hover, .interactions:hover button {
 }
 
 input, textarea {
-    margin: .5rem .1rem;
+    margin: .5rem auto;
     border-radius: var(--bdr);
     border: none;
     background: var(--bg);
     box-shadow: 0 0 10px #00000057;
     transition: var(--trans);
     padding: var(--pad);
-    width: 35%;
+    width: 40%;
 }
 
 input:hover, textarea:hover {
@@ -987,7 +1007,7 @@ input:hover, textarea:hover {
 .user-input {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
     box-shadow: var(--i-shadow), var(--b-shadow);
     padding: var(--pad);
     border-radius: var(--bdr-2);

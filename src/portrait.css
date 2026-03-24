@@ -332,7 +332,6 @@ rd {
 }
 
 .primary:hover, .secondary:hover {
-    scale: 1.1;
     background: #0000008f;
     color: var(--primary);
 }
@@ -486,6 +485,25 @@ button {
     margin: auto;
 }
 
+.project {
+    background: #000;
+}
+
+.project .brief {
+    padding: 4rem 0;
+    margin: 0 auto;
+}
+
+.project p {
+    color: var(--bg);
+}
+
+.project .brief-card:last-child {
+    box-shadow: 0 0 7px #fff;
+    padding-bottom: 4rem;
+    margin-bottom: 0;
+}
+
 .brief {
     width: 95%;
     margin: 6rem auto;
@@ -594,7 +612,7 @@ button:hover, .interactions:hover button {
     color: var(--tertiary-2);
     background: var(--secondary);
     box-shadow: var(--i-shadow);
-    scale: 1.1;
+    scale: 1.03;
 }
 
 #main {

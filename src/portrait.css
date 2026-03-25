@@ -498,10 +498,11 @@ button {
     color: var(--bg);
 }
 
-.project .brief-card:last-child {
+.project .brief-card {
     box-shadow: 0 0 7px #fff;
     padding-bottom: 4rem;
     margin-bottom: 0;
+    margin-bottom: 4rem;
 }
 
 .brief {
@@ -520,7 +521,6 @@ button {
 }
 
 .brief-card {
-    box-shadow: var(--s-shadow);
     border-radius: var(--bdr);
     overflow: hidden;
     margin-bottom: 4rem;
@@ -567,6 +567,35 @@ button {
 
 .brief-overlay {
     display: none;
+}
+
+.full-card {
+    height: 0px;
+    overflow: hidden;
+}
+
+.full-card.active {
+    height: fit-content;
+}
+
+.full-card h2 {
+    margin: 1.5rem auto;
+    color: var(--primary);
+}
+
+.display {
+    display: flex;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    padding: var(--pad) 0;
+    border-top: 2px solid var(--primary);
+    border-bottom: 2px solid var(--primary);
+    margin: 2rem 0;
+}
+
+.display img {
+    width: 90%;
+    margin: 0 10px;
 }
 
 .list {

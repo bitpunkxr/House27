@@ -572,6 +572,7 @@ button {
 .full-card {
     height: 0px;
     overflow: hidden;
+    transition: var(--cb-trans);
 }
 
 .full-card.active {

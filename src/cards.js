@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const briefCards = document.querySelectorAll('.brief-card');
 
     briefCards.forEach(briefCards => {
-        const button = briefCards.querySelector('.secondary');
+        const button = briefCards.querySelector('.primary');
         const fullCard = briefCards.querySelector('.full-card');
 
         if (button && fullCard) {

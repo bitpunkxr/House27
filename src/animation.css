@@ -49,3 +49,13 @@
         transform: translateY(0);
     }
 }
+
+@keyframes wrap {
+    from {
+        height: 1px;
+    }
+
+    to {
+        height: fit-content;
+    }
+}

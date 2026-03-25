@@ -9,7 +9,6 @@ hName.innerHTML = '<p class="capital">H<rd>O</rd>USE 27</p>';
 
 function toggleDisplay() {
     menu.classList.toggle('fold');
-    // container.classList.toggle('fold');
     container.forEach(container => {
         container.classList.toggle('fold');
     });

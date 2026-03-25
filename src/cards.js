@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (button && fullCard) {
             button.addEventListener('click', () => {
                 fullCard.classList.toggle('active');
+                button.innerHTML = 'Show Less<div class="icon">&uArr;</div>';
             });
         }
     });

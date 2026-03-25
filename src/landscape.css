@@ -112,17 +112,10 @@
     }
 
     .brief-card {
-        display: flex;
-        max-width: 1440px;
-        margin-bottom: 10rem;
-    }
-
-    .brief-img {
         width: 70%;
-    }
-
-    .brief-text {
-        width: 30%;
+        max-width: 1024px;
+        margin: auto;
+        margin-bottom: 10rem;
     }
 
     .brief-name h1 {

@@ -576,7 +576,7 @@ button {
 }
 
 .full-card.active {
-    height: fit-content;
+    animation: 1s wrap forwards;
 }
 
 .full-card h2 {

@@ -316,7 +316,7 @@ rd {
     text-align: center;
 }
 
-.primary, .secondary {
+.primary, .primary2, .secondary {
     padding: var(--pad);
     background: var(--faint-2);
     color: var(--primary);
@@ -324,6 +324,7 @@ rd {
     border-radius: var(--bdr-2);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
+    display: inline-block;
 }
 
 .secondary {
@@ -331,13 +332,25 @@ rd {
     box-shadow: var(--i-shadow-2);
 }
 
-.primary:hover, .secondary:hover {
+.primary:hover, .primary2:hover, .secondary:hover {
     background: #0000008f;
     color: var(--primary);
 }
 
 .secondary:hover {
     background: var(--tertiary);
+}
+
+.primary2 {
+    display: none;
+}
+
+.primary2.active {
+    display: inline-block;
+}
+
+.primary.active {
+    display: none;
 }
 
 .icon {
@@ -351,7 +364,7 @@ rd {
     transition: var(--trans);
 }
 
-.primary:hover .icon {
+.primary:hover .icon, .primary2:hover .icon {
     background: var(--primary);
     color: #000;
 }
@@ -525,6 +538,7 @@ button {
     overflow: hidden;
     margin-bottom: 4rem;
     box-shadow: var(--s-shadow);
+    transition: var(--trans);
 }
 
 .brief-card:last-of-type {
@@ -573,11 +587,10 @@ button {
 .full-card {
     height: 0px;
     overflow: hidden;
-    transition: var(--cb-trans);
 }
 
 .full-card.active {
-    animation: 1s wrap forwards;
+    height: auto;
 }
 
 .full-card h2 {
@@ -693,22 +706,14 @@ button:hover, .interactions:hover button {
     width: 47%;
     max-width: 370px;
     box-shadow: var(--s-shadow);
-    margin: 1.5rem auto;
+    margin: .5rem auto;
     justify-content: space-around;
-    transition: var(--trans);
-    /* border-radius: var(--bdr); */
+    transition: var(--cb-trans);
     background: var(--bg);
 }
 
 .showcase.active {
-    margin: 0;
-    position: fixed;
-    /* transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%; */
-    /* height: 60vh; */
     width: 100vw;
-    /* overflow: auto; */
     z-index: 1000;
     scrollbar-width: none;
 }
@@ -756,13 +761,14 @@ button:hover, .interactions:hover button {
 
 .description button {
     color: var(--secondary);
+    margin: 20px auto;
 }
 
 .icons {
     display: flex;
     gap: 3px;
     justify-content: space-evenly;
-    margin: 20px auto;
+    margin: 5px auto;
 }
 
 .icons img {
@@ -980,7 +986,6 @@ button:hover, .interactions:hover button {
     color: var(--text-2);
     padding: var(--pad);
     background: var(--secondary-3);
-    transform: translateY(20px);
 }
 
 .footer h3 {

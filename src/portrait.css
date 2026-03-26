@@ -499,7 +499,7 @@ button {
 }
 
 .project .brief-card {
-    box-shadow: 0 0 7px #fff;
+    box-shadow: 0 0 7px var(--tertiary-2);
     padding-bottom: 4rem;
     margin-bottom: 0;
     margin-bottom: 4rem;
@@ -524,6 +524,7 @@ button {
     border-radius: var(--bdr);
     overflow: hidden;
     margin-bottom: 4rem;
+    box-shadow: var(--s-shadow);
 }
 
 .brief-card:last-of-type {
@@ -691,11 +692,25 @@ button:hover, .interactions:hover button {
 .showcase {
     width: 47%;
     max-width: 370px;
-    box-shadow: var(--shadow);
+    box-shadow: var(--s-shadow);
     margin: 1.5rem auto;
     justify-content: space-around;
     transition: var(--trans);
-    border-radius: var(--bdr);
+    /* border-radius: var(--bdr); */
+    background: var(--bg);
+}
+
+.showcase.active {
+    margin: 0;
+    position: fixed;
+    /* transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%; */
+    /* height: 60vh; */
+    width: 100vw;
+    /* overflow: auto; */
+    z-index: 1000;
+    scrollbar-width: none;
 }
 
 .image {
@@ -725,7 +740,7 @@ button:hover, .interactions:hover button {
     color: var(--secondary);
     text-align: left;
     margin: 1rem 0;
-    font-size: 1rem;
+    font-size: 1.4rem;
 }
 
 .description p b {
@@ -739,10 +754,15 @@ button:hover, .interactions:hover button {
     font-size: 13px;
 }
 
+.description button {
+    color: var(--secondary);
+}
+
 .icons {
     display: flex;
     gap: 3px;
     justify-content: space-evenly;
+    margin: 20px auto;
 }
 
 .icons img {

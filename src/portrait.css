@@ -699,7 +699,7 @@ button:hover, .interactions:hover button {
     margin: auto;
     width: fit-content;
     animation: 0.7s fadeIn forwards;
-    animation-delay: .3s
+    animation-delay: .3s;
 }
 
 .showcase {
@@ -713,11 +713,9 @@ button:hover, .interactions:hover button {
 }
 
 .showcase.active {
-    position: fixed !important;
     overflow: auto;
     width: 100vw;
     max-width: 100vw;
-    z-index: 9999;
     scrollbar-width: none;
     height: 100vh;
     background: var(--trans-bg);

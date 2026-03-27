@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const results = document.querySelectorAll('.results');
     const showcase = document.querySelectorAll('.showcase');
 
     showcase.forEach(showcase => {
@@ -12,6 +13,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 showcase.classList.add('active');
                 button.classList.add('active');
                 button2.classList.add('active');
+                results.forEach(results => {
+                    results.style.flexDirection = 'column';
+                });
             });
         }
         button2.addEventListener('click', () => {
@@ -19,6 +23,9 @@ document.addEventListener('DOMContentLoaded', () => {
             showcase.classList.remove('active');
             button.classList.remove('active');
             button2.classList.remove('active');
+            results.forEach(results => {
+                results.style.flexDirection = 'row';
+            });
         });
     });
 });

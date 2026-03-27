@@ -149,6 +149,11 @@
         border-radius: none;
     }
 
+    .showcase.active {
+        width: 70vw;
+        max-width: 70vw;
+    }
+
     .box1, .box2 {
         width: 35%;
         margin: 2rem auto;

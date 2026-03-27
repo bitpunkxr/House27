@@ -708,16 +708,14 @@ button:hover, .interactions:hover button {
     box-shadow: var(--s-shadow);
     margin: .5rem auto;
     justify-content: space-around;
-    transition: var(--cb-trans);
+    transition: var(--trans);
     background: var(--bg);
 }
 
 .showcase.active {
-    overflow: auto;
     width: 100vw;
     max-width: 100vw;
     scrollbar-width: none;
-    height: 100vh;
     background: var(--trans-bg);
     backdrop-filter: var(--bdf);
 }

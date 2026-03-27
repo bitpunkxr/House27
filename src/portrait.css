@@ -676,6 +676,7 @@ button:hover, .interactions:hover button {
 .options {
     background: var(--primary);
     padding-top: 3rem;
+    margin: 5rem 0;
 }
 
 .options h3 {

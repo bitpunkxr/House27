@@ -32,85 +32,10 @@
     <meta name="twitter:creator" content="@House27homes">
 </head>
 <body>
-    <section class="navigation">
-        <div class="header">
-            <div class="name"></div>
-            <div class="container">
-                <div class="menu">
-                    <a href="https://x.com/House27homes"><img src="public/icons/twitter.png" alt=""></a>
-                </div>
-            </div>
-            <div class="container">
-                <div class="menu">
-                    <a href="https://tiktok.com/House27homes"><img src="public/icons/tiktok.png" alt=""></a>
-                </div>
-            </div>
-            <div class="container">
-                <div class="menu">
-                    <a href="https://instagram.com/House27homes"><img src="public/icons/instagram.png" alt=""></a>
-                </div>
-            </div>
-            <div class="container">
-                <div class="menu" id="ham-menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-            <div class="navbar">
-                <a href="index.html">
-                    <li><p>Home</p></li>
-                </a>
-                <li id="main"><p>Properties</p></li>
-                <a href="about.html">
-                    <li><p>About</p></li>
-                </a>
-                <a href="projects.html">
-                    <li><p>Projects</p></li>
-                </a>
-                <a href="contact.html">
-                    <li><p>Contact</p></li>
-                </a>
-            </div>
-            <div class="link">
-                <a href="https://x.com/House27homes"><img src="public/icons/twitter.png" alt=""></a>
-                <a href="https://tiktok.com/House27homes"><img src="public/icons/tiktok.png" alt=""></a>
-                <a href="https://instagram.com/House27homes"><img src="public/icons/instagram.png" alt=""></a>
-            </div>
-        </div>
-        <div class="open-menu" id="full-menu">
-            <div class="pages">
-                <a href="index.html">
-                    <li><p>Home</p></li>
-                </a>
-                <li id="main"><p>Properties</p></li>
-                <a href="about.html">
-                    <li><p>About</p></li>
-                </a>
-                <a href="projects.html">
-                    <li><p>Projects</p></li>
-                </a>
-                <a href="contact.html">
-                    <li><p>Contact</p></li>
-                </a>
-            </div>
-        </div>
-    </section>
-    
-    <div class="heading">
-        <h1>Properties</h1>
-    </div>
-
     <section class="options">
-        <h3 id="filter" class="capital">Listed properties by location</h3>
-        <div class="list">
-            <li id="filter1">Location</li>
-            <li id="filter2">Categories</li>
-            <li id="filter3">Price</li>
-        </div>
-        <hr>
-        <div class="results" id="location">
+        <div class="results">
+
+            <!-- location -->
             <div class="showcase" id="s1">
                 <div class="image">
                     <img src="public/images/11.2-525x328.webp" alt="">
@@ -369,9 +294,8 @@
                     </a>
                 </div>
             </div>
-        </div>
         
-        <div class="results" id="categories">
+            <!-- category -->
             <div class="showcase" id="s7">
                 <div class="image">
                     <img src="public/images/house1-scaled-1-525x328.webp" alt="">
@@ -630,9 +554,8 @@
                     </a>
                 </div>
             </div>
-        </div>
-        
-        <div class="results" id="price">
+
+            <!-- price -->
             <div class="showcase" id="s13">
                 <div class="image">
                     <img src="public/images/7-525x328.webp" alt="">
@@ -893,32 +816,19 @@
             </div>
         </div>
     </section>
-
-    <section class="footer">
-        <div class="h-link">
-            <div class="links">
-                <a href="#"><p>Apartment</p></a>
-                <a href="#"><p>Lands</p></a>
-                <a href="#"><p>Estates</p></a>
-                <a href="#"><p>Investment</p></a>
-            </div>
-            <div class="links">
-                <a href="#"><p>House27 on Twiiter</p></a>
-                <a href="#"><p>House27 on Instagram</p></a>
-                <a href="#"><p>House27 on TikTok</p></a>
-            </div>
-            <div class="links">
-                <a href="index.html"><p>Home</p></a>
-                <a href="properties.html"><p>Properties</p></a>
-                <a href="about.html"><p>About</p></a>
-                <a href="projects.html"><p>Projects</p></a>
-                <a href="contact.html"><p>Contact</p></a>
-            </div>
-        </div>
-        <div class="c-name"></div>
-    </section>
     <script src="src/default.js"></script>
-    <script src="src/options.js"></script>
-    <script src="src/properties.js"></script>
+    <script>
+        const results = document.querySelector('.results');
+        const showcase = document.querySelectorAll('.showcase');
+        const fullCard = document.querySelectorAll('.full-card');
+
+        results.classList.add('active');
+        showcase.forEach(showcase => {
+            showcase.classList.add('active');
+        });
+        fullCard.forEach(fullCard => {
+            fullCard.classList.add('active');
+        });
+    </script>
 </body>
 </html>

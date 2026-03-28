@@ -7,6 +7,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const button2 = showcase.querySelector('.primary2');
         const fullCard = showcase.querySelector('.full-card');
 
+        button.addEventListener('click', () => {
+            showcase.classList.add('active');
+        });
         if (button && fullCard) {
             button.addEventListener('click', () => {
                 fullCard.classList.add('active');

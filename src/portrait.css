@@ -255,6 +255,13 @@ rd {
     transform: translateX(0);
 }
 
+.pages {
+    height: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
 .pages li {
     color: var(--primary);
     padding: 0.5rem 0;
@@ -267,8 +274,8 @@ rd {
 }
 
 .pages li p {
-    margin-right: 1.5rem;
-    text-align: right;
+    margin: auto;
+    text-align: center;
 }
 
 #hero {

@@ -8,7 +8,6 @@ html, body {
 
 :root {
     --bg: #e4e4e4;
-    --linear-bg: linear-gradient(-45deg, #fff, #a7a7a7);
     --trans-bg: #ffffffda;
     --trans-bg-2: #ffffff5e;
     --primary: #fff;
@@ -45,10 +44,11 @@ html, body {
 }
 
 body {
-    background: var(--linear-bg);
+    background: var(--bg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     color: var(--text);
     word-spacing: 2px;
     letter-spacing: 1px;
@@ -435,10 +435,12 @@ button {
     margin: inherit;
     overflow: hidden;
     grid-template-areas:
-     "header header" 
-     "main aside" 
-     "aside-2 nav"
-     "footer footer";
+     "header main" 
+     "header main" 
+     "aside aside-2" 
+     "aside aside-2" 
+     "nav footer"
+     "nav footer";
     border-radius: var(--bdr-2);
 }
 
@@ -453,7 +455,7 @@ button {
 }
 
 .grid-container .grid .info img {
-    width: 100%;
+    height: 100%;
     transition: var(--trans);
     z-index: 0;
 }
@@ -512,9 +514,6 @@ button {
 
 .project {
     background: linear-gradient(-45deg, var(--secondary-4), var(--secondary-3), #000);
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
 }
 
 .project .brief {
@@ -722,10 +721,7 @@ button:hover, .interactions:hover button {
     margin: .5rem auto;
     justify-content: space-around;
     transition: all .4s ease-in-out;
-    background: var(--linear-bg);
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
+    background: var(--bg);
     border-radius: var(--bdr);
 }
 
@@ -1090,9 +1086,6 @@ input, textarea {
     border-radius: var(--bdr);
     border: none;
     background: var(--bg);
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
     box-shadow: 0 0 10px #00000057;
     transition: var(--trans);
     padding: var(--pad);

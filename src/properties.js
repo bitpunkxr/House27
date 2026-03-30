@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     const results = document.querySelectorAll('.results');
     const showcase = document.querySelectorAll('.showcase');
+    const header = document.querySelector('.navigation');
+    const heading = document.querySelector('.heading');
 
     showcase.forEach(showcase => {
         const button = showcase.querySelector('.primary');
@@ -8,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const fullCard = showcase.querySelector('.full-card');
 
         button.addEventListener('click', () => {
+            showcase.body.style.display = "none";
             showcase.classList.add('active');
         });
         if (button && fullCard) {

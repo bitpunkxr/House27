@@ -427,12 +427,13 @@ button {
     width: 95%;
 }
 
-.grid-container {
+.grid-container, .grid-container-2 {
     display: grid;
     grid-gap: 5px;
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: minmax(120px, auto);
     margin: inherit;
+    width: 95%;
     overflow: hidden;
     grid-template-areas:
      "header main" 
@@ -442,6 +443,16 @@ button {
      "nav footer"
      "nav footer";
     border-radius: var(--bdr-2);
+}
+
+.grid-container-2 {
+    grid-template-areas:
+     "header header" 
+     "main main" 
+     "aside aside" 
+     "aside-2 aside-2" 
+     "nav nav"
+     "footer footer";
 }
 
 .grid-container .grid {
@@ -716,9 +727,10 @@ button:hover, .interactions:hover button {
 }
 
 .showcase {
+    width: 80%;
     max-width: 370px;
     box-shadow: var(--s-shadow);
-    margin: .5rem auto;
+    margin: 1rem auto;
     justify-content: space-around;
     transition: all .4s ease-in-out;
     background: var(--bg);

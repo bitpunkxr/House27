@@ -370,6 +370,7 @@ rd {
     display: inline;
     margin-left: .5rem;
     padding: .5rem .8rem;
+    height: fit-content;
     border-radius: 50%;
     font-weight: 900;
     font-size: 1.3rem;
@@ -735,6 +736,40 @@ button:hover, .interactions:hover button {
     transition: all .4s ease-in-out;
     background: var(--bg);
     border-radius: var(--bdr);
+}
+
+#price .showcase {
+    overflow: hidden;
+    padding: 0;
+    background: none;
+}
+
+#price .primary2 {
+    font-size: 1.5rem;
+    background: none;
+    backdrop-filter: none;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+}
+
+#price .showcase:hover .primary2 {
+    background: var(--secondary);
+    backdrop-filter: var(--bdf);
+    box-shadow: var(--s-shadow);
+}
+
+#price .icon {
+    width: fit-content;
+    margin: 1rem auto;
+}
+
+#price .showcase .info img {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    scale: 1.1
 }
 
 .showcase.active {

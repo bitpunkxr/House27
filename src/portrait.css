@@ -611,12 +611,15 @@ button {
 }
 
 .full-card {
+    border-top: 2px solid #000;
     height: 0px;
     overflow: hidden;
 }
 
 .full-card.active {
     height: auto;
+    animation: 0.7s fadeIn forwards;
+    animation-delay: .3s;
 }
 
 .full-card h2 {
@@ -776,13 +779,17 @@ button:hover, .interactions:hover button {
     width: 100vw;
     max-width: 100vw;
     scrollbar-width: none;
-    background: var(--secondary-2);
-    backdrop-filter: var(--bdf);
-    box-shadow: var(--b-shadow);
+    background: var(--faint);
+    height: fit-content;
+    margin: 0;
+    box-shadow: none;
+    border-radius: none;
 }
 
-.showcase.active p, .showcase.active h2 {
-    color: var(--bg);
+.showcase.active h2 {
+    background: var(--bg);
+    margin: 1rem auto;
+    padding: var(--pad);
 }
 
 .image {
@@ -813,6 +820,7 @@ button:hover, .interactions:hover button {
     text-align: left;
     margin: 1rem 0;
     font-size: 1.4rem;
+    border-radius: var(--bdr-2);
 }
 
 .description p b {
@@ -826,9 +834,35 @@ button:hover, .interactions:hover button {
     font-size: 13px;
 }
 
+.description img {
+    border-radius: var(--bdr);
+}
+
 .description button {
     color: var(--secondary);
     margin: 20px auto;
+}
+
+.description .full-card {
+    border-top: 2px solid #000;
+    height: 0px;
+    overflow: hidden;
+}
+
+.description .full-card.active {
+    height: auto;
+    animation: 0.7s fadeIn forwards;
+    animation-delay: .3s;
+}
+
+.description .full-card h2 {
+    margin: 1.5rem auto;
+    margin-top: 5rem;
+}
+
+.description .full-card p {
+    font-size: 1rem;
+    margin: 1rem 0;
 }
 
 .icons {

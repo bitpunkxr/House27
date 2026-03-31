@@ -10,6 +10,7 @@ html, body {
     --bg: #e4e4e4;
     --trans-bg: #ffffffda;
     --trans-bg-2: #ffffff5e;
+    --linear-bg: linear-gradient(45deg, #ffffff67, #85858567);
     --primary: #fff;
     --primary-2: #002272;
     --primary-3: #006ab1;
@@ -28,13 +29,15 @@ html, body {
     --faint-2: #ffffff41;
     --text-2: #ffffffde;
     --border: 3rem;
+    --border-line: 1px solid #00000075;
+    --border-line-2: 1px solid #ff4444;
     --pad: 1rem;
     --b-pad: 2rem;
     --bdr: 1rem;
     --bdr-2: 2rem;
     --bdf: blur(5px) saturate(0%) brightness(120%);
     --bdf-2: blur(5px) /* saturate(0%) */ brightness(30%);
-    --shadow: 0 0 35px #0000007e;
+    --shadow: 0 0 20px #0000007e;
     --b-shadow: 0 0 35px #d6000085;
     --i-shadow: inset 0 0 3px #f00;
     --i-shadow-2: inset 0 0 10px #f00;
@@ -288,7 +291,7 @@ rd {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: scroll;
+    background-attachment: fixed;
     height: 90vh;
     margin: 0;
     padding: 0;
@@ -409,6 +412,16 @@ rd {
     background: linear-gradient(#00000044, #00000044, #000);
     position: absolute;
     z-index: 0;
+    pointer-events: none;
+}
+
+.overlay-2 {
+    height: 100%;
+    width: 100%;
+    background: #00000044;
+    position: fixed;
+    z-index: 0;
+    pointer-events: none;
 }
 
 button {
@@ -699,10 +712,16 @@ button:hover, .interactions:hover button {
 
 .showcase:hover {
     box-shadow: var(--b-shadow);
+    border: var(--border-line-2);
+}
+
+.showcase:hover h2 {
+    color: var(--tertiary-2);
+    border-bottom: var(--border-line-2);
 }
 
 .options {
-    background: var(--primary);
+    /* background: var(--faint); */
     padding: 5rem 0;
 }
 
@@ -733,12 +752,24 @@ button:hover, .interactions:hover button {
 .showcase {
     width: 80%;
     max-width: 370px;
-    box-shadow: var(--s-shadow);
+    border: var(--border-line);
+    box-shadow: var(--shadow);
     margin: 1rem auto;
     justify-content: space-around;
     transition: all .4s ease-in-out;
-    background: var(--bg);
+    background: var(--linear-bg);
     border-radius: var(--bdr);
+}
+
+.showcase h2 {
+    transition: all .4s ease-in-out;
+}
+
+#price {
+    background: url(../public/images/house1-scaled-1-525x328.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #price .showcase {
@@ -773,6 +804,43 @@ button:hover, .interactions:hover button {
     height: 100%;
     width: 100%;
     scale: 1.1
+}
+
+.price-img { position: relative; }
+
+.hidden { display: none; }
+
+.hidden.active { display: flex; }
+
+.dd-text, .dd-card {
+    padding: 10px 20px;
+    color: var(--secondary-2);
+    box-shadow: var(--b-shadow);
+    border-radius: var(--bdr);
+    border: 1px solid #fff;
+    bottom: 0;
+    backdrop-filter: brightness(130%);
+    transition: var(--trans);
+}
+
+.dd-text { position: absolute; left: 50%; transform: translateX(-50%); transition: var(--trans)}
+
+.dd-text:hover {
+    border: var(--border-line-2);
+    color: var(--tertiary-2);
+}
+
+.dd-card {
+    margin: 1rem 0;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+.dd-card:hover { border: var(--border-line-2); }
+
+.dd-text h5 {
+    font-size: 15px;
+    text-align: center;
 }
 
 .showcase.active {
@@ -813,14 +881,18 @@ button:hover, .interactions:hover button {
 .description {
     width: 90%;
     margin: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .description h2 {
     color: var(--secondary);
     text-align: left;
-    margin: 1rem 0;
-    font-size: 1.4rem;
-    border-radius: var(--bdr-2);
+    margin: auto;
+    font-size: 2rem;
+    border-bottom: 2px solid #000000b9;
+    text-transform: uppercase;
+    letter-spacing: 4px;
 }
 
 .description p b {
@@ -870,6 +942,8 @@ button:hover, .interactions:hover button {
     gap: 3px;
     justify-content: space-evenly;
     margin: 5px auto;
+    background: var(--faint);
+    border-radius: 10px;
 }
 
 .icons img {
@@ -904,9 +978,15 @@ button:hover, .interactions:hover button {
     color: var(--primary);
     margin: 0 auto;
     opacity: 0;
+    padding: var(--pad) 0;
     transform: translateY(20px);
     animation: .7s fadeUp forwards;
     animation-delay: .8s;
+    background: url(../public/images/hero-2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .text {
@@ -918,10 +998,15 @@ button:hover, .interactions:hover button {
     flex-direction: column;
     box-shadow: var(--s-shadow);
     border-radius: 3rem;
+    backdrop-filter: var(--bdr);
+    /* background: var(--faint-2); */
+    backdrop-filter: brightness(230%) blur(10px);
+    border: 1px solid var(--bg);
+    background: var(--faint-2);
 }
 
 .text p {
-    color: var(--text);
+    color: var(--secondary);
 }
 
 .text2 p {
@@ -962,6 +1047,11 @@ button:hover, .interactions:hover button {
     border-end-start-radius: inherit;
     border-end-end-radius: inherit;
     position: relative;
+}
+
+.box2 img {
+    width: 90%;
+    height: auto;
 }
 
 .box-overlay {

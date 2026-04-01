@@ -3,7 +3,7 @@ const filter2 = document.getElementById('filter2');
 const filter3 = document.getElementById('filter3');
 const option1 = document.getElementById('categories');
 const option2 = document.getElementById('location');
-const option3 = document.getElementById('price');
+const option3 = document.getElementById('custom');
 const dispName = document.getElementById('filter');
 
 filter1.classList.add('active');

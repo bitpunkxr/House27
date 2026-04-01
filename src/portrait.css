@@ -48,10 +48,6 @@ html, body {
 
 body {
     background: var(--bg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
     color: var(--text);
     word-spacing: 2px;
     letter-spacing: 1px;
@@ -982,31 +978,27 @@ button:hover, .interactions:hover button {
     transform: translateY(20px);
     animation: .7s fadeUp forwards;
     animation-delay: .8s;
-    background: url(../public/images/hero-2.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
 }
 
 .text {
     width: 95%;
     color: var(--text-2);
+    border: var(--border-line);
     z-index: 1;
     margin: 3rem auto;
     display: flex;
     flex-direction: column;
     box-shadow: var(--s-shadow);
     border-radius: 3rem;
-    backdrop-filter: var(--bdr);
-    /* background: var(--faint-2); */
-    backdrop-filter: brightness(230%) blur(10px);
-    border: 1px solid var(--bg);
     background: var(--faint-2);
 }
 
 .text p {
-    color: var(--secondary);
+    color: var(--text);
+}
+
+.text p b {
+    color: var(--secondary-3);
 }
 
 .text2 p {
@@ -1174,13 +1166,21 @@ button:hover, .interactions:hover button {
 /* Footer  */
 
 .footer {
+    background: url(../public/images/hero-3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.overlay-3 {
     color: var(--text-2);
-    padding: var(--pad);
-    background: var(--secondary-3);
+    z-index: 0;
+    backdrop-filter: brightness(10%) saturate(0%);
 }
 
 .footer h3 {
-    margin: 3rem auto;
+    padding: 3rem 0;
     color: var(--tertiary-2);
     transform: translateY(20px);
     animation: .7s fadeUp forwards;
@@ -1248,7 +1248,7 @@ button:hover, .interactions:hover button {
 
 .form {
     margin: 1rem auto;
-    width: fit-content;
+    width: 95%;
     margin-bottom: 5rem;
 }
 

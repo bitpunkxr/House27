@@ -1174,9 +1174,8 @@ button:hover, .interactions:hover button {
 }
 
 .overlay-3 {
-    color: var(--text-2);
-    z-index: 0;
     backdrop-filter: brightness(10%) saturate(0%);
+    padding-top: 1rem;
 }
 
 .footer h3 {
@@ -1212,6 +1211,7 @@ button:hover, .interactions:hover button {
 .c-name {
     text-align: center;
     color: var(--primary);
+    padding: .5rem 0;
 }
 
 .h-link {

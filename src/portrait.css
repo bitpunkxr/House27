@@ -348,8 +348,7 @@ rd {
 }
 
 .primary:hover, .primary2:hover, .secondary:hover {
-    background: #0000008f;
-    color: var(--primary);
+    scale: 1.1;
 }
 
 .secondary:hover {
@@ -709,9 +708,7 @@ button {
 }
 
 button:hover, .interactions:hover button {
-    color: var(--tertiary-2);
-    background: var(--secondary);
-    box-shadow: var(--i-shadow);
+    scale: 1.1;
 }
 
 #main {
@@ -841,6 +838,7 @@ button:hover, .interactions:hover button {
     margin: 1rem auto;
     color: var(--text);
     font-size: 13px;
+    text-align: center;
 }
 
 .description img {
@@ -868,13 +866,14 @@ button:hover, .interactions:hover button {
     margin-top: 5rem;
 }
 
-.description h5 {
+.price {
     text-align: center;
     margin: 1rem auto;
     padding: 10px;
     background: red;
     border-radius: var(--bdr);
     color: var(--primary);
+    font-size: 20px;
 }
 
 .description .full-card p {
@@ -884,7 +883,8 @@ button:hover, .interactions:hover button {
 
 .icons {
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
+    width: fit-content;
     padding: 0 1rem;
     justify-content: space-evenly;
     margin: 5px auto;
@@ -893,7 +893,7 @@ button:hover, .interactions:hover button {
 }
 
 .icons img {
-    height: 15px;
+    height: 25px;
     width: auto;
     margin: 0;
 }
@@ -908,6 +908,7 @@ button:hover, .interactions:hover button {
 .icons p {
     color: var(--secondary-3);
     margin: 0;
+    font-size: 20px;
 }
 
 .transition, .transition-2 {
@@ -941,6 +942,7 @@ button:hover, .interactions:hover button {
     box-shadow: var(--s-shadow);
     border-radius: 3rem;
     background: var(--faint-2);
+    bottom: var(--pad);
 }
 
 .text p {

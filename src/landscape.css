@@ -141,26 +141,19 @@
         width: 30%;
     }
 
-    .text {
+    .about {
         display: flex;
-        margin: auto;
         flex-direction: row;
         justify-content: space-around;
-        box-shadow: none;
-        border-radius: none;
+    }
+
+    .text {
+        width: 30%;
     }
 
     .showcase.active {
         width: 40vw;
         scrollbar-width: thin;
-    }
-
-    .box1, .box2 {
-        width: 35%;
-        margin: 2rem auto;
-        display: flex;
-        flex-direction: column;
-        height: 100vh;
     }
 
     .box2 {

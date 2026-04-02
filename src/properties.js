@@ -25,8 +25,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+const list = document.querySelector('.list');
 
-const message = document.createElement('button');
+const message = list.createElement('button');
 message.textContent = `Showing ${type}:${value} (Clear filter)`;
 message.style.cursor = 'pointer';
 message.classList.add('primary');

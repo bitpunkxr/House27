@@ -103,820 +103,185 @@
     </div>
 
     <section class="options">
-        <h3 id="filter" class="capital">Listed properties by Category</h3>
+        <h3 id="filter"></h3>
         <div class="list">
             <li id="filter1">Categories</li>
             <li id="filter2">Location</li>
         </div>
-        <button class="primary">
-            Go Back
-        </button>
         <hr>
         
-        <div class="results active">
+        <div class="results" id="categories">
+        <div class="grid-container">
+            
+            <div class="grid h" id="img-1" data-filter-type="category" data-filter-value="shortlet">
+                <div class="info">
+                    <img src="public/images/neighborhood.JPG" alt="">
+                    <div class="interactions">
+                        <button class="primary">
+                            Shortlet
+                            <div class="icon">
+                                &DoubleRightArrow;
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid m" id="img-2" data-filter-type="category" data-filter-value="bungalow">
+                <div class="info">
+                    <img src="public/images/street.jpg" alt="">
+                    <div class="interactions">
+                        <button class="primary">
+                            Bungalow
+                            <div class="icon">
+                                &DoubleRightArrow;
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid a" id="img-3" data-filter-type="category" data-filter-value="duplex">
+                <div class="info">
+                    <img src="public/images/hero-2.jpg" alt="">
+                    <div class="interactions">
+                        <button class="primary">
+                            Duplex
+                            <div class="icon">
+                                &DoubleRightArrow;
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid a2" id="img-4" data-filter-type="category" data-filter-value="terrace">
+                <div class="info">
+                    <img src="public/images/terrace.JPG" alt="">
+                    <div class="interactions">
+                        <button class="primary">
+                            Terrace
+                            <div class="icon">
+                                &DoubleRightArrow;
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
 
-            <div class="showcase" data-location="maitama" data-category="duplex">
-                <div class="image">
-                    <img src="public/images/11.2-525x328.webp" alt="">
-                </div>
-                <div class="description">
-                    <h4>4 Bedroom Duplex</h4>
-                    <h5 class="price">35,000,000</h5>
-                    <div class="icons">
-                        <div>
-                            <img src="public/icons/furniture.png" alt="bedrooms"> <p>4</p>
-                        </div>
-                        <div>
-                            <img src="public/icons/full-screen.png" alt="size"> <p>700SQM</p>
-                        </div>
-                    </div>
-                    <div class="full-card">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero maxime praesentium nostrum nobis soluta nam voluptates inventore, at culpa nemo quia repudiandae, velit veritatis illo vitae repellendus voluptate architecto distinctio?
-                        </p>
-                        <div class="carousel">
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                        </div>
+            <div class="grid n" id="img-5" data-filter-type="category" data-filter-value="land">
+                <div class="info">
+                    <img src="public/images/sunset.jpg" alt="">
+                    <div class="interactions">
+                        <button class="primary">
+                            Land
+                            <div class="icon">
+                                &DoubleRightArrow;
+                            </div>
+                        </button>
                     </div>
                 </div>
             </div>
-             
-            <div class="showcase" data-location="maitama" data-category="terrace">
-                <div class="image">
-                    <img src="public/images/11.2-525x328.webp" alt="">
-                </div>
-                <div class="description">
-                    <h4>4 Bedroom Duplex</h4>
-                    <h5 class="price">35,000,000</h5>
-                    <div class="icons">
-                        <div>
-                            <img src="public/icons/furniture.png" alt="bedrooms"> <p>4</p>
-                        </div>
-                        <div>
-                            <img src="public/icons/full-screen.png" alt="size"> <p>700SQM</p>
-                        </div>
-                    </div>
-                    <div class="full-card">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero maxime praesentium nostrum nobis soluta nam voluptates inventore, at culpa nemo quia repudiandae, velit veritatis illo vitae repellendus voluptate architecto distinctio?
-                        </p>
-                        <div class="carousel">
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                        </div>
+
+            <div class="grid f" id="img-6" data-filter-type="category"data-filter-value="investment">
+                <div class="info">
+                    <img src="public/images/hero-2.jpg" alt="">
+                    <div class="interactions">
+                        <button class="primary">
+                            Investment
+                            <div class="icon">
+                                &DoubleRightArrow;
+                            </div>
+                        </button>
                     </div>
                 </div>
             </div>
-             
-            <div class="showcase" data-location="maitama" data-category="shortlet">
+            </a>
+        </div>
+        </div>
+
+        <div class="results" id="location">
+
+            <div class="showcase" data-filter-type="location" data-filter-value="maitama">
                 <div class="image">
-                    <img src="public/images/11.2-525x328.webp" alt="">
+                    <img src="public/images/10-525x328.webp" alt="">
                 </div>
                 <div class="description">
-                    <h4>4 Bedroom Duplex</h4>
-                    <h5 class="price">35,000,000</h5>
-                    <div class="icons">
-                        <div>
-                            <img src="public/icons/furniture.png" alt="bedrooms"> <p>4</p>
-                        </div>
-                        <div>
-                            <img src="public/icons/full-screen.png" alt="size"> <p>700SQM</p>
-                        </div>
-                    </div>
-                    <div class="full-card">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero maxime praesentium nostrum nobis soluta nam voluptates inventore, at culpa nemo quia repudiandae, velit veritatis illo vitae repellendus voluptate architecto distinctio?
-                        </p>
-                        <div class="carousel">
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                        </div>
-                    </div>
+                    <h2>Maitama</h2>
+                    <button class="primary">
+                        View Properties
+                    </button>
                 </div>
             </div>
-             
-            <div class="showcase" data-location="maitama" data-category="bungalow">
+
+            <div class="showcase" data-filter-type="location" data-filter-value="wuye">
                 <div class="image">
-                    <img src="public/images/11.2-525x328.webp" alt="">
+                    <img src="public/images/3-525x328.webp" alt="">
                 </div>
                 <div class="description">
-                    <h4>4 Bedroom Duplex</h4>
-                    <h5 class="price">35,000,000</h5>
-                    <div class="icons">
-                        <div>
-                            <img src="public/icons/furniture.png" alt="bedrooms"> <p>4</p>
-                        </div>
-                        <div>
-                            <img src="public/icons/full-screen.png" alt="size"> <p>700SQM</p>
-                        </div>
-                    </div>
-                    <div class="full-card">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero maxime praesentium nostrum nobis soluta nam voluptates inventore, at culpa nemo quia repudiandae, velit veritatis illo vitae repellendus voluptate architecto distinctio?
-                        </p>
-                        <div class="carousel">
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                        </div>
-                    </div>
+                    <h2>Wuye</h2>
+                        <button class="primary" id="s2">
+                            View Properties
+                        </button>
                 </div>
             </div>
-             
-            <div class="showcase" data-location="jabi" data-category="shortlet">
+
+            <div class="showcase" data-filter-type="location" data-filter-value="jabi">
                 <div class="image">
-                    <img src="public/images/11.2-525x328.webp" alt="">
+                    <img src="public/images/7-525x328.webp" alt="">
                 </div>
                 <div class="description">
-                    <h4>4 Bedroom Duplex</h4>
-                    <h5 class="price">35,000,000</h5>
-                    <div class="icons">
-                        <div>
-                            <img src="public/icons/furniture.png" alt="bedrooms"> <p>4</p>
-                        </div>
-                        <div>
-                            <img src="public/icons/full-screen.png" alt="size"> <p>700SQM</p>
-                        </div>
-                    </div>
-                    <div class="full-card">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero maxime praesentium nostrum nobis soluta nam voluptates inventore, at culpa nemo quia repudiandae, velit veritatis illo vitae repellendus voluptate architecto distinctio?
-                        </p>
-                        <div class="carousel">
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                        </div>
-                    </div>
+                    <h2>Jabi</h2>
+                        <button class="primary" id="s3">
+                            View Properties
+                        </button>
                 </div>
             </div>
-             
-            <div class="showcase" data-location="jabi" data-category="bungalow">
+
+            <div class="showcase" data-filter-type="location" data-filter-value="apo">
                 <div class="image">
-                    <img src="public/images/11.2-525x328.webp" alt="">
+                    <img src="public/images/9-525x328.webp" alt="">
                 </div>
                 <div class="description">
-                    <h4>4 Bedroom Duplex</h4>
-                    <h5 class="price">35,000,000</h5>
-                    <div class="icons">
-                        <div>
-                            <img src="public/icons/furniture.png" alt="bedrooms"> <p>4</p>
-                        </div>
-                        <div>
-                            <img src="public/icons/full-screen.png" alt="size"> <p>700SQM</p>
-                        </div>
-                    </div>
-                    <div class="full-card">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero maxime praesentium nostrum nobis soluta nam voluptates inventore, at culpa nemo quia repudiandae, velit veritatis illo vitae repellendus voluptate architecto distinctio?
-                        </p>
-                        <div class="carousel">
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                        </div>
-                    </div>
+                    <h2>Apo</h2>
+                        <button class="primary">
+                            View Properties
+                        </button>
                 </div>
             </div>
-             
-            <div class="showcase" data-location="jabi" data-category="terrace">
+
+            <div class="showcase" data-filter-type="location" data-filter-value="karasana">
                 <div class="image">
-                    <img src="public/images/11.2-525x328.webp" alt="">
+                    <img src="public/images/building-teracce-525x328.webp" alt="">
                 </div>
                 <div class="description">
-                    <h4>4 Bedroom Duplex</h4>
-                    <h5 class="price">35,000,000</h5>
-                    <div class="icons">
-                        <div>
-                            <img src="public/icons/furniture.png" alt="bedrooms"> <p>4</p>
-                        </div>
-                        <div>
-                            <img src="public/icons/full-screen.png" alt="size"> <p>700SQM</p>
-                        </div>
-                    </div>
-                    <div class="full-card">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero maxime praesentium nostrum nobis soluta nam voluptates inventore, at culpa nemo quia repudiandae, velit veritatis illo vitae repellendus voluptate architecto distinctio?
-                        </p>
-                        <div class="carousel">
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                        </div>
-                    </div>
+                    <h2>Karasana</h2>
+                        <button class="primary">
+                            View Properties
+                        </button>
                 </div>
             </div>
-             
-            <div class="showcase" data-location="karasana" data-category="duplex">
+            
+            <div class="showcase" data-filter-type="location" data-filter-value="kuje">
                 <div class="image">
-                    <img src="public/images/11.2-525x328.webp" alt="">
+                    <img src="public/images/9.0-525x328.webp" alt="">
                 </div>
                 <div class="description">
-                    <h4>4 Bedroom Duplex</h4>
-                    <h5 class="price">35,000,000</h5>
-                    <div class="icons">
-                        <div>
-                            <img src="public/icons/furniture.png" alt="bedrooms"> <p>4</p>
-                        </div>
-                        <div>
-                            <img src="public/icons/full-screen.png" alt="size"> <p>700SQM</p>
-                        </div>
-                    </div>
-                    <div class="full-card">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero maxime praesentium nostrum nobis soluta nam voluptates inventore, at culpa nemo quia repudiandae, velit veritatis illo vitae repellendus voluptate architecto distinctio?
-                        </p>
-                        <div class="carousel">
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                        </div>
-                    </div>
-                </div>
-            </div>
-             
-            <div class="showcase" data-location="karansana" data-category="duplex">
-                <div class="image">
-                    <img src="public/images/11.2-525x328.webp" alt="">
-                </div>
-                <div class="description">
-                    <h4>4 Bedroom Duplex</h4>
-                    <h5 class="price">35,000,000</h5>
-                    <div class="icons">
-                        <div>
-                            <img src="public/icons/furniture.png" alt="bedrooms"> <p>4</p>
-                        </div>
-                        <div>
-                            <img src="public/icons/full-screen.png" alt="size"> <p>700SQM</p>
-                        </div>
-                    </div>
-                    <div class="full-card">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero maxime praesentium nostrum nobis soluta nam voluptates inventore, at culpa nemo quia repudiandae, velit veritatis illo vitae repellendus voluptate architecto distinctio?
-                        </p>
-                        <div class="carousel">
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                        </div>
-                    </div>
-                </div>
-            </div>
-             
-            <div class="showcase" data-location="karasana" data-category="terrace">
-                <div class="image">
-                    <img src="public/images/11.2-525x328.webp" alt="">
-                </div>
-                <div class="description">
-                    <h4>4 Bedroom Duplex</h4>
-                    <h5 class="price">35,000,000</h5>
-                    <div class="icons">
-                        <div>
-                            <img src="public/icons/furniture.png" alt="bedrooms"> <p>4</p>
-                        </div>
-                        <div>
-                            <img src="public/icons/full-screen.png" alt="size"> <p>700SQM</p>
-                        </div>
-                    </div>
-                    <div class="full-card">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero maxime praesentium nostrum nobis soluta nam voluptates inventore, at culpa nemo quia repudiandae, velit veritatis illo vitae repellendus voluptate architecto distinctio?
-                        </p>
-                        <div class="carousel">
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                        </div>
-                    </div>
-                </div>
-            </div>
-             
-            <div class="showcase" data-location="karasana" data-category="duplex">
-                <div class="image">
-                    <img src="public/images/11.2-525x328.webp" alt="">
-                </div>
-                <div class="description">
-                    <h4>4 Bedroom Duplex</h4>
-                    <h5 class="price">35,000,000</h5>
-                    <div class="icons">
-                        <div>
-                            <img src="public/icons/furniture.png" alt="bedrooms"> <p>4</p>
-                        </div>
-                        <div>
-                            <img src="public/icons/full-screen.png" alt="size"> <p>700SQM</p>
-                        </div>
-                    </div>
-                    <div class="full-card">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero maxime praesentium nostrum nobis soluta nam voluptates inventore, at culpa nemo quia repudiandae, velit veritatis illo vitae repellendus voluptate architecto distinctio?
-                        </p>
-                        <div class="carousel">
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                        </div>
-                    </div>
-                </div>
-            </div>
-             
-            <div class="showcase" data-location="kuje" data-category="bungalow">
-                <div class="image">
-                    <img src="public/images/11.2-525x328.webp" alt="">
-                </div>
-                <div class="description">
-                    <h4>4 Bedroom Duplex</h4>
-                    <h5 class="price">35,000,000</h5>
-                    <div class="icons">
-                        <div>
-                            <img src="public/icons/furniture.png" alt="bedrooms"> <p>4</p>
-                        </div>
-                        <div>
-                            <img src="public/icons/full-screen.png" alt="size"> <p>700SQM</p>
-                        </div>
-                    </div>
-                    <div class="full-card">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero maxime praesentium nostrum nobis soluta nam voluptates inventore, at culpa nemo quia repudiandae, velit veritatis illo vitae repellendus voluptate architecto distinctio?
-                        </p>
-                        <div class="carousel">
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                        </div>
-                    </div>
-                </div>
-            </div>
-             
-            <div class="showcase" data-location="kuje" data-category="shortlet">
-                <div class="image">
-                    <img src="public/images/11.2-525x328.webp" alt="">
-                </div>
-                <div class="description">
-                    <h4>4 Bedroom Duplex</h4>
-                    <h5 class="price">35,000,000</h5>
-                    <div class="icons">
-                        <div>
-                            <img src="public/icons/furniture.png" alt="bedrooms"> <p>4</p>
-                        </div>
-                        <div>
-                            <img src="public/icons/full-screen.png" alt="size"> <p>700SQM</p>
-                        </div>
-                    </div>
-                    <div class="full-card">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero maxime praesentium nostrum nobis soluta nam voluptates inventore, at culpa nemo quia repudiandae, velit veritatis illo vitae repellendus voluptate architecto distinctio?
-                        </p>
-                        <div class="carousel">
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                        </div>
-                    </div>
-                </div>
-            </div>
-             
-            <div class="showcase" data-location="kuje" data-category="duplex">
-                <div class="image">
-                    <img src="public/images/11.2-525x328.webp" alt="">
-                </div>
-                <div class="description">
-                    <h4>4 Bedroom Duplex</h4>
-                    <h5 class="price">35,000,000</h5>
-                    <div class="icons">
-                        <div>
-                            <img src="public/icons/furniture.png" alt="bedrooms"> <p>4</p>
-                        </div>
-                        <div>
-                            <img src="public/icons/full-screen.png" alt="size"> <p>700SQM</p>
-                        </div>
-                    </div>
-                    <div class="full-card">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero maxime praesentium nostrum nobis soluta nam voluptates inventore, at culpa nemo quia repudiandae, velit veritatis illo vitae repellendus voluptate architecto distinctio?
-                        </p>
-                        <div class="carousel">
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                        </div>
-                    </div>
-                </div>
-            </div>
-             
-            <div class="showcase" data-location="wuye" data-category="duplex">
-                <div class="image">
-                    <img src="public/images/11.2-525x328.webp" alt="">
-                </div>
-                <div class="description">
-                    <h4>4 Bedroom Duplex</h4>
-                    <h5 class="price">35,000,000</h5>
-                    <div class="icons">
-                        <div>
-                            <img src="public/icons/furniture.png" alt="bedrooms"> <p>4</p>
-                        </div>
-                        <div>
-                            <img src="public/icons/full-screen.png" alt="size"> <p>700SQM</p>
-                        </div>
-                    </div>
-                    <div class="full-card">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero maxime praesentium nostrum nobis soluta nam voluptates inventore, at culpa nemo quia repudiandae, velit veritatis illo vitae repellendus voluptate architecto distinctio?
-                        </p>
-                        <div class="carousel">
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                        </div>
-                    </div>
-                </div>
-            </div>
-             
-            <div class="showcase" data-location="wuye" data-category="duplex">
-                <div class="image">
-                    <img src="public/images/11.2-525x328.webp" alt="">
-                </div>
-                <div class="description">
-                    <h4>4 Bedroom Duplex</h4>
-                    <h5 class="price">35,000,000</h5>
-                    <div class="icons">
-                        <div>
-                            <img src="public/icons/furniture.png" alt="bedrooms"> <p>4</p>
-                        </div>
-                        <div>
-                            <img src="public/icons/full-screen.png" alt="size"> <p>700SQM</p>
-                        </div>
-                    </div>
-                    <div class="full-card">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero maxime praesentium nostrum nobis soluta nam voluptates inventore, at culpa nemo quia repudiandae, velit veritatis illo vitae repellendus voluptate architecto distinctio?
-                        </p>
-                        <div class="carousel">
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                        </div>
-                    </div>
-                </div>
-            </div>
-             
-            <div class="showcase" data-location="wuye" data-category="terrace">
-                <div class="image">
-                    <img src="public/images/11.2-525x328.webp" alt="">
-                </div>
-                <div class="description">
-                    <h4>4 Bedroom Duplex</h4>
-                    <h5 class="price">35,000,000</h5>
-                    <div class="icons">
-                        <div>
-                            <img src="public/icons/furniture.png" alt="bedrooms"> <p>4</p>
-                        </div>
-                        <div>
-                            <img src="public/icons/full-screen.png" alt="size"> <p>700SQM</p>
-                        </div>
-                    </div>
-                    <div class="full-card">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero maxime praesentium nostrum nobis soluta nam voluptates inventore, at culpa nemo quia repudiandae, velit veritatis illo vitae repellendus voluptate architecto distinctio?
-                        </p>
-                        <div class="carousel">
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                        </div>
-                    </div>
-                </div>
-            </div>
-             
-            <div class="showcase" data-location="wuye" data-category="terrace">
-                <div class="image">
-                    <img src="public/images/11.2-525x328.webp" alt="">
-                </div>
-                <div class="description">
-                    <h4>4 Bedroom Duplex</h4>
-                    <h5 class="price">35,000,000</h5>
-                    <div class="icons">
-                        <div>
-                            <img src="public/icons/furniture.png" alt="bedrooms"> <p>4</p>
-                        </div>
-                        <div>
-                            <img src="public/icons/full-screen.png" alt="size"> <p>700SQM</p>
-                        </div>
-                    </div>
-                    <div class="full-card">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero maxime praesentium nostrum nobis soluta nam voluptates inventore, at culpa nemo quia repudiandae, velit veritatis illo vitae repellendus voluptate architecto distinctio?
-                        </p>
-                        <div class="carousel">
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                        </div>
-                    </div>
-                </div>
-            </div>
-             
-            <div class="showcase" data-location="wuye" data-category="bungalow">
-                <div class="image">
-                    <img src="public/images/11.2-525x328.webp" alt="">
-                </div>
-                <div class="description">
-                    <h4>4 Bedroom Duplex</h4>
-                    <h5 class="price">35,000,000</h5>
-                    <div class="icons">
-                        <div>
-                            <img src="public/icons/furniture.png" alt="bedrooms"> <p>4</p>
-                        </div>
-                        <div>
-                            <img src="public/icons/full-screen.png" alt="size"> <p>700SQM</p>
-                        </div>
-                    </div>
-                    <div class="full-card">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero maxime praesentium nostrum nobis soluta nam voluptates inventore, at culpa nemo quia repudiandae, velit veritatis illo vitae repellendus voluptate architecto distinctio?
-                        </p>
-                        <div class="carousel">
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                        </div>
-                    </div>
-                </div>
-            </div>
-             
-            <div class="showcase" data-location="wuye" data-category="shortlet">
-                <div class="image">
-                    <img src="public/images/11.2-525x328.webp" alt="">
-                </div>
-                <div class="description">
-                    <h4>4 Bedroom Duplex</h4>
-                    <h5 class="price">35,000,000</h5>
-                    <div class="icons">
-                        <div>
-                            <img src="public/icons/furniture.png" alt="bedrooms"> <p>4</p>
-                        </div>
-                        <div>
-                            <img src="public/icons/full-screen.png" alt="size"> <p>700SQM</p>
-                        </div>
-                    </div>
-                    <div class="full-card">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero maxime praesentium nostrum nobis soluta nam voluptates inventore, at culpa nemo quia repudiandae, velit veritatis illo vitae repellendus voluptate architecto distinctio?
-                        </p>
-                        <div class="carousel">
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                            <li class="item">
-                                <div class="content"><img src="public/images/11.2-525x328.webp" alt=""></div>
-                            </li>
-                        </div>
-                    </div>
+                    <h2>Kuje</h2>
+                        <button class="primary">
+                            View Properties
+                        </button>
                 </div>
             </div>
         </div>
     </section>
 
+    <section class="footer">
+        <div class="overlay-3">
+            <div class="h-link"></div>
+            <div class="c-name"></div>
+        </div>
+    </section>
     <script src="src/default.js"></script>
     <script src="src/properties.js"></script>
 </body>

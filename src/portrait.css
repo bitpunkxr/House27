@@ -123,6 +123,7 @@ img {
     position: fixed;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 9999;
 }
 
 .header em {
@@ -245,19 +246,19 @@ rd {
     background: var(--text);
     backdrop-filter: var(--bdf-2);
     -webkit-backdrop-filter: var(--bdf-2);
-    height: 90vh;
+    height: fit-content;
     box-shadow: 0 0 50px #000;
     border-end-end-radius: 1rem;
     border-end-start-radius: 1rem;
-    transform: translateX(150%);
+    transform: translateY(-150%);
     transition: var(--trans);
-    top: 5rem;
     position: absolute;
+    z-index: 1000;
 }
 
 .open-menu.show {
     pointer-events: auto;
-    transform: translateX(0);
+    transform: translateY(0);
 }
 
 .pages {
@@ -265,6 +266,8 @@ rd {
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
+    margin: auto;
+    margin: 5rem auto;
 }
 
 .pages li {
@@ -284,7 +287,7 @@ rd {
 }
 
 #hero {
-    background: url(../public/images/hero-2.jpg);
+    background: url(../public/images/hero.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -406,7 +409,7 @@ rd {
 .overlay {
     height: 100%;
     width: 100%;
-    background: linear-gradient(#00000044, #00000044, #000);
+    background: #0000009c;
     position: absolute;
     z-index: 0;
     pointer-events: none;
@@ -699,7 +702,7 @@ button {
 }
 
 .list li.active {
-    padding: 10px 30px;
+    padding: 10px 40px;
     background: var(--tertiary);
     animation: 5.7s bounce;
     color: var(--primary);
@@ -719,16 +722,6 @@ button:hover, .interactions:hover button {
 
 .image img, .b-img img, .b-text {
     transition: all 1s cubic-bezier(0.86, 0, 0.07, 1);
-}
-
-.showcase:hover {
-    box-shadow: var(--b-shadow);
-    border: var(--border-line-2);
-}
-
-.showcase:hover h2 {
-    color: var(--tertiary-2);
-    border-bottom: var(--border-line-2);
 }
 
 .options {
@@ -770,15 +763,21 @@ button:hover, .interactions:hover button {
     border-radius: var(--bdr);
 }
 
-.showcase h2 {
-    transition: all .4s ease-in-out;
+.showcase:hover {
+    box-shadow: var(--b-shadow);
+    border: var(--border-line-2);
 }
 
-#price {
-    background: url(../public/images/house1-scaled-1-525x328.webp);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.showcase h2 {
+    transition: all .4s ease-in-out;
+    border-bottom: 2px solid transparent;
+    width: fit-content;
+    margin: auto;
+}
+
+.showcase:hover h2 {
+    color: var(--tertiary-2);
+    border-bottom: var(--border-line-2);
 }
 
 .showcase.active {
@@ -815,9 +814,13 @@ button:hover, .interactions:hover button {
 
 .description {
     width: 90%;
-    margin: auto;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
+}
+
+.description h2 {
+    text-align: center;
 }
 
 .description h4 {
@@ -957,13 +960,14 @@ button:hover, .interactions:hover button {
     border-radius: inherit;
     background: #000;
     border-radius: 4rem;
-    box-shadow: var(--s-shadow);
+    box-shadow: var(--s-shadow), inset var(--b-shadow);
 }
 
 .boxed h1 {
     padding: var(--pad);
     color: var(--primary);
     text-align: center;
+    font-size: 1.5rem;
 }
 
 .box1, .box2 {

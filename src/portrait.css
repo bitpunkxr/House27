@@ -4,6 +4,7 @@ html, body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     scrollbar-width: none;
     scroll-behavior: smooth;
+    scrollbar-color: var(--tertiary-2);
 }
 
 :root {
@@ -731,7 +732,6 @@ button:hover, .interactions:hover button {
 }
 
 .options {
-    /* background: var(--faint); */
     padding: 5rem 0;
 }
 
@@ -754,17 +754,16 @@ button:hover, .interactions:hover button {
     flex-wrap: wrap;
     justify-content: space-evenly;
     margin: auto;
-    width: fit-content;
     animation: 0.7s fadeIn forwards;
     animation-delay: .3s;
 }
 
 .showcase {
     width: 80%;
-    max-width: 370px;
+    max-width: 470px;
     border: var(--border-line);
     box-shadow: var(--shadow);
-    margin: 1rem auto;
+    margin: 1.3rem auto;
     justify-content: space-around;
     transition: all .4s ease-in-out;
     background: var(--linear-bg);
@@ -782,82 +781,10 @@ button:hover, .interactions:hover button {
     background-size: cover;
 }
 
-#price .showcase {
-    overflow: hidden;
-    padding: 0;
-    background: none;
-}
-
-#price .primary2 {
-    font-size: 1.5rem;
-    background: none;
-    backdrop-filter: none;
-    box-shadow: none;
-    display: flex;
-    flex-direction: column;
-}
-
-#price .showcase:hover .primary2 {
-    background: var(--secondary);
-    backdrop-filter: var(--bdf);
-    box-shadow: var(--s-shadow);
-}
-
-#price .icon {
-    width: fit-content;
-    margin: 1rem auto;
-}
-
-#price .showcase .info img {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-    scale: 1.1
-}
-
-.price-img { position: relative; }
-
-.hidden { display: none; }
-
-.hidden.active { display: flex; }
-
-.dd-text, .dd-card {
-    padding: 10px 20px;
-    color: var(--secondary-2);
-    box-shadow: var(--b-shadow);
-    border-radius: var(--bdr);
-    border: 1px solid #fff;
-    bottom: 0;
-    backdrop-filter: brightness(130%);
-    transition: var(--trans);
-}
-
-.dd-text { position: absolute; left: 50%; transform: translateX(-50%); transition: var(--trans)}
-
-.dd-text:hover {
-    border: var(--border-line-2);
-    color: var(--tertiary-2);
-}
-
-.dd-card {
-    margin: 1rem 0;
-    box-shadow: none;
-    border-radius: 0;
-}
-
-.dd-card:hover { border: var(--border-line-2); }
-
-.dd-text h5 {
-    font-size: 15px;
-    text-align: center;
-}
-
 .showcase.active {
     width: 90vw;
     max-width: 90vw;
     scrollbar-width: none;
-    height: fit-content;
     box-shadow: none;
     border-radius: none;
 }

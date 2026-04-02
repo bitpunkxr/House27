@@ -25,13 +25,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-function showfilterMessage(type, value) {
-    const message = document.createElement('div');
-    message.textContent = `Showing ${type}:${value} (Clear filter)`;
-    message.style.cursor = 'pointer';
-    message.className('.primary')
-    message.onclick = () => {
-        window.location.href = 'index.html#filter';
-    };
-    document.body.prepend(message);
-}
+
+const message = document.createElement('button');
+message.textContent = `Showing ${type}:${value} (Clear filter)`;
+message.style.cursor = 'pointer';
+message.classList.add('primary');
+message.onclick = () => {
+    window.location.href = 'index.html#filter';
+};
+document.body.prepend(message);

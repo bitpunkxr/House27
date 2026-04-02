@@ -137,8 +137,8 @@
 
     .showcase {
         margin: 3rem 0;
-        max-width: 370px;
-        width: 370px;
+        max-width: 570px;
+        width: 30%;
     }
 
     .text {
@@ -151,12 +151,8 @@
     }
 
     .showcase.active {
-        width: 30vw;
-        max-width: 30vw;
-        height: 70vh;
-        overflow: auto;
-        scrollbar-width: initial;
-        scale: 1.1;
+        width: 40vw;
+        scrollbar-width: thin;
     }
 
     .box1, .box2 {

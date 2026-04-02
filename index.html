@@ -131,12 +131,13 @@
         
         <div class="results" id="categories">
         <div class="grid-container">
-            <div class="grid h" id="img-1">
+            
+            <div class="grid h" id="img-1" data-filter-type="category" data-filter-value="shortlet">
                 <div class="info">
                     <img src="public/images/neighborhood.JPG" alt="">
                     <div class="interactions">
                         <button class="primary">
-                            Apartments
+                            Shortlet
                             <div class="icon">
                                 &DoubleRightArrow;
                             </div>
@@ -144,64 +145,13 @@
                     </div>
                 </div>
             </div>
-            <div class="grid m" id="img-2">
-                <div class="info">
-                    <img src="public/images/hero.jpg" alt="">
-                    <div class="interactions">
-                        <button class="primary">
-                            Shortlets
-                            <div class="icon">
-                                &DoubleRightArrow;
-                            </div>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="grid a" id="img-3">
-                <div class="info">
-                    <img src="public/images/hero-2.jpg" alt="">
-                    <div class="interactions">
-                        <button class="primary">
-                            Rentals
-                            <div class="icon">
-                                &DoubleRightArrow;
-                            </div>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="grid a2" id="img-4">
-                <div class="info">
-                    <img src="public/images/hero-3.jpg" alt="">
-                    <div class="interactions">
-                        <button class="primary">
-                            Lands
-                            <div class="icon">
-                                &DoubleRightArrow;
-                            </div>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="grid n" id="img-5">
-                <div class="info">
-                    <img src="public/images/sunset.jpg" alt="">
-                    <div class="interactions">
-                        <button class="primary">
-                            Investments
-                            <div class="icon">
-                                &DoubleRightArrow;
-                            </div>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="grid f" id="img-6">
+            
+            <div class="grid m" id="img-2" data-filter-type="category" data-filter-value="bungalow">
                 <div class="info">
                     <img src="public/images/street.jpg" alt="">
                     <div class="interactions">
                         <button class="primary">
-                            Estates
+                            Bungalow
                             <div class="icon">
                                 &DoubleRightArrow;
                             </div>
@@ -209,11 +159,68 @@
                     </div>
                 </div>
             </div>
+            
+            <div class="grid a" id="img-3" data-filter-type="category" data-filter-value="duplex">
+                <div class="info">
+                    <img src="public/images/hero-2.jpg" alt="">
+                    <div class="interactions">
+                        <button class="primary">
+                            Duplex
+                            <div class="icon">
+                                &DoubleRightArrow;
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid a2" id="img-4" data-filter-type="category" data-filter-value="terrace">
+                <div class="info">
+                    <img src="public/images/terrace.JPG" alt="">
+                    <div class="interactions">
+                        <button class="primary">
+                            Terrace
+                            <div class="icon">
+                                &DoubleRightArrow;
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid n" id="img-5" data-filter-type="category" data-filter-value="land">
+                <div class="info">
+                    <img src="public/images/sunset.jpg" alt="">
+                    <div class="interactions">
+                        <button class="primary">
+                            Land
+                            <div class="icon">
+                                &DoubleRightArrow;
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid f" id="img-6" data-filter-type="category"data-filter-value="investment">
+                <div class="info">
+                    <img src="public/images/hero-2.jpg" alt="">
+                    <div class="interactions">
+                        <button class="primary">
+                            Investment
+                            <div class="icon">
+                                &DoubleRightArrow;
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            </a>
         </div>
         </div>
 
         <div class="results" id="location">
-            <div class="showcase">
+            <div class="showcase" data-filter-type="location" data-filter-value="maitama">
                 <div class="image">
                     <img src="public/images/10-525x328.webp" alt="">
                 </div>
@@ -224,18 +231,7 @@
                     </button>
                 </div>
             </div>
-            <div class="showcase">
-                <div class="image">
-                    <img src="public/images/11.2-525x328.webp" alt="">
-                </div>
-                <div class="description">
-                    <h2>Guzappe</h2>
-                        <button class="primary" id="s1">
-                            View Properties
-                        </button>
-                </div>
-            </div>
-            <div class="showcase">
+            <div class="showcase" data-filter-type="location" data-filter-value="wuye">
                 <div class="image">
                     <img src="public/images/3-525x328.webp" alt="">
                 </div>
@@ -246,7 +242,7 @@
                         </button>
                 </div>
             </div>
-            <div class="showcase">
+            <div class="showcase" data-filter-type="location" data-filter-value="jabi">
                 <div class="image">
                     <img src="public/images/7-525x328.webp" alt="">
                 </div>
@@ -257,7 +253,7 @@
                         </button>
                 </div>
             </div>
-            <div class="showcase" id="s4">
+            <div class="showcase" data-filter-type="location" data-filter-value="apo">
                 <div class="image">
                     <img src="public/images/9-525x328.webp" alt="">
                 </div>
@@ -268,7 +264,7 @@
                         </button>
                 </div>
             </div>
-            <div class="showcase">
+            <div class="showcase" data-filter-type="location" data-filter-value="karasana">
                 <div class="image">
                     <img src="public/images/building-teracce-525x328.webp" alt="">
                 </div>
@@ -279,7 +275,7 @@
                         </button>
                 </div>
             </div>
-            <div class="showcase">
+            <div class="showcase" data-filter-type="location" data-filter-value="kuje">
                 <div class="image">
                     <img src="public/images/9.0-525x328.webp" alt="">
                 </div>

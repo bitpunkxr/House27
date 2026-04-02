@@ -620,7 +620,6 @@ button {
 }
 
 .full-card {
-    border-top: 2px solid #000;
     height: 0px;
     overflow: hidden;
 }
@@ -634,6 +633,21 @@ button {
 .full-card h2 {
     margin: 1.5rem auto;
     color: var(--primary);
+}
+
+.carousel {
+    display: flex;
+    gap: 8px;
+    padding: 16px;
+    list-style: none;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+
+.item {
+    flex-shrink: 0;
+    width: 80%;
+    scroll-snap-align: center;
 }
 
 .display {
@@ -840,12 +854,10 @@ button:hover, .interactions:hover button {
 }
 
 .showcase.active {
-    width: 100vw;
-    max-width: 100vw;
+    width: 90vw;
+    max-width: 90vw;
     scrollbar-width: none;
-    background: var(--faint);
     height: fit-content;
-    margin: 0;
     box-shadow: none;
     border-radius: none;
 }
@@ -881,12 +893,11 @@ button:hover, .interactions:hover button {
     flex-direction: column;
 }
 
-.description h2 {
+.description h4 {
     color: var(--secondary);
-    text-align: left;
+    text-align: center;
     margin: auto;
-    font-size: 2rem;
-    border-bottom: 2px solid #000000b9;
+    font-size: 1.3rem;
     text-transform: uppercase;
     letter-spacing: 4px;
 }
@@ -903,7 +914,7 @@ button:hover, .interactions:hover button {
 }
 
 .description img {
-    border-radius: var(--bdr);
+    border-radius: 8px;
 }
 
 .description button {
@@ -912,7 +923,6 @@ button:hover, .interactions:hover button {
 }
 
 .description .full-card {
-    border-top: 2px solid #000;
     height: 0px;
     overflow: hidden;
 }
@@ -928,6 +938,15 @@ button:hover, .interactions:hover button {
     margin-top: 5rem;
 }
 
+.description h5 {
+    text-align: center;
+    margin: 1rem auto;
+    padding: 10px;
+    background: red;
+    border-radius: var(--bdr);
+    color: var(--primary);
+}
+
 .description .full-card p {
     font-size: 1rem;
     margin: 1rem 0;
@@ -935,7 +954,8 @@ button:hover, .interactions:hover button {
 
 .icons {
     display: flex;
-    gap: 3px;
+    gap: 1rem;
+    padding: 0 1rem;
     justify-content: space-evenly;
     margin: 5px auto;
     background: var(--faint);

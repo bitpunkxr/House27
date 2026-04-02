@@ -27,3 +27,16 @@ filter1.addEventListener('click', () => {
 filter2.addEventListener('click', () => {
     toggleCategories();
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const summaryCards = document.querySelectorAll('.showcase');
+
+    summaryCards.forEach(card => {
+        card.addEventListener('click', () => {
+            const filterType = card.dataset.filterType; //filter location or category
+            const filterValue = card.dataset.filterValue;
+
+            window.location.href = 'full-properties.html?filterType=${encodeURIComponent(filterType)}&filterValue=${encodeURIComponent(filterValue)}';
+        });
+    });
+});

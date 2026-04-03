@@ -4,7 +4,7 @@ html, body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     scrollbar-width: none;
     scroll-behavior: smooth;
-    scrollbar-color: var(--tertiary-2);
+    scrollbar-color: #ff4444;
 }
 
 :root {
@@ -30,7 +30,7 @@ html, body {
     --faint-2: #ffffff41;
     --text-2: #ffffffde;
     --border: 3rem;
-    --border-line: 1px solid #00000075;
+    --border-line: 1px solid #00000038;
     --border-line-2: 1px solid #ff4444;
     --pad: 1rem;
     --b-pad: 2rem;
@@ -42,7 +42,7 @@ html, body {
     --b-shadow: 0 0 35px #d6000085;
     --i-shadow: inset 0 0 3px #f00;
     --i-shadow-2: inset 0 0 10px #f00;
-    --s-shadow: 3px 3px 7px #00000091;
+    --s-shadow: 0px 0px 8px #00000085;
     --trans: all 0.3s ease;
     --cb-trans: all 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
@@ -89,13 +89,7 @@ li {
     list-style: none;
 }
 
-a {
-    color: var(--secondary);
-}
-
-a {
-    text-decoration: none;
-}
+a { color: var(--secondary); text-decoration: none; }
 
 img {
     width: 100%;
@@ -291,7 +285,7 @@ rd {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
+    background-attachment: scroll;
     height: 90vh;
     margin: 0;
     padding: 0;
@@ -327,6 +321,15 @@ rd {
     color: var(--secondary);
 }
 
+.capital.light {
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 300;
+}
+
 .capital.middle {
     text-align: center;
 }
@@ -339,7 +342,6 @@ rd {
     border-radius: var(--bdr-2);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-    display: inline-block;
 }
 
 .secondary {
@@ -551,7 +553,6 @@ button {
 
 .project .brief-card {
     box-shadow: 0 0 7px var(--tertiary-2);
-    padding-bottom: 4rem;
     margin-bottom: 0;
     margin-bottom: 4rem;
 }
@@ -559,6 +560,10 @@ button {
 .brief {
     width: 95%;
     margin: 6rem auto;
+}
+
+.brief h1, .brief h3 {
+    text-align: center;
 }
 
 .brief button {
@@ -577,6 +582,8 @@ button {
     margin-bottom: 4rem;
     box-shadow: var(--s-shadow);
     transition: var(--trans);
+    max-width: 1024px;
+    margin: 1rem auto;
 }
 
 .brief-card:last-of-type {
@@ -591,8 +598,21 @@ button {
 
 .brief-img h1, .brief-text p {
     letter-spacing: 4px;
-    color: var(--bg);
     margin: auto;
+}
+
+.brief-text {
+    background: #000;
+    padding: 0 var(--b-pad);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.brief-text p {
+    font-size: 18px;
+    margin: 1rem auto;
+    color: var(--text-2);
 }
 
 .brief-img h1 {
@@ -607,11 +627,6 @@ button {
     color: var(--tertiary-2);
     width: 100%;
     padding-top: 20%;
-}
-
-.brief-text {
-    background: #000;
-    padding: 0 var(--pad);
 }
 
 .brief-icon {
@@ -636,6 +651,10 @@ button {
 .full-card h2 {
     margin: 1.5rem auto;
     color: var(--primary);
+}
+
+.full-card img {
+    max-width: 700px;
 }
 
 .carousel {
@@ -922,113 +941,83 @@ button:hover, .interactions:hover button {
 }
 
 .about {
+    width: 95%;
     color: var(--primary);
-    margin: 0 auto;
+    margin: 2rem auto;
     opacity: 0;
     padding: var(--pad) 0;
     transform: translateY(20px);
     animation: .7s fadeUp forwards;
-    animation-delay: .8s;
 }
 
 .text {
-    width: 95%;
-    color: var(--text-2);
-    border: var(--border-line);
-    z-index: 1;
-    margin: 3rem auto;
-    display: flex;
-    flex-direction: column;
-    box-shadow: var(--s-shadow);
-    border-radius: 3rem;
-    background: var(--faint-2);
-    bottom: var(--pad);
+    border-radius: var(--bdr-2);
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: minmax(120px, auto);
+    width: 100%;
+    border-radius: var(--bdr-2);
+    grid-template-areas:
+     "head head" 
+     "foot foot"
+     "side side";
 }
 
 .text p {
     color: var(--text);
 }
 
-.text p b {
-    color: var(--secondary-3);
-}
-
-.text2 p {
-    color: var(--text);
-}
-
-.boxed {
-    width: 100%;
-    border-radius: inherit;
+.text h1 {
+    text-align: center;
+    padding: var(--pad);
+    color: var(--primary);
+    text-align: center;
+    font-size: 1.5rem;
     background: #000;
     border-radius: 4rem;
     box-shadow: var(--s-shadow), inset var(--b-shadow);
 }
 
-.boxed h1 {
-    padding: var(--pad);
-    color: var(--primary);
-    text-align: center;
-    font-size: 1.5rem;
+.text p b {
+    color: var(--secondary-3);
 }
 
-.box1, .box2 {
+.head, .foot, .side {
+    padding: var(--pad);
+    box-shadow: var(--s-shadow);
+    border-radius: inherit;
+}
+
+.head { grid-area: head; }
+
+.foot { grid-area: foot; }
+
+.side { grid-area: side; }
+
+.inspection {
+    text-align: center;
+    background: url(../public/tab-img.JPG);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    background-attachment: fixed;
+    position: relative;
+    height: 60vh;
+}
+
+.writing {
+    width: fit-content;
+    margin: auto;
+    backdrop-filter: brightness(30%) blur(10px);
+    -webkit-backdrop-filter: brightness(30%) blur(10px);
+    color: var(--primary);
+    height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-
-.box1 {
-    width: 90%;
-    margin: var(--pad) auto;
-}
-
-.box2 {
-    height: 40vh;
-    background: url(../public/tab-img.JPG);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-end-start-radius: inherit;
-    border-end-end-radius: inherit;
-    position: relative;
-}
-
-.box2 img {
-    width: 90%;
-    height: auto;
-}
-
-.box-overlay {
-    position: absolute;
-    width: 100%;
-    height: 20%;
-    background: linear-gradient(var(--bg), transparent);
-    top: 0;
-}
-
-#pie {
-    background: url(../public/images/living-room.JPG);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-#wwd {
-    background: url(../public/images/terrace.JPG);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.w-card {
-    display: flex;
-    flex-direction: column;
-    width: fit-content;
-    padding: var(--pad);
-    justify-content: space-evenly;
-    border-radius: var(--bdr);
-    width: 90%;
 }
 
 .card {
@@ -1119,7 +1108,7 @@ button:hover, .interactions:hover button {
 /* Footer  */
 
 .footer {
-    background: url(../public/images/hero-3.jpg);
+    background: url(../public/images/hero.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1128,6 +1117,7 @@ button:hover, .interactions:hover button {
 
 .overlay-3 {
     backdrop-filter: brightness(10%) saturate(0%);
+    -webkit-backdrop-filter: brightness(10%) saturate(0%);
     padding-top: 1rem;
 }
 

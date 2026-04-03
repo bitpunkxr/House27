@@ -6,8 +6,8 @@ const dispName = document.getElementById('filter');
 dispName.innerText = "Properties are available in the following categories and location";
 
 
-filter2.classList.add('active');
-option2.classList.add('active');
+filter1.classList.add('active');
+option1.classList.add('active');
 
 function toggleCategories() {
    option1.classList.add('active');

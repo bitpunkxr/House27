@@ -804,8 +804,6 @@ button:hover, .interactions:hover button {
     width: 90vw;
     max-width: 90vw;
     scrollbar-width: none;
-    box-shadow: none;
-    border-radius: none;
 }
 
 .showcase.active h2 {

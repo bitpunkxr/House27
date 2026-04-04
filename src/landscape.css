@@ -225,11 +225,12 @@
         width: 50%;
     }
 
-    input {
-        width: 44%;
-    }
-
     .user-input {
-        justify-content: space-between;
+        grid-template-areas: 
+         "name name"
+         "mail number"
+         "message message"
+         "message message"
+         "submit submit";
     }
 }

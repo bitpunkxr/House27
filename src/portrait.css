@@ -841,6 +841,7 @@ button:hover, .interactions:hover button {
     position: absolute;
     padding: 10px;
     backdrop-filter: blur(3px) brightness(170%);
+    -webkit-ackdrop-filter: blur(3px) brightness(170%);
     border-radius: 10px;
     box-shadow: 0 0 10px #0000006b;
     color: var(--secondary);

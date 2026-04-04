@@ -165,6 +165,7 @@ img {
 
 rd {
     color: var(--tertiary-2);
+    transition: var(--trans);
 }
 
 .container {
@@ -1184,6 +1185,7 @@ button:hover, .interactions:hover button {
     margin: 1rem;
     border-bottom: 2px var(--primary);
     font-size: 1.2rem;
+    justify-content: center;
 }
 
 .links:nth-child(2) {
@@ -1192,14 +1194,36 @@ button:hover, .interactions:hover button {
 }
 
 .links p {
-    margin: 2rem auto;
+    margin: 1rem auto;
     transition: var(--trans);
     width: fit-content;
+}
+
+.links div {
+    margin: 0 auto;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: minmax(100px, auto);
+    gap: 10px;
+    grid-template-areas:
+     "one two"
+     "three four";
 }
 
 .links a:hover {
     color: var(--primary);
     text-shadow: 0 0 10px var(--primary);
+}
+
+.links a:hover rd {
+    text-shadow: 0 0 10px #f00;
+}
+
+.links img {
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 12px;
 }
 
 .footer h3 {

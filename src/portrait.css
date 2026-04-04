@@ -777,11 +777,12 @@ button:hover, .interactions:hover button {
     margin: 1.3rem auto;
     justify-content: space-around;
     transition: all .4s ease-in-out;
-    background: var(--linear-bg);
-    border-radius: var(--bdr);
+    background: var(--secondary-3);
+    border-radius: var(--bdr-2);
 }
 
 .showcase:hover {
+    background: var(--tertiary-2);
     box-shadow: var(--b-shadow);
     border: var(--border-line-2);
 }
@@ -817,17 +818,58 @@ button:hover, .interactions:hover button {
     width: 100%;
     overflow: hidden;
     overflow-y: hidden;
-    border-start-start-radius: inherit;
-    border-start-end-radius: inherit;
+    border-radius: inherit;
+    position: relative;
 }
+
+.float, .price, .icons {
+    position: absolute;
+    padding: 10px;
+    backdrop-filter: blur(3px) brightness(130%);
+    border-radius: 10px;
+    box-shadow: 0 0 10px #0000006b;
+    color: var(--secondary);
+    font-weight: 700;
+    transition: var(--trans);
+}
+
+.float, .price { top: 5%; }
+.float { left: 5%; }
+.price { right: 5%; }
+
+.icons {
+    bottom: 5%;
+    transform: translateX(-50%);
+    left: 50%;
+    color: var(--secondary-3);
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+     "room size";
+}
+
+.icons p { font-size: 15px; font-weight: 700; }
+
+.showcase:hover .float, .showcase:hover .price, .showcase:hover .icons {
+    box-shadow: 0 0 10px var(--tertiary-2);
+}
+
+#room, #size { display: flex; flex-direction: row; gap: 10px; }
+
+#room img, #size img { width: 20px; height: auto; }
+#room { grid-area: room; }
+#size { grid-area: size; }
 
 .image img {
     margin: 0;
     padding: 0;
+    height: 0%;
+    scale: 1.05
 }
 
 .showcase:hover .image img {
-    scale: 1.1;
+    scale: 1.15;
 }
 
 .description {
@@ -835,6 +877,7 @@ button:hover, .interactions:hover button {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .description h2 {
@@ -842,9 +885,9 @@ button:hover, .interactions:hover button {
 }
 
 .description h4 {
-    color: var(--secondary);
+    color: var(--bg);
     text-align: center;
-    margin: auto;
+    margin: .5rem auto;
     font-size: 1.3rem;
     text-transform: uppercase;
     letter-spacing: 4px;
@@ -887,49 +930,9 @@ button:hover, .interactions:hover button {
     margin-top: 5rem;
 }
 
-.price {
-    text-align: center;
-    margin: 1rem auto;
-    padding: 10px;
-    background: red;
-    border-radius: var(--bdr);
-    color: var(--primary);
-    font-size: 20px;
-}
-
 .description .full-card p {
     font-size: 1rem;
     margin: 1rem 0;
-}
-
-.icons {
-    display: flex;
-    gap: 2rem;
-    width: fit-content;
-    padding: 0 1rem;
-    justify-content: space-evenly;
-    margin: 5px auto;
-    background: var(--faint);
-    border-radius: 10px;
-}
-
-.icons img {
-    height: 25px;
-    width: auto;
-    margin: 0;
-}
-
-.icons div {
-    margin: 10px auto;
-    display: flex;
-    justify-content: space-around;
-    gap: 8px;
-}
-
-.icons p {
-    color: var(--secondary-3);
-    margin: 0;
-    font-size: 20px;
 }
 
 .transition, .transition-2 {

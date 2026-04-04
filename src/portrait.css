@@ -1037,7 +1037,7 @@ button:hover, .interactions:hover button {
 
 .inspection::before {
     content: "";
-    background: url(../public/hero.jpg);
+    background: url(../public/tab-img.JPG);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1101,7 +1101,7 @@ button:hover, .interactions:hover button {
 
 .blog::before {
     content: "";
-    background: url(../public/hero.jpg);
+    background: url(../public/tab-img.JPG);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1158,7 +1158,7 @@ button:hover, .interactions:hover button {
 
 .footer::before {
     content: "";
-    background: url(../public/hero.jpg);
+    background: url(../public/images/hero.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

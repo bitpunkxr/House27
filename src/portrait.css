@@ -32,8 +32,8 @@ html, body {
     --faint-2: #ffffff41;
     --text-2: #ffffffde;
     --border: 3rem;
-    --border-line: 1px solid #00000038;
-    --border-line-2: 1px solid #ff4444;
+    --border-line: 2px solid #00000073;
+    --border-line-2: 2px solid #ff4444;
     --pad: 1rem;
     --b-pad: 2rem;
     --bdr: 1rem;
@@ -44,9 +44,9 @@ html, body {
     --b-shadow: 0 0 35px #d6000085;
     --i-shadow: inset 0 0 3px #f00;
     --i-shadow-2: inset 0 0 10px #f00;
-    --s-shadow: 0px 0px 8px #00000085;
+    --s-shadow: 0px 0px 8px #00000069;
     --trans: all 0.3s ease;
-    --cb-trans: all 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --cb-trans: all 1s cubic-bezier(0.68, -0.55, 0.265, 2);
 }
 
 body {
@@ -256,7 +256,7 @@ rd {
     border-end-end-radius: 1rem;
     border-end-start-radius: 1rem;
     transform: translateX(150%);
-    transition: all .7s ease;
+    transition: var(--trans);
     position: absolute;
     z-index: 1000;
     margin-top: 5rem;
@@ -473,6 +473,7 @@ button {
      "nav footer"
      "nav footer";
     border-radius: var(--bdr-2);
+    background: none;
     appearance: none;
     -webkit-appearance: none;
 }
@@ -497,6 +498,7 @@ button {
     position: relative;
     appearance: none;
     -webkit-appearance: none;
+    border-radius: var(--bdr-2);
 }
 
 .grid-container .grid .info img {
@@ -530,7 +532,7 @@ button {
 
 .interactions {
     z-index: 10;
-    background: var(--text);
+    background: var(--faint);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -544,6 +546,7 @@ button {
     height: 100%;
     transition: var(--trans);
     color: var(--primary);
+    border-radius: var(--bdr-2);
 }
 
 .interactions:hover {
@@ -790,7 +793,7 @@ button:hover, .interactions:hover button {
     width: 80%;
     max-width: 470px;
     border: var(--border-line);
-    box-shadow: var(--shadow);
+    box-shadow: var(--s-shadow);
     margin: 1.3rem auto;
     justify-content: space-around;
     transition: all .4s ease-in-out;
@@ -841,7 +844,7 @@ button:hover, .interactions:hover button {
     position: absolute;
     padding: 10px;
     backdrop-filter: blur(3px) brightness(170%);
-    -webkit-ackdrop-filter: blur(3px) brightness(170%);
+    -webkit-backdrop-filter: blur(3px) brightness(170%);
     border-radius: 10px;
     box-shadow: 0 0 10px #0000006b;
     color: var(--secondary);
@@ -1159,7 +1162,8 @@ button:hover, .interactions:hover button {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
+    background-attachment: scroll;
+    background-size: cover;
 }
 
 .footer h1 {
@@ -1289,7 +1293,6 @@ input, textarea {
     background: var(--bg);
     box-shadow: 0 0 10px #00000057;
     transition: var(--trans);
-    width: 100%;
     text-align: center;
 }
 

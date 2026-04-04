@@ -40,3 +40,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const summaryCards = document.querySelectorAll('.grid-container');
+
+    summaryCards.forEach(card => {
+        card.addEventListener('click', () => {
+            const filterType = card.dataset.filterType;
+            const filterValue = card.dataset.filterValue;
+
+            window.location.href = `full-properties.html?filterType=${encodeURIComponent(filterType)}&filterValue=${encodeURIComponent(filterValue)}`;
+        });
+    });
+});

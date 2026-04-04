@@ -6,6 +6,7 @@ html, body {
     scroll-behavior: smooth;
     scrollbar-color: #ff4444;
     max-width: 4000px;
+    -webkit-font-smoothing: antialiased;
 }
 
 :root {
@@ -77,6 +78,10 @@ h2, h3, p, h4 {
     font-weight: 400;
 }
 
+p {
+    width: 90%;
+}
+
 em {
     color: var(--secondary);
 }
@@ -121,6 +126,10 @@ img {
     z-index: 9999;
 }
 
+.header p {
+    width: fit-content;
+}
+
 .header em {
     color: var(--tertiary-2);
 }
@@ -131,7 +140,7 @@ img {
 }
 
 .header.active p {
-    color: var(--primary);
+    color: var(--bg);
 }
 
 .name {
@@ -246,40 +255,44 @@ rd {
     box-shadow: 0 0 50px #000;
     border-end-end-radius: 1rem;
     border-end-start-radius: 1rem;
-    transform: translateY(-150%);
-    transition: var(--trans);
+    transform: translateX(150%);
+    transition: all .7s ease;
     position: absolute;
     z-index: 1000;
+    margin-top: 5rem;
+    height: 100vh;
+    overflow-y: scroll;
+    scrollbar-width: none;
 }
 
 .open-menu.show {
     pointer-events: auto;
-    transform: translateY(0);
+    transform: translateX(0);
 }
 
 .pages {
-    height: 100%;
+    height: 30%;
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
-    margin: auto;
-    margin: 5rem auto;
+    margin: 10% auto;
 }
 
 .pages li {
     color: var(--primary);
     padding: 0.5rem 0;
     border-top: 2px solid transparent;
-    transition: var(--trans); 
-}
-
-.pages li:hover {
-    color: var(--tertiary-2);
+    transition: var(--trans);
 }
 
 .pages li p {
     margin: auto;
     text-align: center;
+    color: var(--primary);
+}
+
+.pages li p:hover, #main p  {
+    color: var(--tertiary-2);
 }
 
 #hero {
@@ -460,6 +473,8 @@ button {
      "nav footer"
      "nav footer";
     border-radius: var(--bdr-2);
+    appearance: none;
+    -webkit-appearance: none;
 }
 
 .grid-container-2 {
@@ -480,6 +495,8 @@ button {
     display: flex;
     transition: var(--trans);
     position: relative;
+    appearance: none;
+    -webkit-appearance: none;
 }
 
 .grid-container .grid .info img {
@@ -781,7 +798,6 @@ button:hover, .interactions:hover button {
 }
 
 .showcase:hover {
-    background: var(--tertiary-2);
     box-shadow: var(--b-shadow);
     border: var(--border-line-2);
 }
@@ -892,7 +908,7 @@ button:hover, .interactions:hover button {
     margin: .5rem auto;
     text-transform: uppercase;
     letter-spacing: 4px;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     transition: var(--trans);
 }
 
@@ -910,7 +926,7 @@ button:hover, .interactions:hover button {
 }
 
 .showcase:hover .description h4, .showcase:hover .description h2, .showcase:hover .description p {
-    color: var(--bg);
+    color: var(--tertiary);
 }
 
 .description img {
@@ -1010,14 +1026,18 @@ button:hover, .interactions:hover button {
 
 .inspection {
     text-align: center;
-    background: url(../public/tab-img.JPG);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
     text-align: center;
     position: relative;
     height: 60vh;
+}
+
+.inspection::before {
+    content: "";
+    background: url(../public/hero.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .writing {
@@ -1073,11 +1093,14 @@ button:hover, .interactions:hover button {
 
 .blog {
     padding: 3rem 0 7rem 0;
-    background: var(--primary);
-    background: url(../public/tab-img.JPG);
+}
+
+.blog::before {
+    content: "";
+    background: url(../public/hero.jpg);
     background-position: center;
-    background-size: cover;
     background-repeat: no-repeat;
+    background-size: cover;
     background-attachment: fixed;
 }
 
@@ -1129,8 +1152,9 @@ button:hover, .interactions:hover button {
 
 /* Footer  */
 
-.footer {
-    background: url(../public/tab-img.JPG);
+.footer::before {
+    content: "";
+    background: url(../public/hero.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1215,6 +1239,7 @@ button:hover, .interactions:hover button {
     margin: 1rem auto;
     transition: var(--trans);
     width: fit-content;
+    color: var(--primary);
 }
 
 .links div {
@@ -1256,6 +1281,8 @@ button:hover, .interactions:hover button {
 }
 
 input, textarea {
+    appearance: none;
+    -webkit-appearance: none;
     border-radius: var(--bdr);
     border: none;
     background: var(--bg);

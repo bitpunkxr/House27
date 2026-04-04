@@ -270,7 +270,7 @@ rd {
     transform: translateX(0);
 }
 
-.pages {
+.pages, .pages-h {
     height: 30%;
     display: flex;
     justify-content: space-evenly;

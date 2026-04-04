@@ -1033,10 +1033,6 @@ button:hover, .interactions:hover button {
     text-align: center;
     position: relative;
     height: 60vh;
-}
-
-.inspection::before {
-    content: "";
     background: url(../public/tab-img.JPG);
     background-position: center;
     background-repeat: no-repeat;
@@ -1097,10 +1093,6 @@ button:hover, .interactions:hover button {
 
 .blog {
     padding: 3rem 0 7rem 0;
-}
-
-.blog::before {
-    content: "";
     background: url(../public/tab-img.JPG);
     background-position: center;
     background-repeat: no-repeat;
@@ -1156,14 +1148,12 @@ button:hover, .interactions:hover button {
 
 /* Footer  */
 
-.footer::before {
-    content: "";
+.footer {
     background: url(../public/images/hero.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: scroll;
-    background-size: cover;
+    background-attachment: fixed;
 }
 
 .footer h1 {

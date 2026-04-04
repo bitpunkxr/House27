@@ -3,7 +3,7 @@ const filter2 = document.getElementById('filter2');
 const option1 = document.getElementById('categories');
 const option2 = document.getElementById('location');
 const dispName = document.getElementById('filter');
-dispName.innerText = "Properties are available in the following categories and location";
+dispName.innerText = "Our Properties";
 
 
 filter1.classList.add('active');

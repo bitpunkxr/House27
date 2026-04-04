@@ -105,13 +105,13 @@ img {
 
 .header {
     color: black;
-    background: var(--trans-bg);
     padding: 10px var(--pad);
+    background: #ffffff83;
     justify-content: space-between;
     display: flex;
     width: 100%;
-    backdrop-filter: var(--bdf);
-    -webkit-backdrop-filter: var(--bdf);
+    backdrop-filter: blur(200px);
+    -webkit-backdrop-filter: blur(200px);
     border-radius: var(--bdr);
     box-shadow: var(--s-shadow);
     transition: var(--trans);
@@ -258,7 +258,7 @@ rd {
 }
 
 .pages {
-    height: 50%;
+    height: 100%;
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
@@ -746,12 +746,12 @@ button:hover, .interactions:hover button {
     padding: 5rem 0;
 }
 
-.options h3 {
+.options h1 {
     text-align: center;
     color: var(--secondary);
     margin: auto;
     width: 90%;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
 }
 
 .results {
@@ -777,7 +777,6 @@ button:hover, .interactions:hover button {
     margin: 1.3rem auto;
     justify-content: space-around;
     transition: all .4s ease-in-out;
-    background: var(--secondary-3);
     border-radius: var(--bdr-2);
 }
 
@@ -791,12 +790,14 @@ button:hover, .interactions:hover button {
     transition: all .4s ease-in-out;
     border-bottom: 2px solid transparent;
     width: fit-content;
-    margin: auto;
+    margin: .5rem auto;
+    text-transform: uppercase;
+    letter-spacing: 4px;
 }
 
 .showcase:hover h2 {
     color: var(--tertiary-2);
-    border-bottom: var(--border-line-2);
+    border-bottom: 1px solid var(--bg);
 }
 
 .showcase.active {
@@ -825,7 +826,7 @@ button:hover, .interactions:hover button {
 .float, .price, .icons {
     position: absolute;
     padding: 10px;
-    backdrop-filter: blur(3px) brightness(130%);
+    backdrop-filter: blur(3px) brightness(170%);
     border-radius: 10px;
     box-shadow: 0 0 10px #0000006b;
     color: var(--secondary);
@@ -853,6 +854,8 @@ button:hover, .interactions:hover button {
 
 .showcase:hover .float, .showcase:hover .price, .showcase:hover .icons {
     box-shadow: 0 0 10px var(--tertiary-2);
+    background: #ff4444a1;
+    color: var(--primary);
 }
 
 #room, #size { display: flex; flex-direction: row; gap: 10px; }
@@ -881,16 +884,18 @@ button:hover, .interactions:hover button {
 }
 
 .description h2 {
+    transition: var(--trans);
     text-align: center;
 }
 
 .description h4 {
-    color: var(--bg);
+    color: var(--secondary);
     text-align: center;
     margin: .5rem auto;
-    font-size: 1.3rem;
     text-transform: uppercase;
     letter-spacing: 4px;
+    font-size: 1.3rem;
+    transition: var(--trans);
 }
 
 .description p b {
@@ -903,6 +908,11 @@ button:hover, .interactions:hover button {
     color: var(--text);
     font-size: 13px;
     text-align: center;
+    transition: var(--trans);
+}
+
+.showcase:hover .description h4, .showcase:hover .description h2, .showcase:hover .description p {
+    color: var(--bg);
 }
 
 .description img {
@@ -1006,8 +1016,8 @@ button:hover, .interactions:hover button {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    text-align: center;
     background-attachment: fixed;
+    text-align: center;
     position: relative;
     height: 60vh;
 }
@@ -1066,6 +1076,15 @@ button:hover, .interactions:hover button {
 .blog {
     padding: 3rem 0 7rem 0;
     background: var(--primary);
+    background: url(../public/tab-img.JPG);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.blog h1 {
+    backdrop-filter: blur(200px);
 }
 
 .b-of-card {
@@ -1113,7 +1132,7 @@ button:hover, .interactions:hover button {
 /* Footer  */
 
 .footer {
-    background: url(../public/images/hero.jpg);
+    background: url(../public/tab-img.JPG);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1140,8 +1159,6 @@ button:hover, .interactions:hover button {
 }
 
 .overlay-3 .writing {
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
     border-radius: var(--bdr-2);
     border: 2px solid #ffffff23;
     padding: 4rem;
@@ -1229,8 +1246,9 @@ button:hover, .interactions:hover button {
     border-radius: 12px;
 }
 
-.footer h3 {
+.footer h3, .footer p {
     text-align: center;
+    max-width: 400px;
 }
 
 .form {

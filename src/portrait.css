@@ -11,13 +11,12 @@ html, body {
 
 :root {
     --bg: #e4e4e4;
+    --bg-2: #c5c5c5;
     --trans-bg: #ffffffda;
     --trans-bg-2: #ffffff5e;
     --linear-bg: linear-gradient(45deg, #ffffff67, #85858567);
     --primary: #fff;
-    --primary-2: #002272;
-    --primary-3: #006ab1;
-    --primary-4: #b9e3ff;
+    --primary-2: #d7e5f0;
     --secondary: #000000b9;
     --secondary-2: #1b1b1b;
     --secondary-3: #0e0e0e;
@@ -32,19 +31,21 @@ html, body {
     --faint-2: #ffffff41;
     --text-2: #ffffffde;
     --border: 3rem;
-    --border-line: 2px solid #00000073;
+    --border-line: 2px solid #85858567;
     --border-line-2: 2px solid #ff4444;
+    --border-line-3: 2px solid #8585853a;
     --pad: 1rem;
     --b-pad: 2rem;
     --bdr: 1rem;
     --bdr-2: 2rem;
     --bdf: blur(5px) saturate(0%) brightness(120%);
     --bdf-2: blur(5px) /* saturate(0%) */ brightness(30%);
-    --shadow: 0 0 20px #0000007e;
+    --shadow: 0 0 20px #24222293;
     --b-shadow: 0 0 35px #d6000085;
     --i-shadow: inset 0 0 3px #f00;
     --i-shadow-2: inset 0 0 10px #f00;
-    --s-shadow: 0px 0px 8px #00000069;
+    --s-shadow: 0px 0px 10px #00000088;
+    --s-shadow-2: 0px 0px 20px #8dcbf5;
     --trans: all 0.3s ease;
     --cb-trans: all 1s cubic-bezier(0.68, -0.55, 0.265, 2);
 }
@@ -111,7 +112,7 @@ img {
 .header {
     color: black;
     padding: 10px var(--pad);
-    background: #ffffff83;
+    background: #d7e5f0bb;
     justify-content: space-between;
     display: flex;
     width: 100%;
@@ -464,7 +465,6 @@ button {
     grid-auto-rows: minmax(120px, auto);
     margin: inherit;
     width: 95%;
-    overflow: hidden;
     grid-template-areas:
      "header main" 
      "header main" 
@@ -488,7 +488,7 @@ button {
      "footer footer";
 }
 
-.grid-container .grid {
+.grid-container .grid, .grid-container-2 .grid {
     background: var(--faint);    
     position: relative;
     overflow: hidden;
@@ -499,6 +499,7 @@ button {
     appearance: none;
     -webkit-appearance: none;
     border-radius: var(--bdr-2);
+    box-shadow: var(--s-shadow-2);
 }
 
 .grid-container .grid .info img {
@@ -509,6 +510,10 @@ button {
 
 .grid-container div:hover .info img {
     scale: 1.1;
+}
+
+.grid:hover {
+    box-shadow: var(--b-shadow);
 }
 
 .grid.h { grid-area: header; }
@@ -573,12 +578,6 @@ button {
     color: var(--bg);
 }
 
-.project .brief-card {
-    box-shadow: 0 0 7px var(--tertiary-2);
-    margin-bottom: 0;
-    margin-bottom: 4rem;
-}
-
 .brief {
     width: 95%;
     margin: 6rem auto;
@@ -595,7 +594,8 @@ button {
 .brief-of-cards {
     margin: 2rem auto;
     display: flex;
-    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .brief-card {
@@ -604,12 +604,21 @@ button {
     margin-bottom: 4rem;
     box-shadow: var(--s-shadow);
     transition: var(--trans);
-    max-width: 1024px;
+    width: 90%;
+    max-width: 500px;
     margin: 1rem auto;
+    background: #000;
 }
 
-.brief-card:last-of-type {
-    margin-bottom: 1rem;
+.project .brief-of-card {
+    flex-direction: column;
+}
+
+.project .brief-card {
+    box-shadow: 0 0 7px var(--tertiary-2);
+    margin-bottom: 0;
+    margin-bottom: 4rem;
+    max-width: 1024px;
 }
 
 .brief-img {
@@ -632,6 +641,10 @@ button {
 }
 
 .brief-text p {
+    border-radius: var(--bdr);
+    border: var(--border-line-3);
+    width: fit-content;
+    padding: var(--pad);
     font-size: 18px;
     margin: 1rem auto;
     color: var(--text-2);
@@ -793,16 +806,18 @@ button:hover, .interactions:hover button {
     width: 80%;
     max-width: 470px;
     border: var(--border-line);
-    box-shadow: var(--s-shadow);
+    box-shadow: var(--s-shadow-2);
     margin: 1.3rem auto;
     justify-content: space-around;
     transition: all .4s ease-in-out;
     border-radius: var(--bdr-2);
+    background: var(--primary-2);
 }
 
 .showcase:hover {
     box-shadow: var(--b-shadow);
     border: var(--border-line-2);
+    background: var(--bg);
 }
 
 .showcase h2 {
@@ -1108,6 +1123,8 @@ button:hover, .interactions:hover button {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .b-card {
@@ -1118,6 +1135,7 @@ button:hover, .interactions:hover button {
     box-shadow: var(--shadow);
     border-radius: var(--bdr);
     margin: 2rem auto;
+    box-shadow: var(--shadow);
 }
 
 .b-img {

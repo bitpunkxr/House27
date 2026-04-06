@@ -108,6 +108,7 @@
     }
 
     .brief-card {
+        width: 40%;
         margin-bottom: 5rem;
     }
 
@@ -174,12 +175,11 @@
 
     .b-of-card {
         flex-direction: row;
-        flex-wrap: wrap;
     }
 
     .b-card {
-        width: 30%;
-        margin: 2rem auto;
+        width: 40%;
+        margin: 2rem;
     }
 
     .pages {

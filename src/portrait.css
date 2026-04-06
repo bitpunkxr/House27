@@ -321,14 +321,17 @@ rd {
 
 .home h1 {
     opacity: 0;
-    letter-spacing: 5px;
-    word-spacing: 5px;
+    letter-spacing: 1px;
+    word-spacing: 2px;
     animation: 3s fadeUp forwards;
     margin: 1rem 0;
 }
 
 .home p {
+    opacity: 0;
     color: var(--text-2);
+    animation: 3s fadeUp forwards;
+    animation-delay: 1s;
 }
 
 .capital {
@@ -1134,7 +1137,6 @@ button:hover, .interactions:hover button {
     list-style: none;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
-    backdrop-filter: saturate(0%);
 }
 
 .b-card {

@@ -112,6 +112,10 @@
         margin-bottom: 5rem;
     }
 
+    .project .brief-card {
+        width: 80%;
+    }
+
     .brief-name h1 {
         margin-bottom: 3rem;
     }
